@@ -1,0 +1,6 @@
+{
+  "name": "cc-extra-dialogue",
+  "ccmodHumanName": "CCExtraDialogue",
+  "version": "0.0.1",
+  "plugin": "plugin.js"
+}
