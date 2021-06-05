@@ -1,0 +1,29 @@
+== apollo+battle-over+example ==
+frequency: REGULAR
+repeat: ONCE
+eventType: PARALLEL
+loopCount: 3
+condition: party.alive.Apollo && plot.line >= 40000
+
+Message 1
+Apollo > CONTENT: I am Apollo! Justice justice justice!
+Lea > CHARMED: ...!
+
+Message 2
+Apollo > DEFAULT: We should duel again, Spheromancer Lea!
+Lea > SMILE: ...
+
+Message 3
+Apollo > POINTING: We have such a noble class, Lea!
+Lea > NOD: [nods]
+
+== emilie+example ==
+condition: party.alive.Emilie
+
+Message 1:
+Emilie > CULTURE: I am French. Oui oui.
+Lea > SMILE: ...
+
+Message 3:
+Emilie > SUSPICIOUS: I bet you didn't even notice I said nothing special after last battle, cherie?
+Lea > SHAKE: [shakes head]
