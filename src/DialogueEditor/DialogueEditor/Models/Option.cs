@@ -4,6 +4,7 @@ namespace DialogueEditor.Models
 {
     public class Option
     {
+        // Todo: Refactor options to stoge generic <T> data instead of objet
         public object OptionData { get; }
 
         public string Title { get; }

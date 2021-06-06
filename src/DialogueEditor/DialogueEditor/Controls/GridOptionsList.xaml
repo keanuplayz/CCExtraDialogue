@@ -22,6 +22,7 @@
                             Width="200"
                             Margin="8">
                             <Button 
+                                Style="{StaticResource MahApps.Styles.Button.Flat}"
                                 VerticalAlignment="Stretch"
                                 HorizontalAlignment="Stretch"
                                 Click="Option_Click">
