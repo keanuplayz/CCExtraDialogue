@@ -42,6 +42,14 @@ namespace DialogueEditor
 
             var optionsList = expressionsProvider.CharacterExpressions.Select(ce => new Option(ce, ce.Expression, ce.Image));
 
+            if (optionsList.Count() == 0)
+            {
+                MessageBox.Show($"Loaded 0 expressions from \"{fbd.SelectedPath}\"" 
+                    + Environment.NewLine + "Click OK to close application.");
+                Shutdown();
+                return;
+            }
+
             // Initialize and display main window
             var vm = new MainViewModel(optionsList);
             var view = new MainView(vm);

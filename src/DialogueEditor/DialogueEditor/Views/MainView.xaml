@@ -7,11 +7,44 @@
     xmlns:local="clr-namespace:DialogueEditor"
     xmlns:ma="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:controls="clr-namespace:DialogueEditor.Controls"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
     mc:Ignorable="d"
     Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel
+            Orientation="Horizontal">
+            <TextBlock 
+                Text="Character" 
+                VerticalAlignment="Center"/>
+            <ComboBox
+                Margin="8,0,0,0"
+                ItemsSource="{Binding CharactersList}"
+                SelectedItem="{Binding CharacterFilter}" />
+            
+            <TextBlock 
+                Margin="24,0,0,0"
+                Text="Expression Filter" 
+                VerticalAlignment="Center"/>
+            <TextBox 
+                Margin="8,0,0,0"
+                Width="150"
+                Text="{Binding ExpressionFilter, UpdateSourceTrigger=PropertyChanged}" />
+        </StackPanel>
+
+        <Button 
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Command="{Binding OpenNewWindowCommand}">
+            <iconPacks:Material Kind="OpenInNew" />
+        </Button>
+        
         <controls:GridOptionsList 
-            DataContext="{Binding OptionsList}" 
+            Grid.Row="1"
+            DataContext="{Binding FilteredOptionsList}" 
             VerticalAlignment="Top" 
             HorizontalAlignment="Stretch"
             OptionClick="GridOptionsList_OptionClick"/>
