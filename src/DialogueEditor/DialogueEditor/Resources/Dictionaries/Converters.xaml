@@ -1,0 +1,14 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:DialogueEditor.Resources.Dictionaries"
+    xmlns:ext="clr-namespace:MvvmExtensions.Converters;assembly=MvvmExtensions">
+
+    <ext:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    <ext:InvertBooleanConverter x:Key="InvertBooleanConverter" />
+    <ext:InvertBooleanToVisibilityConverter x:Key="InvertBooleanToVisibilityConverter" />
+    <ext:InvertValueToVisibilityConverter x:Key="InvertValueToVisibilityConverter" />
+    <ext:MultiBoolAndConverter x:Key="MultiBoolAndConverter" />
+    <ext:MultiBoolOrConverter x:Key="MultiBoolOrConverter" />
+    <ext:ValueToVisibilityConverter x:Key="ValueToVisibilityConverter" />
+</ResourceDictionary>
