@@ -10,10 +10,11 @@ namespace DialogueEditor
 {
     public class MainViewModel : PropertyChangedImplementation
     {
+        List<Option> _options = new List<Option>();
+
         string _characterFilter = string.Empty;
         string _expressionFilter = string.Empty;
-
-        public List<Option> OptionsList { get; } = new List<Option>();
+        Dictionary<string, List<Option>> _characterExpressionOptionsDictionary = new Dictionary<string, List<Option>>();
 
         public List<string> CharactersList { get; } = new List<string>();
 
@@ -52,20 +53,26 @@ namespace DialogueEditor
             }
         }
 
-        public MainViewModel(IEnumerable<Option> options)
+        public MainViewModel(IEnumerable<Option> options, string defaultCharacterFilter = null, string defaultExpressionFilter = null)
         {
-            OptionsList.AddRange(options);
+            _options.AddRange(options);
 
-            // Todo: Optimize through dictionaries
-            var characters = options.Select(o => (o.OptionData as CharacterExpression).Character).Distinct();
+            var characters = _options.Select(o => (o.OptionData as CharacterExpression).Character).Distinct();
+            
             CharactersList.AddRange(characters);
-            CharacterFilter = CharactersList.First();
+            foreach (var character in CharactersList)
+            {
+                var characterExpressions = _options.Where(o => (o.OptionData as CharacterExpression).Character == character);
+                _characterExpressionOptionsDictionary[character] = new List<Option>(characterExpressions);
+            }
+
+            CharacterFilter = defaultCharacterFilter ?? CharactersList.First();
+            ExpressionFilter = defaultExpressionFilter ?? string.Empty;
         }
 
         List<Option> GetFilteredOptionsList()
         {
-            return OptionsList
-                .Where(o => (o.OptionData as CharacterExpression).Character == CharacterFilter)
+            return _characterExpressionOptionsDictionary[CharacterFilter]
                 .Where(o => (o.OptionData as CharacterExpression).Expression.ToLowerInvariant().Contains(ExpressionFilter.ToLowerInvariant()))
                 .ToList();
         }
@@ -82,8 +89,8 @@ namespace DialogueEditor
 
         void OpenNewWindow()
         {
-            var optionsListCopy = new List<Option>(OptionsList);
-            var vm = new MainViewModel(optionsListCopy);
+            var optionsListCopy = new List<Option>(_options);
+            var vm = new MainViewModel(optionsListCopy, CharacterFilter, ExpressionFilter);
             var newWindow = new MainView(vm);
             newWindow.ShowActivated = false; // Lack of activation allows to quickly open multiple windows without loosing focus
             newWindow.Show();

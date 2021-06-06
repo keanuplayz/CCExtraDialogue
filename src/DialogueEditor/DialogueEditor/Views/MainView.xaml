@@ -9,7 +9,7 @@
     xmlns:controls="clr-namespace:DialogueEditor.Controls"
     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
     mc:Ignorable="d"
-    Title="MainWindow" Height="450" Width="800">
+    Title="MainWindow" Height="400" Width="750">
     <Grid Margin="12">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -44,6 +44,7 @@
         
         <controls:GridOptionsList 
             Grid.Row="1"
+            Margin="0,8,0,0"
             DataContext="{Binding FilteredOptionsList}" 
             VerticalAlignment="Top" 
             HorizontalAlignment="Stretch"

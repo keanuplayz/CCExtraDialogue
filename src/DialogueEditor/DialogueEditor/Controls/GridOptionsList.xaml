@@ -19,7 +19,7 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Grid  
-                            Width="175"
+                            Width="200"
                             Margin="8">
                             <Button 
                                 VerticalAlignment="Stretch"
@@ -30,7 +30,7 @@
                                 IsHitTestVisible="False" 
                                 Margin="8">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="175"/>
+                                    <RowDefinition Height="200"/>
                                     <RowDefinition />
                                 </Grid.RowDefinitions>
                                 <Image 
