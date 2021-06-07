@@ -2,7 +2,7 @@ import json
 import os
 import re
 import sys
-from typing import Iterable
+from typing import Iterable, Union
 
 # ~ crosscode eventscript v1.2.0-alpha-1 parser, by EL ~
 # to run:
@@ -77,7 +77,8 @@ elseRegex = re.compile(r"^else$")
 endifRegex = re.compile(r"^endif$")
 #endregion regex
 
-genMessageSetSkeleton = lambda num: {"withElse": False, "type": "IF", "condition": f"call.runCount == {num}", "thenStep": []}
+genIfSkeleton = lambda condition: {"withElse": False, "type": "IF", "condition": condition, "thenStep": []}
+genMessageSetSkeleton = lambda num: genIfSkeleton(f"call.runCount == {num}")
 genChangeBoolSkeleton = lambda var, value: {"changeType": "set","type": "CHANGE_VAR_BOOL","varName": var, "value": value}
 genChangeNumSkeleton = lambda var, type, value: {"changeType": type,"type": "CHANGE_VAR_BOOL","varName": var, "value": value}
 
@@ -99,12 +100,37 @@ def processDialogue(inputString: str) -> dict:
     }
     return messageEvent
 
-def processEvent(eventStr: str, eventIter: Iterable = None) -> dict:
+def handleEvent(eventStr: str, eventIter: Iterable = None) -> dict:
     
-    def generator(fullEvent: str):
+    def generator(fullEvent: str) -> str:
         for line in fullEvent.splitlines():
             yield line
-    
+
+    def processEvents(eventStr) -> list[dict]:
+        workingList = []
+        for line in eventStr.splitlines():
+            if match := re.match(dialogueRegex, line):
+                workingList.append(processDialogue(line))
+
+            elif match := re.match(setVarBoolRegex, line):
+                workingList.append(genChangeBoolSkeleton(match.group(1),bool(match.group(2))))
+
+            elif match := re.match(setVarNumRegex, line):
+                varName, sign, number = match.groups()
+                if sign == "=":
+                    newEvent = genChangeNumSkeleton(varName, "set", int(number))
+                elif sign in ["+", "-"]:
+                    newEvent = genChangeNumSkeleton(varName, "add", int(f"{sign}{number}"))
+                workingList.append(newEvent)
+                
+            elif match := re.match(ifRegex, line):
+                pass
+            elif re.match(elseRegex, line):
+                pass
+            elif re.match(endifRegex, line):
+                pass
+            pass
+
     event = {
         "frequency": "REGULAR",
         "repeat": "ONCE",
@@ -139,30 +165,6 @@ def processEvent(eventStr: str, eventIter: Iterable = None) -> dict:
             event["runOnTrigger"].append(int(match.group(1)))
             event["event"].append(genMessageSetSkeleton(messageNumber))
 
-        elif match := re.match(dialogueRegex, line):
-            if messageNumber == 0: continue
-            # note to self - you're gonna have to re-write all of this event-adding.
-            # have fun ;)
-            event["event"][messageNumber - 1]["thenStep"].append(processDialogue(line))
-
-        elif match := re.match(setVarBoolRegex, line):
-            event["event"][messageNumber - 1]["thenStep"].append(genChangeBoolSkeleton(match.group(1),bool(match.group(2))))
-
-        elif match := re.match(setVarNumRegex, line):
-            varName, sign, number = match.groups()
-            if sign == "=":
-                newEvent = genChangeNumSkeleton(varName, "set", int(number))
-            elif sign in ["+", "-"]:
-                newEvent = genChangeNumSkeleton(varName, "add", int(f"{sign}{number}"))
-            event["event"][messageNumber - 1]["thenStep"].append(newEvent)
-            
-        elif match := re.match(ifRegex, line):
-            pass
-        elif re.match(elseRegex, line):
-            pass
-        elif re.match(endifRegex, line):
-            pass
-
         else:
             print(f"Unrecognized line \"{line}\", ignoring...", file = sys.stderr)
     return event
@@ -179,7 +181,7 @@ if __name__ == "__main__":
 
             if match := re.match(titleRegex, line):
                 if currentEvent != "": # check that the event isn't empty so it only runs if there's actually something there
-                    eventDict[currentEvent] = processEvent(bufferString)
+                    eventDict[currentEvent] = handleEvent(bufferString)
                 # set the current event and clear the buffer
                 currentEvent = match.group(1)
                 if currentEvent in eventDict:
@@ -187,7 +189,7 @@ if __name__ == "__main__":
                 bufferString = ""
             else:
                 bufferString += line + "\n"
-        eventDict[currentEvent] = processEvent(bufferString)
+        eventDict[currentEvent] = handleEvent(bufferString)
 
     os.makedirs("./patches/", exist_ok = True)
     os.makedirs("./assets/data/", exist_ok = True)
