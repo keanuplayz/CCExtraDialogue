@@ -1,10 +1,10 @@
-import re
 import json
-import sys
 import os
+import re
+import sys
+from typing import Iterable
 
-# ~ crosscode eventscript processor v1.1.0, by EL ~
-# it should work, i'm pretty sure :) [famous last words?]
+# ~ crosscode eventscript v1.2.0-alpha-1 parser, by EL ~
 # to run:
 #   python dialogue-converter.py <input text file>
 #
@@ -61,7 +61,7 @@ commentRegex = re.compile(r"^(?:#|\/\/).*")
 # matches strings of the form "(character) > (expression): (message)" or "(character) > (expression) (message)"
 dialogueRegex = re.compile(r"(.+)\s*>\s*([A-Z_]+)[\s:](.+)$")
 # matches strings of the form "message (number)", insensitive search
-messageRegex = re.compile(r"^message (\d+):?$", flags=re.I)
+messageRegex = re.compile(r"^(?:message|event) (\d+):?$", flags=re.I)
 # matches strings of the form "== title =="
 titleRegex = re.compile(r"^== (.+) ==$")
 # matches strings of the form "(key): (value)"
@@ -99,7 +99,7 @@ def processDialogue(inputString: str) -> dict:
     }
     return messageEvent
 
-def processEvent(eventStr: str, eventIter = None) -> dict:
+def processEvent(eventStr: str, eventIter: Iterable = None) -> dict:
     
     def generator(fullEvent: str):
         for line in fullEvent.splitlines():
@@ -123,6 +123,9 @@ def processEvent(eventStr: str, eventIter = None) -> dict:
     messageNumber = 0
     for line in eventIter if eventIter is not None else generator(eventStr):
         line = line.strip()
+
+        # skip blank lines and comments
+        if (not line) or re.match(commentRegex, line): continue
 
         if match := re.match(propertyRegex, line):
             propertyName, value = match.groups()
@@ -161,7 +164,7 @@ def processEvent(eventStr: str, eventIter = None) -> dict:
             pass
 
         else:
-            if(line): print(f"Unrecognized line \"{line}\", ignoring...", file = sys.stderr)
+            print(f"Unrecognized line \"{line}\", ignoring...", file = sys.stderr)
     return event
 
 eventDict = {}
