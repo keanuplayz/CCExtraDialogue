@@ -99,7 +99,12 @@ def processDialogue(inputString: str) -> dict:
     }
     return messageEvent
 
-def processEvent(eventStr: str) -> dict:
+def processEvent(eventStr: str, eventIter = None) -> dict:
+    
+    def generator(fullEvent: str):
+        for line in fullEvent.splitlines():
+            yield line
+    
     event = {
         "frequency": "REGULAR",
         "repeat": "ONCE",
@@ -116,7 +121,7 @@ def processEvent(eventStr: str) -> dict:
     }
     
     messageNumber = 0
-    for line in eventStr.splitlines():
+    for line in eventIter if eventIter is not None else generator(eventStr):
         line = line.strip()
 
         if match := re.match(propertyRegex, line):
@@ -148,6 +153,12 @@ def processEvent(eventStr: str) -> dict:
                 newEvent = genChangeNumSkeleton(varName, "add", int(f"{sign}{number}"))
             event["event"][messageNumber - 1]["thenStep"].append(newEvent)
             
+        elif match := re.match(ifRegex, line):
+            pass
+        elif re.match(elseRegex, line):
+            pass
+        elif re.match(endifRegex, line):
+            pass
 
         else:
             if(line): print(f"Unrecognized line \"{line}\", ignoring...", file = sys.stderr)
