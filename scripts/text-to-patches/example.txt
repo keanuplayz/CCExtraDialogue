@@ -17,6 +17,9 @@ Message 3
 Apollo > POINTING: We have such a noble class, Lea!
 Lea > NOD: [nods]
 set tmp.test true
+set tmp.numTest + 5
+set tmp.numTest2 - 3
+set tmp.numTest2 = 3
 
 == emilie+example ==
 condition: party.alive.Emilie

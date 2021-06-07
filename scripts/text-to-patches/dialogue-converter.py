@@ -67,7 +67,9 @@ titleRegex = re.compile(r"^== (.+) ==$")
 # matches strings of the form "(key): (value)"
 propertyRegex = re.compile(r"^(\w+)\s*:\s*(.+)$")
 # matches "set (varname) (true/false)"
-setVarBoolRegex = re.compile(r"^set\s+([\w\.]+)\s+(true|false)$", flags=re.I)
+setVarBoolRegex = re.compile(r"^set\s+([\w\.]+)(?:\s+|(?:\s*=\s*))(true|false)$", flags=re.I)
+# matches "set (varname) (+/-/=) (number)"
+setVarNumRegex = re.compile(r"^set\s+([\w\.]+)\s*(=|\+|-)\s*(\d+)$", flags=re.I)
 
 # matches "if (condition)", "else", and  "endif" respectively
 ifRegex = re.compile(r"^if (.+)$")
@@ -77,6 +79,7 @@ endifRegex = re.compile(r"^endif$")
 
 genMessageSetSkeleton = lambda num: {"withElse": False, "type": "IF", "condition": f"call.runCount == {num}", "thenStep": []}
 genChangeBoolSkeleton = lambda var, value: {"changeType": "set","type": "CHANGE_VAR_BOOL","varName": var, "value": value}
+genChangeNumSkeleton = lambda var, type, value: {"changeType": type,"type": "CHANGE_VAR_BOOL","varName": var, "value": value}
 
 
 def processDialogue(inputString: str) -> dict:
@@ -137,6 +140,15 @@ def processEvent(eventStr: str) -> dict:
         elif match := re.match(setVarBoolRegex, line):
             event["event"][messageNumber - 1]["thenStep"].append(genChangeBoolSkeleton(match.group(1),bool(match.group(2))))
 
+        elif match := re.match(setVarNumRegex, line):
+            varName, sign, number = match.groups()
+            if sign == "=":
+                newEvent = genChangeNumSkeleton(varName, "set", int(number))
+            elif sign in ["+", "-"]:
+                newEvent = genChangeNumSkeleton(varName, "add", int(f"{sign}{number}"))
+            event["event"][messageNumber - 1]["thenStep"].append(newEvent)
+            
+
         else:
             if(line): print(f"Unrecognized line \"{line}\", ignoring...", file = sys.stderr)
     return event
@@ -146,36 +158,37 @@ currentEvent: str = ""
 bufferString = ""
 inputFilename = sys.argv[1]
 
-with open(inputFilename, "r") as inputFile:
-    for line in inputFile:
-        if re.match(commentRegex, line): continue
-        
-        if match := re.match(titleRegex, line):
-            if currentEvent != "": # check that the event isn't empty so it only runs if there's actually something there
-                eventDict[currentEvent] = processEvent(bufferString)
-            # set the current event and clear the buffer
-            currentEvent = match.group(1)
-            if currentEvent in eventDict:
-                raise KeyError("Duplicate event name found in input file.")
-            bufferString = ""
-        else:
-            bufferString += line + "\n"
-    eventDict[currentEvent] = processEvent(bufferString)
+if __name__ == "__main__":
+    with open(inputFilename, "r") as inputFile:
+        for line in inputFile:
+            if re.match(commentRegex, line): continue
 
-os.makedirs("./patches/", exist_ok = True)
-os.makedirs("./assets/data/", exist_ok = True)
+            if match := re.match(titleRegex, line):
+                if currentEvent != "": # check that the event isn't empty so it only runs if there's actually something there
+                    eventDict[currentEvent] = processEvent(bufferString)
+                # set the current event and clear the buffer
+                currentEvent = match.group(1)
+                if currentEvent in eventDict:
+                    raise KeyError("Duplicate event name found in input file.")
+                bufferString = ""
+            else:
+                bufferString += line + "\n"
+        eventDict[currentEvent] = processEvent(bufferString)
 
-with open("./assets/data/database.json.patch", "w+") as patchFile:
-    patchDict: list[dict] = []
-    patchDict.append({"type": "ENTER", "index": "commonEvents"})
-    for key, value in eventDict.items():
-        with open(f"./patches/{key}.json", "w+") as jsonFile:
-            json.dump({key: value}, jsonFile)
-        patchDict.append(
-            {
-                "type": "IMPORT",
-                "src": f"mod:patches/{key}.json"
-            }
-        ),
-    patchDict.append({"type": "EXIT"})
-    json.dump(patchDict, patchFile)
+    os.makedirs("./patches/", exist_ok = True)
+    os.makedirs("./assets/data/", exist_ok = True)
+
+    with open("./assets/data/database.json.patch", "w+") as patchFile:
+        patchDict: list[dict] = []
+        patchDict.append({"type": "ENTER", "index": "commonEvents"})
+        for key, value in eventDict.items():
+            with open(f"./patches/{key}.json", "w+") as jsonFile:
+                json.dump({key: value}, jsonFile)
+            patchDict.append(
+                {
+                    "type": "IMPORT",
+                    "src": f"mod:patches/{key}.json"
+                }
+            ),
+        patchDict.append({"type": "EXIT"})
+        json.dump(patchDict, patchFile)
