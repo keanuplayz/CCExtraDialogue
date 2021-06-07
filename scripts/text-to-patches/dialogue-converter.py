@@ -3,7 +3,7 @@ import json
 import sys
 import os
 
-# ~ crosscode conversation-text-to-event converter v1.0.0, by EL ~
+# ~ crosscode eventscript processor, by EL ~
 # it should work, i'm pretty sure :) [famous last words?]
 # to run:
 #   python dialogue-converter.py <input text file>
@@ -56,15 +56,26 @@ characterLookup: dict = {
 
 #region regex
 
+# matches lines that start with "#" or "//"
+commentRegex = re.compile(r"^(?:#|\/\/).*")
 # matches strings of the form "(character) > (expression): (message)" or "(character) > (expression) (message)"
-dialogueRegex = re.compile(r"(.+)\s*>\s*([A-Z_]+)[\s:](.+)")
+dialogueRegex = re.compile(r"(.+)\s*>\s*([A-Z_]+)[\s:](.+)$")
 # matches strings of the form "message (number)", insensitive search
-messageRegex = re.compile(r"message (\d+):?", flags=re.I)
+messageRegex = re.compile(r"^message (\d+):?$", flags=re.I)
 # matches strings of the form "== title =="
-titleRegex = re.compile(r"== (.+) ==")
+titleRegex = re.compile(r"^== (.+) ==$")
 # matches strings of the form "(key): (value)"
-propertyRegex = re.compile(r"(\w+)\s*:\s*(.+)")
+propertyRegex = re.compile(r"^(\w+)\s*:\s*(.+)$")
+# matches "set (varname) (value)"
+setVarRegex = re.compile(r"^set\s+([\w\.]+)\s+(true|false|\d+)$", flags=re.I)
+# matches "true" or "false" ...yeah.
+boolRegex = re.compile(r"true|false", flags=re.I)
+# matches "if (condition)"
+ifRegex = re.compile(r"^if (.+)$")
+# comment regex
 
+elseRegex = re.compile(r"^else$")
+endifRegex = re.compile(r"^endif$")
 #endregion regex
 
 def processDialogue(inputString: str) -> dict:
@@ -102,6 +113,7 @@ def processEvent(eventStr: str) -> dict:
     genMessageSetSkeleton = lambda num: {"withElse": False, "type": "IF", "condition": f"call.runCount == {num}", "thenStep": []}
     messageNumber = 0
     for line in eventStr.splitlines():
+        line = line.strip()
         if match := re.match(propertyRegex, line):
             propertyName, value = match.groups()
             if propertyName in ["frequency", "repeat", "condition", "eventType", "loopCount"]:
@@ -127,6 +139,7 @@ inputFilename = sys.argv[1]
 
 with open(inputFilename, "r") as inputFile:
     for line in inputFile:
+        if re.match(commentRegex, line): continue
         match = re.match(titleRegex, line)
         if match:
             if currentEvent != "": # check that the event isn't empty so it only runs if there's actually something there
