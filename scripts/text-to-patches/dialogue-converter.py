@@ -3,7 +3,7 @@ import json
 import sys
 import os
 
-# ~ crosscode eventscript processor, by EL ~
+# ~ crosscode eventscript processor v1.1.0, by EL ~
 # it should work, i'm pretty sure :) [famous last words?]
 # to run:
 #   python dialogue-converter.py <input text file>
@@ -66,17 +66,18 @@ messageRegex = re.compile(r"^message (\d+):?$", flags=re.I)
 titleRegex = re.compile(r"^== (.+) ==$")
 # matches strings of the form "(key): (value)"
 propertyRegex = re.compile(r"^(\w+)\s*:\s*(.+)$")
-# matches "set (varname) (value)"
-setVarRegex = re.compile(r"^set\s+([\w\.]+)\s+(true|false|\d+)$", flags=re.I)
-# matches "true" or "false" ...yeah.
-boolRegex = re.compile(r"true|false", flags=re.I)
-# matches "if (condition)"
-ifRegex = re.compile(r"^if (.+)$")
-# comment regex
+# matches "set (varname) (true/false)"
+setVarBoolRegex = re.compile(r"^set\s+([\w\.]+)\s+(true|false)$", flags=re.I)
 
+# matches "if (condition)", "else", and  "endif" respectively
+ifRegex = re.compile(r"^if (.+)$")
 elseRegex = re.compile(r"^else$")
 endifRegex = re.compile(r"^endif$")
 #endregion regex
+
+genMessageSetSkeleton = lambda num: {"withElse": False, "type": "IF", "condition": f"call.runCount == {num}", "thenStep": []}
+genChangeBoolSkeleton = lambda var, value: {"changeType": "set","type": "CHANGE_VAR_BOOL","varName": var, "value": value}
+
 
 def processDialogue(inputString: str) -> dict:
     messageMatch = re.match(dialogueRegex, inputString)
@@ -110,24 +111,32 @@ def processEvent(eventStr: str) -> dict:
             "type": "BATTLE_OVER"
         }
     }
-    genMessageSetSkeleton = lambda num: {"withElse": False, "type": "IF", "condition": f"call.runCount == {num}", "thenStep": []}
+    
     messageNumber = 0
     for line in eventStr.splitlines():
         line = line.strip()
+
         if match := re.match(propertyRegex, line):
             propertyName, value = match.groups()
             if propertyName in ["frequency", "repeat", "condition", "eventType", "loopCount"]:
                 event[propertyName] = value
             else: 
                 print(f"Unrecognized property \"{propertyName}\", skipping...", file = sys.stderr)
+
         elif match := re.match(messageRegex, line):
             messageNumber += 1
             event["runOnTrigger"].append(int(match.group(1)))
             event["event"].append(genMessageSetSkeleton(messageNumber))
-            pass
+
         elif match := re.match(dialogueRegex, line):
             if messageNumber == 0: continue
+            # note to self - you're gonna have to re-write all of this event-adding.
+            # have fun ;)
             event["event"][messageNumber - 1]["thenStep"].append(processDialogue(line))
+
+        elif match := re.match(setVarBoolRegex, line):
+            event["event"][messageNumber - 1]["thenStep"].append(genChangeBoolSkeleton(match.group(1),bool(match.group(2))))
+
         else:
             if(line): print(f"Unrecognized line \"{line}\", ignoring...", file = sys.stderr)
     return event
@@ -140,8 +149,8 @@ inputFilename = sys.argv[1]
 with open(inputFilename, "r") as inputFile:
     for line in inputFile:
         if re.match(commentRegex, line): continue
-        match = re.match(titleRegex, line)
-        if match:
+        
+        if match := re.match(titleRegex, line):
             if currentEvent != "": # check that the event isn't empty so it only runs if there's actually something there
                 eventDict[currentEvent] = processEvent(bufferString)
             # set the current event and clear the buffer

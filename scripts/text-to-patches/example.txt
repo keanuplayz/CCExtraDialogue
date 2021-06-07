@@ -16,6 +16,7 @@ Lea > SMILE: ...
 Message 3
 Apollo > POINTING: We have such a noble class, Lea!
 Lea > NOD: [nods]
+set tmp.test true
 
 == emilie+example ==
 condition: party.alive.Emilie
