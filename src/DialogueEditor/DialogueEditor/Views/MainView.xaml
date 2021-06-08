@@ -9,28 +9,14 @@
     xmlns:controls="clr-namespace:DialogueEditor.Controls"
     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
     mc:Ignorable="d"
-    Title="EXPRESSIONS VIEWER" Height="640" Width="750">
-    <Grid Margin="12">
+    Title="EXPRESSIONS VIEWER" Height="500" Width="680">
+    <Grid Margin="8,4">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Border 
-            BorderThickness="0"
-            Background="LightBlue"
-            Margin="0,0,0,4">
-            <StackPanel  
-                Orientation="Horizontal" 
-                Margin="4">
-                <iconPacks:PackIconMaterial Kind="InformationOutline" />
-                <TextBlock 
-                    Margin="8,0,0,0"
-                    Text="Click on expression to copy it to clipboard in format '{charactername} > {expressionname} '" />
-            </StackPanel>
-        </Border>
 
-        <Grid Grid.Row="1">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition Width="Auto" />
@@ -42,17 +28,17 @@
                         Text="Character" 
                         VerticalAlignment="Center"/>
                     <ComboBox
-                        Margin="8,0,0,0"
+                        Margin="4,0,0,0"
                         ItemsSource="{Binding CharactersList}"
                         SelectedItem="{Binding CharacterFilter}" />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="4">
                     <TextBlock 
-                        Text="Expression Filter" 
+                        Text="Filter" 
                         VerticalAlignment="Center"/>
                     <TextBox 
-                        Margin="8,0,0,0"
+                        Margin="4,0,0,0"
                         Width="150"
                         Text="{Binding ExpressionFilter, UpdateSourceTrigger=PropertyChanged}" />
                 </StackPanel>
@@ -80,8 +66,8 @@
         </Grid>
 
         <controls:GridOptionsList 
-            Grid.Row="2"
-            Margin="0,8,0,0"
+            Grid.Row="1"
+            Margin="0,4,0,0"
             DataContext="{Binding FilteredOptionsList}" 
             VerticalAlignment="Top" 
             HorizontalAlignment="Stretch"
