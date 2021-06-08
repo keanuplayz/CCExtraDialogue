@@ -1,4 +1,5 @@
 ﻿using DialogueEditor.Avalonia.Models;
+using DialogueEditor.Avalonia.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -57,9 +58,13 @@ namespace DialogueEditor.Avalonia.Modules
                 foreach (var expressionFile in expressionFiles)
                 {
                     var expressionName = Path.GetFileNameWithoutExtension(expressionFile);
-                    //var expressionBitmap = BitmapHelper.CreateBitmapFromFile(expressionFile);
-                    var expressionBitmap = new object();
-                    characterExpressions.Add(new CharacterExpression(characterName, expressionName, expressionBitmap));
+                    
+                    try
+                    {
+                        var expressionBitmap = BitmapHelper.CreateBitmapFromFile(expressionFile).TrimTransparentSpace();
+                        characterExpressions.Add(new CharacterExpression(characterName, expressionName, expressionBitmap));
+                    }
+                    catch (Exception) { }
                 }
 
                 return characterExpressions;

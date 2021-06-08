@@ -1,4 +1,6 @@
 ﻿
+using Avalonia.Media.Imaging;
+
 namespace DialogueEditor.Models
 {
     public class Option
@@ -8,9 +10,9 @@ namespace DialogueEditor.Models
 
         public string Title { get; }
 
-        public object Image { get; }
+        public IBitmap Image { get; }
 
-        public Option(object optionData, string title, object image)
+        public Option(object optionData, string title, IBitmap image)
         {
             OptionData = optionData;
             Title = title;

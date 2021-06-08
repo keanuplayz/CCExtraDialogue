@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ReactiveUI;
 using System.Reactive;
+using Avalonia;
 
 namespace DialogueEditor.Avalonia.ViewModels
 {
@@ -26,7 +27,7 @@ namespace DialogueEditor.Avalonia.ViewModels
         public string CharacterFilter
         {
             get { return _characterFilter; }
-            set { this.RaiseAndSetIfChanged(ref _expressionFilter, value); }
+            set { this.RaiseAndSetIfChanged(ref _characterFilter, value); }
         }
 
         public string ExpressionFilter
@@ -77,6 +78,11 @@ namespace DialogueEditor.Avalonia.ViewModels
                 var emptyCharacter = "None";
                 CharactersList.Add(emptyCharacter);
                 _characterExpressionOptionsDictionary[emptyCharacter] = new List<Option>();
+                for (int i = 0; i < 20; i++)
+                {
+                    _characterExpressionOptionsDictionary[emptyCharacter].Add(
+                        new Option(new CharacterExpression(emptyCharacter, $"expression{i}", null), $"option{i}", null));
+                }
             }
 
             var lea = CharactersList.FirstOrDefault((c) => string.Equals(c, "lea", StringComparison.OrdinalIgnoreCase));
@@ -102,13 +108,16 @@ namespace DialogueEditor.Avalonia.ViewModels
             var expression = (option.OptionData as CharacterExpression);
             if (expression != null)
             {
-                var copiedText = $"{expression.Character} > {expression.Expression} ";
+                // Todo: Could probably be simplified
+                var textToCopy = $"{expression.Character} > {expression.Expression}";
 
                 // Remote index if its a frame from animation
-                if (copiedText.LastIndexOf(' ') > 0 && char.IsDigit(copiedText.Last()))
-                    copiedText.Substring(0, copiedText.LastIndexOf(' '));
+                if (textToCopy.LastIndexOf(' ') > 0 && char.IsDigit(textToCopy.Last()))
+                    textToCopy.Substring(0, textToCopy.LastIndexOf(' ') - 1);
 
-                CrossPlatformClipboard.SetText(copiedText);
+                textToCopy = $"{textToCopy}: ";
+
+                Application.Current.Clipboard.SetTextAsync(textToCopy);
             }
         }
 

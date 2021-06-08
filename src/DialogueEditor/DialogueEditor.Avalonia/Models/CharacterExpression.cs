@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avalonia.Media.Imaging;
+using System;
 
 namespace DialogueEditor.Avalonia.Models
 {
@@ -10,9 +11,9 @@ namespace DialogueEditor.Avalonia.Models
 
         public string Expression { get; }
 
-        public object Image { get; }
+        public IBitmap Image { get; }
 
-        public CharacterExpression(string character, string expression, object image)
+        public CharacterExpression(string character, string expression, IBitmap image)
         {
             Character = character ?? throw new ArgumentNullException(nameof(character));
             Expression = expression ?? throw new ArgumentNullException(nameof(expression));
