@@ -6,6 +6,7 @@ using DialogueEditor.Avalonia.Modules;
 using DialogueEditor.Avalonia.ViewModels;
 using DialogueEditor.Avalonia.Views;
 using DialogueEditor.Models;
+using System.IO;
 using System.Linq;
 
 namespace DialogueEditor.Avalonia
