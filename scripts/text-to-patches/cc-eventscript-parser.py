@@ -115,7 +115,7 @@ def handleEvent(eventStr: str) -> dict:
         hasElse = False
 
         for line in eventStr.splitlines():
-            
+            line = line.strip()
             if match := re.match(ifRegex, line):
                 if ifCount == 0:
                     ifCondition = match.group(1)
@@ -131,7 +131,7 @@ def handleEvent(eventStr: str) -> dict:
                 else:
                     ifBlock = genIfSkeleton(ifCondition)
                     ifBlock["thenStep"], ifBlock["elseStep"] = processEvents(stringBuffer, True)
-                    if ifBlock["elseStep"] != None: ifBlock["withElse"] == True
+                    if ifBlock["elseStep"] is not None: ifBlock["withElse"] = True
                     else: del ifBlock["elseStep"]
                     ifCount = 0
                     workingList.append(ifBlock)
@@ -147,6 +147,8 @@ def handleEvent(eventStr: str) -> dict:
                     raise Exception("Error: Multiple 'else' statements found inside of if block.")
                 else:
                     hasElse = True
+                    ifEventList = workingList.copy()
+                    workingList = []
 
             elif match := re.match(dialogueRegex, line):
                 workingList.append(processDialogue(line))
