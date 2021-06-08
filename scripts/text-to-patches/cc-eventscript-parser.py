@@ -100,16 +100,26 @@ def processDialogue(inputString: str) -> dict:
     }
     return messageEvent
 
-def handleEvent(eventStr: str, eventIter: Iterable = None) -> dict:
+def handleEvent(eventStr: str) -> dict:
     
-    def generator(fullEvent: str) -> str:
-        for line in fullEvent.splitlines():
-            yield line
+    #def generator(fullEvent: str) -> str:
+    #    for line in fullEvent.splitlines():
+    #        yield line
 
-    def processEvents(eventStr) -> list[dict]:
+    def processEvents(eventStr: str) -> list[dict]:
         workingList = []
+        ifCount = 0
+        stringBuffer = ""
         for line in eventStr.splitlines():
-            if match := re.match(dialogueRegex, line):
+
+            if re.match(endifRegex, line):
+                pass
+
+            if ifCount > 0:
+                # adds to buffer for later processing
+                stringBuffer += line
+
+            elif match := re.match(dialogueRegex, line):
                 workingList.append(processDialogue(line))
 
             elif match := re.match(setVarBoolRegex, line):
@@ -127,9 +137,9 @@ def handleEvent(eventStr: str, eventIter: Iterable = None) -> dict:
                 pass
             elif re.match(elseRegex, line):
                 pass
-            elif re.match(endifRegex, line):
-                pass
-            pass
+
+                
+        return workingList
 
     event = {
         "frequency": "REGULAR",
@@ -147,32 +157,48 @@ def handleEvent(eventStr: str, eventIter: Iterable = None) -> dict:
     }
     
     messageNumber = 0
-    for line in eventIter if eventIter is not None else generator(eventStr):
-        line = line.strip()
+    stringBuffer = ""
+    trackMessages = False
 
+    for line in eventStr.splitlines():
+        line = line.strip()
         # skip blank lines and comments
         if (not line) or re.match(commentRegex, line): continue
 
-        if match := re.match(propertyRegex, line):
+        if match := re.match(messageRegex, line):
+            if trackMessages:
+                workingEvent = genMessageSetSkeleton(messageNumber)
+                workingEvent["thenStep"] = processEvents(stringBuffer)
+                event["event"].append(workingEvent)
+                stringBuffer = ""
+
+            messageNumber += 1
+            trackMessages = True
+            event["runOnTrigger"].append(int(match.group(1)))
+
+        elif trackMessages:
+            stringBuffer += line + "\n"
+
+        elif match := re.match(propertyRegex, line):
             propertyName, value = match.groups()
             if propertyName in ["frequency", "repeat", "condition", "eventType", "loopCount"]:
                 event[propertyName] = value
             else: 
                 print(f"Unrecognized property \"{propertyName}\", skipping...", file = sys.stderr)
 
-        elif match := re.match(messageRegex, line):
-            messageNumber += 1
-            event["runOnTrigger"].append(int(match.group(1)))
-            event["event"].append(genMessageSetSkeleton(messageNumber))
-
         else:
             print(f"Unrecognized line \"{line}\", ignoring...", file = sys.stderr)
+        
+    workingEvent = genMessageSetSkeleton(messageNumber)
+    workingEvent["thenStep"] = processEvents(stringBuffer)
+    event["event"].append(workingEvent)
+
     return event
 
 eventDict = {}
 currentEvent: str = ""
 bufferString = ""
-inputFilename = sys.argv[1]
+inputFilename = "example.txt" #sys.argv[1]
 
 if __name__ == "__main__":
     with open(inputFilename, "r") as inputFile:
