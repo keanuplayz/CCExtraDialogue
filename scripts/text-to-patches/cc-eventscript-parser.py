@@ -32,7 +32,7 @@ from typing import Iterable, Union
 #
 # (see example text file for a more clear example.)
 
-
+debug = True
 
 # a handy dictionary for converting a character's readable name to their internal name.
 # it's simple enough to add more characters (or even custom characters!) to this.
@@ -120,29 +120,33 @@ def handleEvent(eventStr: str) -> dict:
                 if ifCount == 0:
                     ifCondition = match.group(1)
                 else:
-                    stringBuffer += line
+                    stringBuffer += line + "\n"
                 ifCount += 1
 
             elif re.match(endifRegex, line):
                 if ifCount > 1:
                     ifCount -= 1
                 elif ifCount < 1:
-                    raise Exception("'endif' found outside of if block")
+                    raise Exception("Error: 'endif' found outside of if block")
                 else:
                     ifBlock = genIfSkeleton(ifCondition)
                     ifBlock["thenStep"], ifBlock["elseStep"] = processEvents(stringBuffer, True)
-                    if ifBlock["elseStep"] is not None: ifBlock["withElse"] == True
+                    if ifBlock["elseStep"] != None: ifBlock["withElse"] == True
                     else: del ifBlock["elseStep"]
                     ifCount = 0
                     workingList.append(ifBlock)
 
             # adds to string buffer for later processing
             elif ifCount > 0:
-                stringBuffer += line
+                stringBuffer += line + "\n"
 
             elif re.match(elseRegex, line):
-                if not isIf:
-                    raise Exception("'else' found outside of if block.")
+                if (not isIf):
+                    raise Exception("Error: 'else' statement found outside of if block.")
+                elif hasElse:
+                    raise Exception("Error: Multiple 'else' statements found inside of if block.")
+                else:
+                    hasElse = True
 
             elif match := re.match(dialogueRegex, line):
                 workingList.append(processDialogue(line))
@@ -250,7 +254,7 @@ if __name__ == "__main__":
         patchDict.append({"type": "ENTER", "index": "commonEvents"})
         for key, value in eventDict.items():
             with open(f"./patches/{key}.json", "w+") as jsonFile:
-                json.dump({key: value}, jsonFile)
+                json.dump({key: value}, jsonFile, indent = 2 if debug else 0)
             patchDict.append(
                 {
                     "type": "IMPORT",
@@ -258,4 +262,4 @@ if __name__ == "__main__":
                 }
             ),
         patchDict.append({"type": "EXIT"})
-        json.dump(patchDict, patchFile)
+        json.dump(patchDict, patchFile, indent = 2 if debug else 0)
