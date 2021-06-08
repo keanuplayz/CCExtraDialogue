@@ -2,6 +2,7 @@
 using MvvmExtensions.Attributes;
 using MvvmExtensions.Commands;
 using MvvmExtensions.PropertyChangedMonitoring;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
@@ -81,7 +82,8 @@ namespace DialogueEditor
                 _characterExpressionOptionsDictionary[character] = new List<Option>(characterExpressions);
             }
 
-            CharacterFilter = CharactersList.First();
+            var lea = CharactersList.FirstOrDefault((c) => string.Equals(c, "lea", StringComparison.OrdinalIgnoreCase));
+            CharacterFilter = lea ?? CharactersList.First();
         }
 
         List<Option> GetFilteredOptionsList()
