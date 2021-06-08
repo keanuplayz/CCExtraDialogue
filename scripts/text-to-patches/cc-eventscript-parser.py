@@ -2,9 +2,8 @@ import json
 import os
 import re
 import sys
-from typing import Iterable, Union
 
-# ~ crosscode eventscript v1.2.0-alpha-1 parser, by EL ~
+# ~ crosscode eventscript v1.2.0 parser, by EL ~
 # to run:
 #   python dialogue-converter.py <input text file>
 #
@@ -32,7 +31,7 @@ from typing import Iterable, Union
 #
 # (see example text file for a more clear example.)
 
-debug = True
+debug = False
 
 # a handy dictionary for converting a character's readable name to their internal name.
 # it's simple enough to add more characters (or even custom characters!) to this.
@@ -101,10 +100,6 @@ def processDialogue(inputString: str) -> dict:
     return messageEvent
 
 def handleEvent(eventStr: str) -> dict:
-    
-    #def generator(fullEvent: str) -> str:
-    #    for line in fullEvent.splitlines():
-    #        yield line
 
     def processEvents(eventStr: str, isIf: bool = False) -> list[dict]:
         workingList: list[dict] = []
@@ -125,6 +120,7 @@ def handleEvent(eventStr: str) -> dict:
 
             elif re.match(endifRegex, line):
                 if ifCount > 1:
+                    stringBuffer += line + "\n"
                     ifCount -= 1
                 elif ifCount < 1:
                     raise Exception("Error: 'endif' found outside of if block")
@@ -229,7 +225,7 @@ def handleEvent(eventStr: str) -> dict:
 eventDict = {}
 currentEvent: str = ""
 bufferString = ""
-inputFilename = "example.txt" #sys.argv[1]
+inputFilename = sys.argv[1] if not debug else "example.txt"
 
 if __name__ == "__main__":
     with open(inputFilename, "r") as inputFile:

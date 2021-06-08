@@ -17,8 +17,17 @@ Message 3
 Apollo > POINTING: We have such a noble class, Lea!
 Lea > NOD: [nods]
 set tmp.test true
-set tmp.numTest + 5
-set tmp.numTest2 - 3
+# oh yeah i should test comments
+if tmp.test
+    set tmp.numTest + 5
+    set tmp.numTest2 - 3
+# nesting test
+    if tmp.test2
+        set tmp.numTest + 5
+    else
+        set tmp.numTest2 - 3
+    endif
+endif
 set tmp.numTest2 = 3
 
 == emilie+example ==
