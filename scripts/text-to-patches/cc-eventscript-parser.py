@@ -106,18 +106,43 @@ def handleEvent(eventStr: str) -> dict:
     #    for line in fullEvent.splitlines():
     #        yield line
 
-    def processEvents(eventStr: str) -> list[dict]:
-        workingList = []
-        ifCount = 0
-        stringBuffer = ""
+    def processEvents(eventStr: str, isIf: bool = False) -> list[dict]:
+        workingList: list[dict] = []
+        ifCount: int = 0
+        ifCondition: str = ""
+        stringBuffer: str = ""
+        ifEventList = []
+        hasElse = False
+
         for line in eventStr.splitlines():
+            
+            if match := re.match(ifRegex, line):
+                if ifCount == 0:
+                    ifCondition = match.group(1)
+                else:
+                    stringBuffer += line
+                ifCount += 1
 
-            if re.match(endifRegex, line):
-                pass
+            elif re.match(endifRegex, line):
+                if ifCount > 1:
+                    ifCount -= 1
+                elif ifCount < 1:
+                    raise Exception("'endif' found outside of if block")
+                else:
+                    ifBlock = genIfSkeleton(ifCondition)
+                    ifBlock["thenStep"], ifBlock["elseStep"] = processEvents(stringBuffer, True)
+                    if ifBlock["elseStep"] is not None: ifBlock["withElse"] == True
+                    else: del ifBlock["elseStep"]
+                    ifCount = 0
+                    workingList.append(ifBlock)
 
-            if ifCount > 0:
-                # adds to buffer for later processing
+            # adds to string buffer for later processing
+            elif ifCount > 0:
                 stringBuffer += line
+
+            elif re.match(elseRegex, line):
+                if not isIf:
+                    raise Exception("'else' found outside of if block.")
 
             elif match := re.match(dialogueRegex, line):
                 workingList.append(processDialogue(line))
@@ -132,13 +157,13 @@ def handleEvent(eventStr: str) -> dict:
                 elif sign in ["+", "-"]:
                     newEvent = genChangeNumSkeleton(varName, "add", int(f"{sign}{number}"))
                 workingList.append(newEvent)
-                
-            elif match := re.match(ifRegex, line):
-                pass
-            elif re.match(elseRegex, line):
-                pass
 
-                
+        if isIf: 
+            if not hasElse:
+                return workingList, None
+            else:
+                return ifEventList, workingList
+
         return workingList
 
     event = {
