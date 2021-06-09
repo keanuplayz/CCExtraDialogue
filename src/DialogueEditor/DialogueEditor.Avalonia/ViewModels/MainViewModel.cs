@@ -1,5 +1,4 @@
 using DialogueEditor.Avalonia.Models;
-using DialogueEditor.Avalonia.Modules;
 using DialogueEditor.Avalonia.Views;
 using DialogueEditor.Models;
 using System;
@@ -11,7 +10,7 @@ using Avalonia;
 
 namespace DialogueEditor.Avalonia.ViewModels
 {
-    public class MainViewModel : ViewModelBase
+    internal class MainViewModel : ViewModelBase
     {
         List<Option> _options = new List<Option>();
 

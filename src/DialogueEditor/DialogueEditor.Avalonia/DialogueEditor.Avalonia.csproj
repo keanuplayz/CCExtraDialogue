@@ -16,10 +16,11 @@
     <AvaloniaResource Include="Resources\ccextradialogue.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.3" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.3" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.3" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.3" />
+    <PackageReference Include="Avalonia" Version="0.10.6" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.6" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.6" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.6" />
+    <PackageReference Include="MessageBox.Avalonia" Version="1.3.1" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\GridOptionsList.xaml" />
@@ -33,6 +34,9 @@
     </Compile>
     <Compile Update="Views\MainView.axaml.cs">
       <DependentUpon>MainView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\StartupView.axaml.cs">
+      <DependentUpon>StartupView.axaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>
