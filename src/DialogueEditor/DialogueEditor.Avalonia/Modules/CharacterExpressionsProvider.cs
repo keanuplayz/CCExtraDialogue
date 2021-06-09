@@ -61,7 +61,7 @@ namespace DialogueEditor.Avalonia.Modules
                     
                     try
                     {
-                        var expressionBitmap = BitmapHelper.CreateBitmapFromFile(expressionFile).TrimTransparentSpace();
+                        var expressionBitmap = ImageLoader.CreateCroppedBitmapFromFile(expressionFile);
                         characterExpressions.Add(new CharacterExpression(characterName, expressionName, expressionBitmap));
                     }
                     catch (Exception) { }
