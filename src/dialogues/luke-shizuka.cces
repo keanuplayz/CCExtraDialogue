@@ -1,0 +1,91 @@
+== luke+shizuka-battle-over-cced ==
+
+condition: party.alive.Luke && party.alive.Shizuka
+
+Message 1
+Luke >WONDERING: Hey, Shizuka.
+Shizuka > DEFAULT: Yes?
+Luke > WONDERING: Were you the one, who Lea was based on?
+Shizuka > SMUG: Yeah.
+Luke > WORRIED: Kind of a strange feeling. Since both me and Lea are evotars.
+Shizuka > DOWN: What do you mean?
+Luke > WORRIED: Luke and I seem more alike than you two, you know.
+Lea > SURPRISED_TOWARD: …?
+Shizuka > BRIGHT: Figures. Lea had a head start of a few years.
+Lea > EXHAUSTED: …
+
+Message 2
+Luke > DEFAULT: Aren’t you two basically sisters?
+
+# Similar conversation occurs in Lukas-Shizuka party 
+if cced.lea-sakai-sisterhood-dialogue
+    Luke > TOWARDS: One could say that you have more in common than anybody else in the universe.
+    Shizuka > INNOCENT: I mean… if she wants to…
+    Shizuka > SMILE: She does understand me better than anyone... like a real sister would.
+    Lea > TOUCHED: …
+else
+    Shizuka > BRIGHT: Are we? What do you say, Lea?
+    Lea > NOD_HAPPY: [nods]
+    Shizuka > SMUG: Thought as much.
+endif
+
+Luke > WINK: \\c[3]Lea Sakai\\c[0]. <What a beautifully sounding name!>
+Lea > CHARMED: ...
+Shizuka > EVIL_GRIN: Oh bother...
+
+set cced.lea-sakai-sisterhood-dialogue true
+
+Message 3
+Luke > WONDERING: Why Lea?
+Lea > SURPRISED_TOWARD: Why Lea?
+Shizuka > SARCASTIC: Why Luke?
+Luke > DEFAULT: So that people don’t confuse us two when talking.
+Shizuka > SARCASTIC: Good point.
+
+# Similar conversation occurs in Lukas-Shizuka party 
+if cced.why-lea-named-lea-dialogue
+    Lea > SURPRISED: Wait! Why Lea?
+    Shizuka > INNOCENT: No particular reason besides that it sounds nice.
+    Lea > THINKING: ...
+endif 
+
+set cced.why-lea-named-lea-dialogue true
+
+
+Message 4
+Luke > SURPRISED: Wow, you two do fight similarly.
+Luke > TOWARDS: <But Lea has more fluidness and determination in her movements.>
+Lea > SMUG: …!
+
+# Also occurs in party with C'Tron, Joern and Lukas 
+if cced.shizuka-lea-similarity-dialogue == 1
+    Shizuka > FUNNY_SMILE: Yeah, I get that a lot.
+endif
+if cced.shizuka-lea-similarity-dialogue == 2
+    Shizuka > INNOCENT: Okaaay...
+endif
+if cced.shizuka-lea-similarity-dialogue >= 3
+    Shizuka > EXTRA_ANNOYED: ...
+    Lea > SMILE: ...
+endif
+
+Shizuka > DEFAULT: Just rusty from my vacation.
+Luke > WONDERING: Vacation… another thing I will not miss.
+Lea > SURPRISED: Why?
+Luke > EYES_CLOSED: No job, no vacations.
+Shizuka > FUNNY_SMILE: Just you wait. They will find something to do for you.
+Lea > EXHAUSTED: ...
+
+set cced.shizuka-lea-similarity-dialogue + 1
+
+Message 5
+Luke > WINK: I suppose, Lea was always this charming?
+Lea > CHARMED: ...
+Shizuka > SARCASTIC: Be a bit more subtle, okay?
+Shizuka > BRIGHT: Before first awakening, someone took courtesy to give her a new haircut...
+Shizuka > SMUG: And the horns.
+Lea > HOLD_HORNS_ANNOYED: …!
+Luke > COMPLAINING: Yeah. I wish they would enable customisation menu for evotars.
+Shizuka > EVIL_GRIN: Well… you know, what to do once they do, mister.
+
+set cced.luke-shizuka-banter-finished true
