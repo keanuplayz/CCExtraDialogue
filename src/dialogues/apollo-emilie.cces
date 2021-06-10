@@ -12,7 +12,7 @@ Message 2
 #??? Not sure if we need another line in here, leave it as it is or merge with previous message
 Emilie > WATCH_OUT_BADASS Say... If there were no Spheromancer class, which one would you pick?
 Apollo > LECTURING I will never betray my noble class!
-Apollo > SUSPICIOUS But if I was forced to… hmmm...
+Apollo > SUSPICIOUS But if I was forced to... hmmm...
 
 #Triblader
 #A melee class, focusing equally on offense and defense.
@@ -23,7 +23,7 @@ Message 3
 Emilie > DEFAULT How about a \\c[3]Triblader\\c[0]?
 Apollo > SHOUTING Tribladers are too straightforward. While their stats are balanced, their ranged capabilities are only good for puzzles.
 Apollo > POINTING If you are a Triblader, all you have to do is rush in and swing your sword. No strategy, positioning or thinking required!
-Emilie > CURIOUS But you like honorable things and stuff. Tribladers use swords, and these are weapons of knights. Aren’t knights like… very noble and honorable?
+Emilie > CURIOUS But you like honorable things and stuff. Tribladers use swords, and these are weapons of knights. Aren`t knights like... very noble and honorable?
 Apollo > LECTURING Indeed, the sword is an honest and fair weapon. But the weapon alone does not decide your honor. It is the one, who wields the blade!
 Apollo > CONTENT No Triblader will match up to the Spheromancers, who follow the Path of Justice!
 Lea > EXHAUSTED ...
@@ -39,15 +39,15 @@ Emilie > DETERMINED Okay, then how about \\c[3]Quadroguard\\c[0]. Protecting you
 Apollo > DEFAULT The Quadroguards put their lives on the line to take the blows and protect their team.
 Apollo > LECTURING A truly honorable class, that almost rivals the Spheromancer.
 Emilie > SMILE Oui! A team of a Quadroguard and Pentafist sounds good. Right, Lea? 
-Lea > SURPRISED_TOWARD …?
+Lea > SURPRISED_TOWARD ...?
 Apollo > POINTING While Quadroguards are valuable teammates, they would be less than ideal for walking the track alone.
 Apollo > LECTURING They are great at protecting themselves and their team, but severely lack in offensive capabilities.
 Apollo > SHOUTING Any PVP fight with skilled Quadroguard the most boring one you can get.
 Emilie > ASTONISHED Ooooh~, why is that?
 Apollo > LECTURING An experienced one is virtually impossible to hit and sufficiently damage, but at the same time they do not pose a threat themselves because of slow attack speed and lower damage.
 Apollo > DEFAULT I may have considered picking Quadroguard. It would be an honor to protect noble Spheromancer Lea.
-Lea > SCARED …!
-Apollo > CONTENT But we have Joern for that, so that’s a no.
+Lea > SCARED ...!
+Apollo > CONTENT But we have Joern for that, so that`s a no.
 
 #Pentafist
 #A melee-focused quick and agile class with high critical hits.
@@ -59,9 +59,9 @@ Message 5
 Emilie > DETERMINED What about \\c[3]Pentafist\\c[0], huh?
 Apollo > LECTURING I would never pick them.
 Apollo > POINTING Just like tribladers, Pentafists are all about attacking as fast as you can without thinking.
-Apollo > SHOUTING Unlike tribladers, it’s the only thing Pentafists are good at. They have no range, no damage and have to rely on luck because of this focus on… focus.
+Apollo > SHOUTING Unlike tribladers, it`s the only thing Pentafists are good at. They have no range, no damage and have to rely on luck because of this focus on... focus.
 Emilie > EMBARRASSED If Pentafists are so bad, why are they the most popular class in CrossWorlds?
-Apollo > MOPING Because of their flashy appearance… Almost every new player picks a Pentafist. 
+Apollo > MOPING Because of their flashy appearance... Almost every new player picks a Pentafist. 
 Apollo > ANGRY In the end, it throws even more shade on those, who actually put effort into honing their skills.
 Apollo > CONTENT Pentafists are also terrible for dueling, as duels are less about who is more skilled, than who gets the first hit in.
 Emilie > EXHAUSTED I could say the same about your duels with Lea.
@@ -78,24 +78,24 @@ Emilie > SMILE Suuuuuuuure thing, grasshead.
 Message 6
 Emilie > DETERMINED This leaves us with \\c[3]Hexacast\\c[0].
 Apollo: Hexacasts specialize in keeping their distance and attacking enemies from afar, while lacking in health and melee damage.
-Em: <Isn’t Albert a Hexacast, who prefers melee combat?>
-Lea > THINKING …
-Apollo: Hexacasts certainly can fight in melee, every class does. But it’s less than ideal when one can obliterate their enemies with powerful homing or area-damaging arts.
+Em: <Isn`t Albert a Hexacast, who prefers melee combat?>
+Lea > THINKING ...
+Apollo: Hexacasts certainly can fight in melee, every class does. But it`s less than ideal when one can obliterate their enemies with powerful homing or area-damaging arts.
 Em: What about Hexacast duels?
 Apollo: Simply throwing arts is not sufficient to win, so they must employ at least some kind of trickery or strategy, as befits their virtue. 
-Apollo: Still, it’s more of a fight of programmed automated weapons and homing attacks than actual display of fighting mastery.
+Apollo: Still, it`s more of a fight of programmed automated weapons and homing attacks than actual display of fighting mastery.
 # ??? - Missing connecting line. Alternatively, throw out next line entirely.
 Apollo: I must admit. Out of all four classes, Hexacast duels are the most interesting to follow.
 
 Message 7
 Emilie > WATCH_OUT_BADASS You still haven't answered the question, grasshead.
-Apollo > MOPING Without spheromancer class, I’d rather play something else.
+Apollo > MOPING Without spheromancer class, I`d rather play something else.
 Emilie > ASTONISHED Really?! Like what?
-Apollo > LECTURING I don’t know… Maybe \\c[3]For Justice! / CrossWay Fighter \\c[0].
+Apollo > LECTURING I don`t know... Maybe \\c[3]For Justice! / CrossWay Fighter \\c[0].
 Emilie > HAPPY Oooooooh~, I like that one!
 Apollo > SUSPICIOUS You play fighting games?
-Emilie > DETERMINED Oui! Try me and I’ll beat you every time.
-Lea > ANNOYED …
+Emilie > DETERMINED Oui! Try me and I`ll beat you every time.
+Lea > ANNOYED ...
 Apollo > SUSPICIOUS I shall consider this proposition.
 
 set cced.apollo-emilie-banter-finished true

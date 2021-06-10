@@ -12,17 +12,17 @@
 Message 1
 Lukas > COMPLAINING: <moregerman>, that was quite the marathon!
 Lukas > TOWARDS: No wonder you reached my level so fast.
-Lea > WHISTLING: …!
+Lea > WHISTLING: ...!
 
 == luke-battle-over-S ==
 Message 1
 Luke > SHOCKED: Where did you get this energy, Lea?
-Lea > WHISTLING: …!
+Lea > WHISTLING: ...!
 
 == shizuka-battle-over-S ==
 Message 1
-Shizuka > FUNNY_SMILE: I’ve lost kill count… \.\.\.let’s call it a draw.
-Lea > SMILE: …
+Shizuka > FUNNY_SMILE: I`ve lost kill count... \.\.\.let`s call it a draw.
+Lea > SMILE: ...
 
 
 
@@ -30,15 +30,15 @@ Lea > SMILE: …
 #character-dies 0_2
 == lukas-dies_0_2 ==
 Message 1
-Lukas > PISSED: <moregerman>,  should’ve seen this coming.
+Lukas > PISSED: <moregerman>,  should`ve seen this coming.
 
 == luke-dies_0_2 ==
 Message 2
-Luke > PISSED: <moregerman>,  should’ve seen this coming.
+Luke > PISSED: <moregerman>,  should`ve seen this coming.
 
 == shizuka-dies_0_2 ==
 Message 3
-Shizuka > DENYING: Why am I always tanking all the aggro…
+Shizuka > DENYING: Why am I always tanking all the aggro...
 
 
 
@@ -47,11 +47,11 @@ Shizuka > DENYING: Why am I always tanking all the aggro…
 #character-equip
 == apollo-character-equip ==
 Message 1
-Apollo > LECTURING: By failing to prepare, you are preparing to fail. Don’t forget to keep your gear in check, Spheromancer Lea!
+Apollo > LECTURING: By failing to prepare, you are preparing to fail. Don`t forget to keep your gear in check, Spheromancer Lea!
 Message 2
 Apollo > DEFAULT: My gear is upgraded and I am once again ready to follow you, Spheromacer Lea!
 Message 3
-Apollo > LECTURING: I’ve just upgraded my gear, and you should too, Spheromancer Lea!
+Apollo > LECTURING: I`ve just upgraded my gear, and you should too, Spheromancer Lea!
 
 
 == joern-character-equip ==
@@ -67,9 +67,9 @@ Joern > DEFAULT: Got new gear. Can't help with buying new things.
 
 == lukas-character-equip ==
 Message 1
-Lukas > DEFAULT: About time for gear upgrade! Let’s go cut some things.
+Lukas > DEFAULT: About time for gear upgrade! Let`s go cut some things.
 Message 2
-Lukas > LAUGH: Bought myself new gear! So glad it doesn’t cost real money.
+Lukas > LAUGH: Bought myself new gear! So glad it doesn`t cost real money.
 Message 3
 Lukas > WINK: Got new gear! Wanna run a \\c[3]Team Cup\\c[0] to test it out?
 
@@ -87,7 +87,7 @@ Shizuka > INNOCENT: How is all this still in the game? Some pieces are obviously
 Message 2
 Shizuka > FUNNY_SMILE: Brought new stuff. Back in a day you had to fish it out from ponds.
 Message 3
-Shizuka > FUNNY_SMILE: Got new gear. I’m so glad it doesn’t affect your skin. We would look like clowns.
+Shizuka > FUNNY_SMILE: Got new gear. I`m so glad it doesn`t affect your skin. We would look like clowns.
 Lea > SMILE: ...
 
 #alt Message 3
@@ -95,6 +95,6 @@ Lea > SMILE: ...
 #Lea > SMILE: ...
 
 #alt Message 3
-#Shizuka > DEFAULT/SMILE Got new gear. So glad it doesn’t affect your skin.
+#Shizuka > DEFAULT/SMILE Got new gear. So glad it doesn`t affect your skin.
 #Shizuka > FUNNY_SMILE We would look like clowns otherwise.
 #Lea > SMILE: ...

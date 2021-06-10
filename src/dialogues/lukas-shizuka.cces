@@ -7,21 +7,21 @@ Lukas >WONDERING: Hey, Shizuka.
 Shizuka > DEFAULT: Yes?
 Lukas > WONDERING: Were you the one, who Lea was based on?
 Shizuka > SMUG: Yeah.
-Lukas > TOWARD: Isn’t it neat, how us both have evotars of ourselves?
-Shizuka > INNOCENT: Um… yeah… I guess.
+Lukas > TOWARD: Isn`t it neat, how us both have evotars of ourselves?
+Shizuka > INNOCENT: Um... yeah... I guess.
 Lukas > SKEPTICAL: Although, Luke and I seem more alike than you two.
 Shizuka > BRIGHT: Figures. Lea had a head start of a few years.
 Lea > EXHAUSTED: ...
 
 Message 2
-Schneider > DEFAULT: Aren’t you two basically sisters?
+Schneider > DEFAULT: Aren`t you two basically sisters?
 
 # Similar conversation occurs in Luke-Shizuka party 
 if cced.lea-sakai-sisterhood-dialogue
     Schneider > TOWARDS: One could say that you have more in common than anybody else in the universe.
-    Shizuka > INNOCENT: I mean… if she wants to…
+    Shizuka > INNOCENT: I mean... if she wants to...
     Shizuka > SMILE: She does understand me better than anyone... like a real sister would.
-    Lea > TOUCHED: …
+    Lea > TOUCHED: ...
 else
     Shizuka > BRIGHT: Are we? What do you say, Lea?
     Lea > NOD_HAPPY: [nods]
@@ -50,7 +50,7 @@ set cced.why-lea-named-lea-dialogue true
 Message 4
 Lukas > SURPRISED: Wow, you two do fight similarly.
 Lukas > TOWARDS: <But Lea has more fluidness and determination in her movements.>
-Lea > SMUG: …!
+Lea > SMUG: ...!
 
 # Also occurs in party with C'Tron, Joern and Luke 
 if cced.shizuka-lea-similarity-dialogue == 1
@@ -68,7 +68,7 @@ Shizuka > DEFAULT: Just rusty from my vacation.
 Lukas > DEFAULT: Recently traveled somewhere?
 Shizuka > FUNNY_SMILE: Yeah.[pause] To real life.
 Lukas > LAUGH: Now I see where the sassiness came from.
-Lea > WHISTLING: …
+Lea > WHISTLING: ...
 
 set cced.shizuka-lea-similarity-dialogue + 1
 
@@ -85,22 +85,22 @@ Lea > THINKING ...
 Message 6
 Lukas > EYES_CLOSED: It was Satoshi.
 Shizuka > SMUG: You sure?
-Lukas > WINK: Pretty sure. Can’t be you.
+Lukas > WINK: Pretty sure. Can`t be you.
 Shizuka > BRIGHT: And why is that?
 Lukas > TOWARDS: Your chest is smaller.
-Lukas > LAUGH: And I don’t need a ruler for that one.
-Lea > SMUG: …!
-Shizuka > SURPRISED: …
+Lukas > LAUGH: And I don`t need a ruler for that one.
+Lea > SMUG: ...!
+Shizuka > SURPRISED: ...
 Shizuka > SHOUT: \\c[1]You what?!!\\c[0]
 
 Message 7
 Shizuka > SARCASTIC: I am actually impressed.
-Shizuka > SARCASTIC: You’ve managed to insult me, Lea and my idiot brother in the one sentence.
-Lukas > COMPLAINING: <moregerman>, I’m sorry, alright?
-Lukas > EYES_CLOSED: Wasn’t very tactful of me.
+Shizuka > SARCASTIC: You`ve managed to insult me, Lea and my idiot brother in the one sentence.
+Lukas > COMPLAINING: <moregerman>, I`m sorry, alright?
+Lukas > EYES_CLOSED: Wasn`t very tactful of me.
 Shizuka > TOWARD: Apologies accepted, whatever.
-Shizuka > BADASS: Let’s go punch some more mobs. I need to unwind.
-Lea > EXCITED: …!
+Shizuka > BADASS: Let`s go punch some more mobs. I need to unwind.
+Lea > EXCITED: ...!
 
 set cced.lukas-shizuka-banter-finished true
 
@@ -111,36 +111,36 @@ set cced.lukas-shizuka-banter-finished true
 condition: party.alive.Schneider && party.alive.Shizuka && plot.line >= 48000 && cced.lukas-shizuka-banter-finished
 
 Message 1
-Lukas > EXT_EMBARASSED: …
-Shizuka > DENYING: …
-Lukas > WORRIED: Well… this is awkward…
+Lukas > EXT_EMBARASSED: ...
+Shizuka > DENYING: ...
+Lukas > WORRIED: Well... this is awkward...
 Shizuka > DENYING: It is...
 Lea > SURPRISED_TOWARD: ...?
 Lea > SURPRISED_AWAY: Why?
 
 Message 2
-Lukas > COMPLAINING: I’m sorry, Shizuka.
+Lukas > COMPLAINING: I`m sorry, Shizuka.
 Shizuka > SMUG: You should be. 
-Shizuka > FUNNY_SMILE: I’m still shaken.
+Shizuka > FUNNY_SMILE: I`m still shaken.
 Lea > SURPRISED_AWAY:  Why?
-Lukas > PISSED: No, you’re not.
-Shizuka > SARCASTIC: Then I’m hungry. And when I’m hungry, I tend to punch annoying people. 
-Lea > ANNOYED: …?
+Lukas > PISSED: No, you`re not.
+Shizuka > SARCASTIC: Then I`m hungry. And when I`m hungry, I tend to punch annoying people. 
+Lea > ANNOYED: ...?
 
 Message 3
 Shizuka > EVIL_GRIN: How did this thought even occur to you?
-Shizuka > SURPRISED: Wait, I know. It’s because of Luke!
+Shizuka > SURPRISED: Wait, I know. It`s because of Luke!
 Lukas > SKEPTICAL: Was worth a try.
-Shizuka > FUNNY_SMILE: Should’ve tried harder.
+Shizuka > FUNNY_SMILE: Should`ve tried harder.
 Shizuka > BRIGHT: He put way more thought into it than you did.
 Lea > ANNOYED: ...What?
 
 Message 4
-Lukas > WINK: So you’re saying that….
+Lukas > WINK: So you`re saying that....
 Shizuka > ANNOYED: No.
 Lukas > LAUGH: Alright.
-Lea > ANNOYED: …!
-Shizuka > CONFLICTED: And let’s never bring this topic up again.
+Lea > ANNOYED: ...!
+Shizuka > CONFLICTED: And let`s never bring this topic up again.
 Lukas > DEFAULT: Fair enough.
 Lea > SHOUT: <What?! Why?! Why! Hi! Lea! Bye!>
 
