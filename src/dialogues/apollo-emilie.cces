@@ -3,7 +3,7 @@
 condition: party.alive.Apollo && party.alive.Emilie
 
 Message 1 
-Apolloollo > CONTENT Another glorious victory for Spheromancers!
+Apollo > CONTENT Another glorious victory for Spheromancers!
 Lea > EXCITED ...!
 Emilie > SUSPICIOUS I'm right here, grasshead.
 Apollo > ANGRY Oh yes, we are in a party with a Pentafist, aren't we.

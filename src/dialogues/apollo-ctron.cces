@@ -1,0 +1,90 @@
+== apollo+ctron-battle-over-cced ==
+
+condition: party.alive.Apollo && party.alive.Glasses
+
+# Thinking of rewriting it from scratch
+
+Message 1  
+Apollo > CONTENT: The justice has been served once again! 
+C'tron > WORRIED: If you call murdering a bunch of animals justice... 
+Ap: We must face each and every obstacle the Track puts in our way! 
+Ap: It is our duty as Seekers! 
+Ap: Even if our hearts tell us otherwise, the path of Justice is true! 
+C'tron > EMBARRASSED: Urgh, okay... I guess? 
+
+Message 2 
+Apollo > CONTENT: Our enemies are vanquished once again! (  ) 
+Apollo > LECTURING: Animal, machine or something else entirely... 
+Apollo > POINTING: None hall stands in the way of Justice! 
+Tr: To be honest, most of Shadoon animals hardly resemble animals. 
+Tr: At least, not after all those changes. 
+Ap : It is by design of the ancients that these animals were imbued with the power of the Track! Ap : The very same power that us noble Seekers use to tackle our challenges! 
+C'tron > WORRIED: I don't know if you can call adding guns to birds as 'imbuing power'... 
+Lea > SMILE: ...
+
+Message 3
+Ap: It is true, <?> hexacast! Not every enemy is the creation of the Track. 
+Apollo > LECTURING: In fact, most cybernetic enemies are but the victims of evil experiments... 
+Apollo > POINTING: Performed by \c[1]humans\c[0]! 
+Lea > ASTONISHED: ...! 
+C'tron > SMILE: They have to be very smart to pull of animal \c[3]uplifting\c[0]. 
+C'tron > WORRIED: To bad that research never managed to get approval by ACF.
+Lea > SURPRISED_AWAY: Why?
+
+if plot.line < 40000
+    # Ignorance is bliss
+    C'tron > SMILE: Probably the same reason why \c[3]AGI\c[0] is frowned upon. 
+    Lea > NERVOUS: ...Why? 
+    C'tron > EMBARRASSED: If only I knew that, Lea. 
+    Lea > SAD: ... 
+else
+    # Compassionate from knowing
+    C'tron > SAD: Probably the same reason why \c[3]AGI\c[0] is frowned upon.
+    Lea > NERVOUS: ...Why? 
+    C'tron > TOWARD: <I`m sure it will change for the better.>
+    Lea > NOD_SAD: [nods]
+endif
+
+Apollo > PONDERING: ...
+Apollo > LECTURING: In any case, their facility is hidden somewhere on Shadoon. 
+Apollo > SHOUTING: Finding and stopping these unjust experiments is but one of our many duties as noble Seekers.
+
+Message 4 
+Tr : What about organic animals, like Shokats?
+Tr : Animals have to eat something, and originally, cats are carnivores. 
+C'tron > EMBARRASSED: Well... most fauna on Shadoon is, really. 
+Ap: To survive, inhabitants fight every day for their survival. Both other creatures and the track.
+Ap: At the end of the day, the most powerful ones emerge and feed on their defeated adversaries. (  that’s too dark  )
+Lea > SCARED: ...? 
+C'tron > SMUG: Don’t forget occasional dessert in form of a seeker...
+Lea > PANIC:  ...?!!
+
+# Message 5, 6 and 7 are in need of serious re-imagining and rewrite
+Message 5
+Tr :Question, Apollo. Operation Trackwalker existed for a long time, is it not? 
+Ap: Its true. For many years have humans tried to conquer the Track. 
+Tr: Then to be sustainable, the Track ecosystem must either be manually regulated by intelligent agent.
+Tr: Or there must be an established \c[3]food chain\c[0]. (Need check for common sense. I have no idea, how correct is that) 
+Tr: Usually that means that plant-eating animal is eaten by flesh-eating animal. ...
+Tr: I’m not certain there can be one, when every Shadoon creature appears to be an apex predator. (  ) 
+Ap: Even Seaflies? 
+Tr: Don’t remind me of those…
+
+Message 6    
+Tr: But let's take Shokats for example. They are a small game hunters blah blah blah. 
+Ap: But what about electric eels? They can shock stuff too! 
+Tr: Eels are actually knife fish. 
+Tr: They can do shock up to ten seconds 
+Tr: And like cats, they are a small game hunter 
+Tr: Shokats can do so much more frequently, but lets just say its the Track. 
+
+Message 7 
+Ap: Aren't electric eels able to kill humans too? 
+Tr: Yes, but they risk their own lives when doing charges. 
+Tr: 80% of their body is electricity generator. 
+Tr: And they need to be straight or do a U-turn to cause shock and avoid death. 
+Lea > SURPRISED_AWAY: Why? 
+Tr: Electricity goes from low potential to higher potential through the path of least resistance 
+Tr: Fun fact, if electric eels touch the target they are shocking, they are very likely to kill themselves.
+
+set cced.apollo-ctron-banter-finished true
