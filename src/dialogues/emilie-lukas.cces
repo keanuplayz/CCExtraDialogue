@@ -4,31 +4,31 @@ condition: party.aline.Emilie && party.alive.Schneider
 
 Message 1
 Lukas > DEFAULT: Been some time since we properly played together.
-Emilie > HAPPY: Oui! And I`m glad Lea is finally back! 
+Emilie > HAPPY: Oui! And I'm glad Lea is finally back! 
 Lea > SURPRISED: Wait Lea?
 #alternatives to “sleeping” are “offline” and “away”
 Lukas > EYES_CLOSED: Ja / Yap. We all took a break from CrossWorlds, while you were... sleeping.
-Emilienator > SMILE: Silly, you thought I`d play without you?
+Emilienator > SMILE: Silly, you thought I'd play without you?
 Lea > TOUCHED: Thanks...
 Lukas > SKEPTICAL: The game was also kind of out of content for us...
 Lukas > EYES_CLOSED: But \\c[3]you\\c[0] were the main reason.
 
 Message 2
 Emilie > EXHAUSTED: <Honestly, the waiting for first Sergey call was the worst.>
-Emilie > SAD: I couldn`t sleep properly for \\c[3]weeks\\c[0].
+Emilie > SAD: I couldn't sleep properly for \\c[3]weeks\\c[0].
 Lukas > WONDERING: You also had exams approaching at a time, right?
 Emilie > MOPING: Sacrebleu, who cares about stupid exams... 
-Lukas > LAUGH: Well, it`s good that everything turned out as it is, right?
-Emilie > EXCITED: Yeah! And now, since we`re all equally leveled, we can all kick ass together!
+Lukas > LAUGH: Well, it's good that everything turned out as it is, right?
+Emilie > EXCITED: Yeah! And now, since we're all equally leveled, we can all kick ass together!
 Lea > EXCITED: ...!!
 
 Message 3
-Emilie > AWAY <Why CrossWorlds uses so many instanced rooms if its an MMO? Doesn`t it like... defeat the purpose of MMO>
-Lukas > WONDERING: Sometimes I wonder about it myself. Wouldn`t it also be cheaper to use less instances?
-Emilie > SHRUG: Guess we`ll never know.
+Emilie > AWAY <Why CrossWorlds uses so many instanced rooms if its an MMO? Doesn't it like... defeat the purpose of MMO>
+Lukas > WONDERING: Sometimes I wonder about it myself. Wouldn't it also be cheaper to use less instances?
+Emilie > SHRUG: Guess we'll never know.
 
 Message 4
-Lukas > DEFAULT: By the way, how did you like \\c[3]that jumping puzzle\\c[0] in Gaia`s Garden?
+Lukas > DEFAULT: By the way, how did you like \\c[3]that jumping puzzle\\c[0] in Gaia's Garden?
 Emilie > EXHAUSTED: Mon Dieu, the jumping ones are bad already.
 Emilie > CURIOUS: Worse can only be those, where you have to hit switches on time.
 Lukas > UP: Or ones, where you have to escort a slowly traveling VRP.
@@ -39,7 +39,7 @@ Emilie > EXHAUSTED: Me neither.
 Message 5
 Emilie > EMBARRASSED: This reminds me. Most enemies in CrossWorlds are cool, but I hate the flying ones.
 Lukas > LAUGH: Yeah. They always keep flying away if you get to close and it turns into a waiting game for their special attack.
-Emilie > AWAY: Exactly. Sometimes it`s one last papagun that just keeps throwing bananas at you and refuses to go down.
+Emilie > AWAY: Exactly. Sometimes it's one last papagun that just keeps throwing bananas at you and refuses to go down.
 Lea > EXHAUSTED: ...
 Lukas > DEFAULT: They are actually melons, but I wholeheartedly agree with you. Kinda hard to land a solid swing at them.
 Emilie > WATCH_OUT_BADASS: At least Lea can take care of them with her ranged attacks.
@@ -50,12 +50,12 @@ Lukas > DEFAULT: Tasks are thrown between department, people are too incompetent
 Lukas > LAUGH: You know, business as usual.
 Emilie > CURIOUS: I wonder if Lea will also get a job.
 Le > SURPRISED_AWAY: How?
-Lukas > WONDERING: I`m sure Instatainment will find something for you to do.
+Lukas > WONDERING: I'm sure Instatainment will find something for you to do.
 
 Message 7
 Lukas > SHOCKED: Did someone just move in the bush?!
-Emilie > CURIOUS: You mean that grasshaired player, who`s been following us for a few hours?
-Emilie > SMILE: Oui, he`s \\c[3]creepy\\c[0].
+Emilie > CURIOUS: You mean that grasshaired player, who's been following us for a few hours?
+Emilie > SMILE: Oui, he's \\c[3]creepy\\c[0].
 Lukas > PANIC: \\c[1]Few hours\\c[0]?!
 Lea > SURPRISED_AWAY: ...?
 
