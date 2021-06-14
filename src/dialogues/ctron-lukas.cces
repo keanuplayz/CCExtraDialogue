@@ -21,7 +21,7 @@ Lukas > LAUGH: I just noticed you were reluctant to use some abilities, that's a
 Lea > SMILE: ...
 
 Message 3
-Lukas > DEFAULT: You lot didn't forget to spend your \\c[3]circuit points\\c[0], right?
+Lukas > DEFAULT: You lot didn't forget to spend your \c[3]circuit points\c[0], right?
 
 # Did a few hundred hedgehag loops
 if <player level> >= 80
@@ -41,10 +41,10 @@ else
 endif
 
 C'tron > SMILE: <Of course... kind of hard to forget it.>
-Lukas > SKEPTICAL: Well, then you surely have \\c[3]Divine Protection\\c[0] and its variants unlocked, Tronny. Give them a shot.
+Lukas > SKEPTICAL: Well, then you surely have \c[3]Divine Protection\c[0] and its variants unlocked, Tronny. Give them a shot.
 C'tron > SURPRISED: Is it like... protective... arts?
 Lukas > LAUGH:  Jap. Surprised you don't use them more often.   
-Lukas > TOWARDS: They are very good for \\c[3]level 1\\c[0] arts. Albert throws Them all the time.
+Lukas > TOWARDS: They are very good for \c[3]level 1\c[0] arts. Albert throws Them all the time.
 C'tron > EMBARRASSED:  Okay-dokey... <I'll see about it>.
 
 Message 4
@@ -56,7 +56,7 @@ Lea > WHISTLING: ...!
 # Better fix the tauthology / repetition in next two lines
 C'tron > SAD: <I also kind of... never used them before.>
 Lukas > LAUGH: <Oh well. Makes sense, if you've never used them before.>
-Lukas > DEFAULT: Don't worry about right elements. Just throw \\c[3]Sharpening Flames\\c[0] on me or Lea next time we get in a fight.
+Lukas > DEFAULT: Don't worry about right elements. Just throw \c[3]Sharpening Flames\c[0] on me or Lea next time we get in a fight.
 C'tron > EMBARRASSED: Sure, I'll try to remember that.
 
 Message 5
@@ -64,7 +64,7 @@ Lukas > COMPLAINING: \..\..\..Tronny.
 C'tron > EXHAUSTED: Right... sorry...
 C'tron > EMBARRASSED: I uh... I think, I just don't like protective arts.
 Lukas > SKEPTICAL: They give more than just resistances, mind you.
-Lukas > DEFAULT: For example, one of the effects of \\c[3]Heat\\c[0] variant is a significant increase to \\c[3]attack\\c[0] stat.
+Lukas > DEFAULT: For example, one of the effects of \c[3]Heat\c[0] variant is a significant increase to \c[3]attack\c[0] stat.
 Lea > ASTONISHED: ...!
 Lukas > WINK: I think, Lea would really appreciate it if you used this buff on her. Bigger numbers never hurt.
 Lea > EXCITED: Lea!

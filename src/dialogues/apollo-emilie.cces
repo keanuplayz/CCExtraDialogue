@@ -20,7 +20,7 @@ Apollo > SUSPICIOUS But if I was forced to... hmmm...
 #Tribladers are a Melee-oriented class, analogous to Fighters in a traditional class system. Their combat style focuses heavily on melee combos and multi-target melee slashes. They are also able to use Balls, which are despite the name shaped like small daggers, and somehow still bounce off walls. Their stats are reasonably balanced, although they tend to have slightly higher Attack. Their weapon of choice is the sword.
 #All tribladers wear triangle shoulders and use the color green in their clothes.
 Message 3
-Emilie > DEFAULT How about a \\c[3]Triblader\\c[0]?
+Emilie > DEFAULT How about a \c[3]Triblader\c[0]?
 Apollo > SHOUTING Tribladers are too straightforward. While their stats are balanced, their ranged capabilities are only good for puzzles.
 Apollo > POINTING If you are a Triblader, all you have to do is rush in and swing your sword. No strategy, positioning or thinking required!
 Emilie > CURIOUS But you like honorable things and stuff. Tribladers use swords, and these are weapons of knights. Aren't knights like... very noble and honorable?
@@ -35,7 +35,7 @@ Lea > EXHAUSTED ...
 #The Stats of Quadroguards are not directly mentioned, but it is likely that they have high Defense and Health when compared to other classes. Their weapon of choice is a mace, which is typically wielded in combination with a shield.
 #Most quadroguards wear square shaped horns in the chin and use the color blue in their clothes.
 Message 4
-Emilie > DETERMINED Okay, then how about \\c[3]Quadroguard\\c[0]. Protecting your friends is very noble?
+Emilie > DETERMINED Okay, then how about \c[3]Quadroguard\c[0]. Protecting your friends is very noble?
 Apollo > DEFAULT The Quadroguards put their lives on the line to take the blows and protect their team.
 Apollo > LECTURING A truly honorable class, that almost rivals the Spheromancer.
 Emilie > SMILE Oui! A team of a Quadroguard and Pentafist sounds good. Right, Lea? 
@@ -56,7 +56,7 @@ Apollo > CONTENT But we have Joern for that, so that's a no.
 #The Pentafist is a rather difficult class to master, but its flashy appearance makes it very popular among new players, leading experienced players to be very skeptical about the proficiency of newbie Pentafists.
 #All Pentafist characters carry feather-like metal pieces on their ear and use the color orange in their clothes.
 Message 5
-Emilie > DETERMINED What about \\c[3]Pentafist\\c[0], huh?
+Emilie > DETERMINED What about \c[3]Pentafist\c[0], huh?
 Apollo > LECTURING I would never pick them.
 Apollo > POINTING Just like tribladers, Pentafists are all about attacking as fast as you can without thinking.
 Apollo > SHOUTING Unlike tribladers, it's the only thing Pentafists are good at. They have no range, no damage and have to rely on luck because of this focus on... focus.
@@ -65,7 +65,7 @@ Apollo > MOPING Because of their flashy appearance... Almost every new player pi
 Apollo > ANGRY In the end, it throws even more shade on those, who actually put effort into honing their skills.
 Apollo > CONTENT Pentafists are also terrible for dueling, as duels are less about who is more skilled, than who gets the first hit in.
 Emilie > EXHAUSTED I could say the same about your duels with Lea.
-Apollo > CONTENT  <Why, it may look like it to you, but the truth is every move of our fights but a result of a calculated \\c[3]mindgame\\c[0]. We fight not with our fists, but our \\c[3]minds\\c[0]. Strategy over stats.>
+Apollo > CONTENT  <Why, it may look like it to you, but the truth is every move of our fights but a result of a calculated \c[3]mindgame\c[0]. We fight not with our fists, but our \c[3]minds\c[0]. Strategy over stats.>
 Lea > SHAKE [shakes head]
 Emilie > SMILE Suuuuuuuure thing, grasshead.
 
@@ -76,7 +76,7 @@ Emilie > SMILE Suuuuuuuure thing, grasshead.
 #Hexacasts wear very light, clothing-like armor, and throw hexagon-shaped VRP. As their combat style is highly range-based, they are the only class not known to have a weapon of choice.
 #All Hexacast characters carry a hexagon shaped earring and use the color purple in their clothes.
 Message 6
-Emilie > DETERMINED This leaves us with \\c[3]Hexacast\\c[0].
+Emilie > DETERMINED This leaves us with \c[3]Hexacast\c[0].
 Apollo: Hexacasts specialize in keeping their distance and attacking enemies from afar, while lacking in health and melee damage.
 Em: <Isn't Albert a Hexacast, who prefers melee combat?>
 Lea > THINKING ...
@@ -91,7 +91,7 @@ Message 7
 Emilie > WATCH_OUT_BADASS You still haven't answered the question, grasshead.
 Apollo > MOPING Without spheromancer class, I'd rather play something else.
 Emilie > ASTONISHED Really?! Like what?
-Apollo > LECTURING I don't know... Maybe \\c[3]For Justice! / CrossWay Fighter \\c[0].
+Apollo > LECTURING I don't know... Maybe \c[3]For Justice! / CrossWay Fighter \c[0].
 Emilie > HAPPY Oooooooh~, I like that one!
 Apollo > SUSPICIOUS You play fighting games?
 Emilie > DETERMINED Oui! Try me and I'll beat you every time.

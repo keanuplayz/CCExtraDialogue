@@ -78,25 +78,25 @@ Joern > SMILE: I like buying trinkets.
 condition: party.alive.Glasses && party.alive.Joern && area.heat-area.isCurrent
 
 Message 1
-Joern > DEFAULT: I don't like the \\c[3]Maroon Valley\\c[0]. 
+Joern > DEFAULT: I don't like the \c[3]Maroon Valley\c[0]. 
 Joern > ANGRY: Its to bright, sand gets everywhere and its also very hot. I'm sweating buckets right now. 
 Joern > DEFAULT: Why would they do it like that?
-C'tron > TOWARD: Some folks prefer the environment to be \\c[3]realistic\\c[0]. Otherwise they can't get into the game.
-C'tron > SMILE: Fortunately, \\c[3]personal temperature settings\\c[0] are highly customisable.
+C'tron > TOWARD: Some folks prefer the environment to be \c[3]realistic\c[0]. Otherwise they can't get into the game.
+C'tron > SMILE: Fortunately, \c[3]personal temperature settings\c[0] are highly customisable.
 
 if plot.line >= 40000
-    C'tron > WORRIED: To bad evotars can't access them, just like the \\c[3]looks menu\\c[0].
+    C'tron > WORRIED: To bad evotars can't access them, just like the \c[3]looks menu\c[0].
     C'Tron > EMBARRASSED: At least we get somewhat bearable settings by default. 
     Lea > EXHAUSTED: ...!!
 endif
 
-Joern > UP: There are \\c[3]personal temperature settings\\c[0]?
+Joern > UP: There are \c[3]personal temperature settings\c[0]?
 Joern > SURPRISED: ...
 
 set cced.ctron-joern-location-banters + 1
 
 Message 2
-Joern > DEFAULT: It says \\c[1]'Realistic Immersion Preset'\\c[0]. 
+Joern > DEFAULT: It says \c[1]'Realistic Immersion Preset'\c[0]. 
 Joern > SARCASTIC: Think, I'll lower it a little.
 C'tron > BLANK: Don't tell me you've played all this time with realistic temperature.
 Joern > DEFAULT: ...

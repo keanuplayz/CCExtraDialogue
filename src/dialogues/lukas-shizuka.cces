@@ -28,7 +28,7 @@ else
     Shizuka > SMUG: Thought as much.
 endif
 
-Lukas > LAUGH: \\c[3]Lea Sakai\\c[0]. Has a ring to it!
+Lukas > LAUGH: \c[3]Lea Sakai\c[0]. Has a ring to it!
 
 set cced.lea-sakai-sisterhood-dialogue true
 
@@ -79,7 +79,7 @@ Shizuka > DEFAULT:  As far as I am aware, yes.
 Lukas > WONDERING: Then I wonder, why you two look similar, but are not identical, like me and Luke.
 Shizuka > BRIGHT: Someone took courtesy to give her a new haircut before first awakening.
 Lea > SURPRISED: Who?
-Shizuka > SMUG: Take a guess. There were three of us back in a day. \\c[3]Me\\c[0], \\c[3]Satoshi\\c[0] and \\c[3]Gautham\\c[0].
+Shizuka > SMUG: Take a guess. There were three of us back in a day. \c[3]Me\c[0], \c[3]Satoshi\c[0] and \c[3]Gautham\c[0].
 Lea > THINKING ...
 
 Message 6
@@ -91,7 +91,7 @@ Lukas > TOWARDS: Your chest is smaller.
 Lukas > LAUGH: And I don't need a ruler for that one.
 Lea > SMUG: ...!
 Shizuka > SURPRISED: ...
-Shizuka > SHOUT: \\c[1]You what?!!\\c[0]
+Shizuka > SHOUT: \c[1]You what?!!\c[0]
 
 Message 7
 Shizuka > SARCASTIC: I am actually impressed.

@@ -71,7 +71,7 @@ Lukas > DEFAULT: About time for gear upgrade! Let's go cut some things.
 Message 2
 Lukas > LAUGH: Bought myself new gear! So glad it doesn't cost real money.
 Message 3
-Lukas > WINK: Got new gear! Wanna run a \\c[3]Team Cup\\c[0] to test it out?
+Lukas > WINK: Got new gear! Wanna run a \c[3]Team Cup\c[0] to test it out?
 
 == luke-character-equip ==
 Message 1
@@ -79,7 +79,7 @@ Luke > DEFAULT: About time for gear upgrade. I was itching for a change.
 Message 2
 Luke > WORRIED: Frankly, I could use a change in appearance. Too bad it's not available to us.
 Message 3
-Luke > WONDERING: Got new gear. Let's run a \\c[3]Team Cup\\c[0] to test it out?
+Luke > WONDERING: Got new gear. Let's run a \c[3]Team Cup\c[0] to test it out?
 
 == shizuka-character-equip ==
 Message 1
