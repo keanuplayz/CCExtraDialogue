@@ -1,33 +1,43 @@
 # Joern comments on the landscapes of CrossWorlds.  
-
+# Note: Secret 'Detective Joern' dialogue is unlocked after at least 1 message in every location instead of 'all messages'
+# This is intended because not every region gets more than one message and its not obvious when you are done with them.
 
 == ctron-joern-battle-over-rise-cced ==
 condition: party.alive.Glasses && party.alive.Joern && area.autumn-area.isCurrent
 
 Message 1
-Lea > SURPRISED_AWAY: ...?
+Joern > DEFAULT: So peaceful in here.
+Joern > TOWARD: When we don't kill everything in sight.
+Lea > SMUG: ...!
+C'tron > SURPRISED: Its a very pleasant area to return to for sure.
+C'tron > SMILE: Maybe my favorite out of all we've been to.
 
-#J-So peaceful in here.
-#Joern > ANGRY: When we don't kill animals.
-#Lea > SMUG: ...
-#Tr-Its very pleasant area to return to for sure.
-#Tr-Maybe my favorite out of all we've been to.
-#Lea > NOD: [nods]
-#???
+if plot.line >= 40000
+    Joern > DEFAULT: And a nice place for your home.
+endif
+
+Lea > NOD: [nods]
 
 set cced.ctron-joern-location-banters + 1
 
-
+Message 2
+Joern > DEFAULT: We should go on a picnic someday.
+C'tron > EMBARRASSED: Agreed. Just need to find a place without too many players.
+C'tron > SURPRISED: I bet Lea knows a few quiet spots in Autumns Rise, right?
+Lea > NOD_HAPPY: Lea!
+Joern > SMILE: Picnic shopping.
 
 == ctron-joern-battle-over-fall-cced ==
 condition: party.alive.Glasses && party.alive.Joern && area.autumn-fall.isCurrent
 
 Message 1
-Lea > SURPRISED_AWAY: ...?
-
-#J-All this ruins
-#Tr-Overgrown shadows of civilization, taken back by nature.
-#Tr-Its very romanticising sight. 
+Joern > AWWW: Seeing all this ruins is so sad.
+C'tron > DEFAULT: Shadows of civilization long forgotten, taken back by forces of nature.
+C'tron > DOWN: Every concrete jungle built by intelligent life will eventually be abandoned, doomed to break down under the elements.
+C'tron > AWESOME: And when it does, in a few years, landscape inevitably changes back to how it was intended to be.
+C'tron > AWESOME: Lush, green and full of life.
+Lea > SURPRISED: ...
+Joern > AWWW: Why do you have to be so straightforward?
 
 set cced.ctron-joern-location-banters + 1
 
@@ -37,11 +47,30 @@ set cced.ctron-joern-location-banters + 1
 condition: party.alive.Glasses && party.alive.Joern && area.bergen-trails.isCurrent
 
 Message 1
-Lea > SURPRISED_AWAY: ...?
-
-# ???
+Joern > DEFAULT: Bergen Trail is nice. A bit chilly.
+Joern > DEFAULT: Reminds me of hiking we did with Polly.
+C'tron > DEFAULT: You two hike a lot?
+Joern > DEFAULT: Sometimes. I like mountains.
+Lea > SURPRISED_TOWARD: Why?
+Joern > SMILE: The best view comes after the hardest climb.
+Lea > EXCITED: ...!
+C'tron > EMBARRASSED: That's a nice quote.
 
 set cced.ctron-joern-location-banters + 1
+
+Message 2
+Joern > DEFAULT: There is one more reason.
+Joern > DEFAULT: Every hiking trail has something special at the end...
+if plot.line < 40000
+    Lea > EXCITED: ...?!
+endif
+if plot.line >= 40000
+    Lea > EXCITED: What?!
+endif
+
+Joern > SARCASTIC: Souvenir shops.
+Lea > ANNOYED: ...
+Joern > SMILE: I like buying trinkets.
 
 
 
@@ -49,32 +78,31 @@ set cced.ctron-joern-location-banters + 1
 condition: party.alive.Glasses && party.alive.Joern && area.heat-area.isCurrent
 
 Message 1
-Lea > SURPRISED_AWAY: ...?
+Joern > DEFAULT: I don't like the \\c[3]Maroon Valley\\c[0]. 
+Joern > ANGRY: Its to bright, sand gets everywhere and its also very hot. I'm sweating buckets right now. 
+Joern > DEFAULT: Why would they do it like that?
+C'tron > TOWARD: Some folks prefer the environment to be \\c[3]realistic\\c[0]. Otherwise they can't get into the game.
+C'tron > SMILE: Fortunately, \\c[3]personal temperature settings\\c[0] are highly customisable.
 
-#J-I dont like the desert. 
-#J-Its to bloomy, sandy and is very hot. I'm sweating buckets right now. 
-#J-Its immersive, but also very uncomfortable. Why would they do it like that?
-#Tr-Some folks prefer it to be \\c[3]realistic\\c[0]. Otherwise they can't forget that its a game.
-#Tr-Fortunately, \\c[3]personal temperature settings\\c[0] are highly customisable.
-#if plot.line >= 40000
-#C'Tron > EMBARRASSED: I'm also happy that evotars use somewhat bearable settings by default. 
-#Lea > EXHAUSTED: ...!!
-#endif
-#J-There are \\c[3]personal temperature settings\\c[0]?
-#J-...Oh.
+if plot.line >= 40000
+    C'tron > WORRIED: To bad evotars can't access them, just like the \\c[3]looks menu\\c[0].
+    C'Tron > EMBARRASSED: At least we get somewhat bearable settings by default. 
+    Lea > EXHAUSTED: ...!!
+endif
+
+Joern > UP: There are \\c[3]personal temperature settings\\c[0]?
+Joern > SURPRISED: ...
 
 set cced.ctron-joern-location-banters + 1
 
 Message 2
-Lea > SURPRISED_AWAY: ...?
-
-#J-Hmmm, it says \\c[3]'Realistic Immersion Preset'\\c[0]. 
-#J-I think, I'll lower it a little.
-#Tr > SHOCKED: Don't tell me you've played all this time with enabled realistic temperature.
-#J > DEFAULT: ...
-#Lea > SCARED: ...!
-#Tr > PANIC: Oh no...
-#J > SMILE: ...
+Joern > DEFAULT: It says \\c[1]'Realistic Immersion Preset'\\c[0]. 
+Joern > SARCASTIC: Think, I'll lower it a little.
+C'tron > BLANK: Don't tell me you've played all this time with realistic temperature.
+Joern > DEFAULT: ...
+Lea > SCARED: ...!
+C'tron > PANIC: Oh no...
+Joern > SMILE: ...
 
 
 
@@ -82,9 +110,12 @@ Lea > SURPRISED_AWAY: ...?
 condition: party.alive.Glasses && party.alive.Joern && area.jungle.isCurrent
 
 Message 1
-Lea > SURPRISED_AWAY: ...?
-
-# ???
+C'tron > DEFAULT: Instatainment nailed the image of a real jungle. Excluding the animals, of course.
+C'tron > SURPRISED: Its very humid, lush with green and full of difficult terrain.
+C'tron > EMBARRASSED: Although, I'd like it to a bit more straightforward... and smaller, I guess.
+Joern > DEFAULT: There are no shortcuts to any place worth going, Tronny.
+Lea > ASTONISHED: ...!
+C'tron > EMBARRASSED: Yeah... you're right on that one.
 
 set cced.ctron-joern-location-banters + 1
 
@@ -102,6 +133,7 @@ set cced.ctron-joern-location-banters + 1
 #Tr-This will destroy all plants because photosynthesis
 #J-Relax, Tronny. 
 #Joern > <EXTRA_?>EYES_CLOSED: Relax.
+
 
 
 == ctron-joern-battle-over-azure-cced ==
