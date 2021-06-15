@@ -27,6 +27,8 @@ C'tron > SURPRISED: I bet Lea knows a few quiet spots in Autumns Rise, right?
 Lea > NOD_HAPPY: Lea!
 Joern > SMILE: Picnic shopping.
 
+
+
 == ctron-joern-battle-over-fall-cced ==
 condition: party.alive.Glasses && party.alive.Joern && area.autumn-fall.isCurrent
 
@@ -47,11 +49,11 @@ set cced.ctron-joern-location-banters + 1
 condition: party.alive.Glasses && party.alive.Joern && area.bergen-trails.isCurrent
 
 Message 1
-Joern > DEFAULT: Bergen Trail is nice. A bit chilly.
-Joern > DEFAULT: Reminds me of hiking we did with Polly.
+Joern > DEFAULT: \c[3]Bergen Trail\c[0] is nice. Fresh and chilly.
+Joern > DEFAULT: Reminds me our hiking with Polly.
 C'tron > DEFAULT: You two hike a lot?
 Joern > DEFAULT: Sometimes. I like mountains.
-Lea > SURPRISED_TOWARD: Why?
+Lea > EXTRA_LIGHT_SMILE: Why?
 Joern > SMILE: The best view comes after the hardest climb.
 Lea > EXCITED: ...!
 C'tron > EMBARRASSED: That's a nice quote.
@@ -68,7 +70,7 @@ if plot.line >= 40000
     Lea > EXCITED: What?!
 endif
 
-Joern > SARCASTIC: Souvenir shops.
+Joern > DEFAULT: Souvenir shops.
 Lea > ANNOYED: ...
 Joern > SMILE: I like buying trinkets.
 
@@ -86,9 +88,10 @@ C'tron > SMILE: Fortunately, \c[3]personal temperature settings\c[0] are highly 
 
 if plot.line >= 40000
     C'tron > WORRIED: To bad evotars can't access them, just like the \c[3]looks menu\c[0].
-    C'Tron > EMBARRASSED: At least we get somewhat bearable settings by default. 
     Lea > EXHAUSTED: ...!!
-endif
+    C'Tron > EMBARRASSED: At least we get somewhat bearable settings by default, right?
+    Lea > NOD: [nods] 
+endif 
 
 Joern > UP: There are \c[3]personal temperature settings\c[0]?
 Joern > SURPRISED: ...
@@ -112,7 +115,7 @@ condition: party.alive.Glasses && party.alive.Joern && area.jungle.isCurrent
 Message 1
 C'tron > DEFAULT: Instatainment nailed the image of a real jungle. Excluding the animals, of course.
 C'tron > SURPRISED: Its very humid, lush with green and full of difficult terrain.
-C'tron > EMBARRASSED: Although, I'd like it to a bit more straightforward... and smaller, I guess.
+C'tron > EMBARRASSED: Although, I'd like it to be a bit more straightforward... and smaller, I guess.
 Joern > DEFAULT: There are no shortcuts to any place worth going, Tronny.
 Lea > ASTONISHED: ...!
 C'tron > EMBARRASSED: Yeah... you're right on that one.
@@ -127,12 +130,27 @@ condition: party.alive.Glasses && party.alive.Joern && area.forest.isCurrent
 Message 1
 Lea > SURPRISED_AWAY: ...?
 
+Joern > DEFAULT: Can't find places like \c[3]Sapphire Ridge\c[0] back home.
+Joern > SMILE: I thinking of meditation break under some tree.
+C'tron > DEFAULT: Perpetual dusk, while not unheard of, is a very rare <planetary behavior>.
+C'tron > SURPRISED: For that to be natural, Raritan Gem must have synchronous rotation with the star.
+C'tron > WORRIED: Can't be the case. The climate would be way different even after \c[3]terraforming\c[0].
+Joern > SMILE: Relax and enjoy the atmosphere, Tronny.
+
 set cced.ctron-joern-location-banters + 1
 
-#J-Very gloomy and tranquil. Very relaxing.
-#Tr-This will destroy all plants because photosynthesis
-#J-Relax, Tronny. 
-#Joern > <EXTRA_?>EYES_CLOSED: Relax.
+Message 2
+# Crackpot theories time
+C'tron > THOUGHTFUL: <Thinking about it, orbiting around gas giant may result in Raritan Gem's being hidden from the star behind parental gas giant.>
+C'tron > WORRIED: No way it has \c[3]synchronous rotation\c[0], \c[3]geostatic orbit\c[0] and \c[3]habitable atmosphere and gravity\c[0] at the same time.
+C'tron > WORRIED: This is way to many coincidences.
+Joern > SARCASTIC: ...
+Lea > EXHAUSTED: ...
+C'tron > BLANK: And if there are so many instanced rooms for every player...
+C'tron > PANIC: Its not only water or light... \c[1]entire planet must be simulated\c[0]!
+Joern > SMILE: Relax, Tronny.
+Joern > EXTRA_TRANQUIL: Relax.
+Lea > SLEEPING: ...
 
 
 
@@ -140,16 +158,17 @@ set cced.ctron-joern-location-banters + 1
 condition: party.alive.Glasses && party.alive.Joern && area.beach.isCurrent
 
 Message 1
-Lea > SURPRISED_AWAY: ...?
-
-#J-So nice they added in a beach area
-#J-Sea breeze is so refreshing
-#Tr-Did you know that sand on beaches is a direct result of the constant erosion of rock in the sea?
-#Tr-They also appear empty, but underneath the sand there is actually a wealth of interesting animal life.
-#Lea > AStONISHED: Who?
-#Tr-Mostly different variations of sand crabs and clams and worms.
-#Joern > SMILE: Tasty.
-#Lea > SCARED: ...?!
+Joern > DEFAULT: This beach area is pretty.
+Joern > SMILE: Now, you two go on vacation too.
+Lea > SMILE: ...
+C'tron > EMBARRASSED: I guess. Something is better than nothing, right?
+Joern > TOWARD: It's way more clean than the one we've been too.
+C'tron > AWESOME: Did you know that food leftovers from tourists are an important part of some beach ecosystems?
+C'tron > EMBARRASSED: Although these cases are far and between and don't have that many species.
+Lea > ASTONISHED: Who?
+C'tron > SMILE: Mostly different variations of sand crabs and worms.
+Joern > SMILE: Tasty.
+Lea > DISGUSTED: ...!
 
 set cced.ctron-joern-location-banters + 1
 
