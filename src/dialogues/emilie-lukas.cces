@@ -1,6 +1,6 @@
 == emilie+lukas-battle-over-cced ==
 
-condition: party.aline.Emilie && party.alive.Schneider
+condition: party.alive.Emilie && party.alive.Schneider
 
 Message 1
 Lukas > DEFAULT: Been some time since we properly played together.
