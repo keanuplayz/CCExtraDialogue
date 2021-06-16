@@ -13,3 +13,25 @@ Lea > NOD: [nods]
 
 
 Event 2:
+Shizuka > TOWARD: I'm curious... what did you mean by "we fight the same"?
+Joern > SURPRISED: Hmm?
+Shizuka > CONFLICTED: Like... How do Lea and I fight the same way?
+Joern > SMILE: You both have the same general "movements" in combat. #to-do - this line probably needs to be reworked
+Joern > UP: Along with that, you two can be a little... aggressive. 
+if newgame.sergey-hax
+    Shizuka > SARCASTIC: By "aggressive", I assume you mean \c[1]one-shotting pretty much every enemy?
+    Lea > INSANE_DOWN: \c[1]...!
+    Shizuka > SARCASTIC: ...because if you're referring to \c[1]that\c[0], it only applies to one of us.
+    Joern > SARCASTIC: No, not that...
+    Shizuka > FUNNY_SMILE: Even with your \c[1]insane damage\c[0], I guess I can see some similarities. 
+else
+    Shizuka > CONCERNED: Well... I guess I see what you mean.
+    Shizuka > DENYING: Remember our duel, Lea?
+    Lea > PAIN_EYE_CLOSED: ...
+    Lea > NOD: [nods]
+    Shizuka > SMUG: You used my some of my favorite tricks against me! # probably workshop this one.
+    if plot.shizuka.cupGot
+        Shizuka > EVIL_GRIN: I can't wait for a rematch, Lea.
+    endif
+endif
+Shizuka > DEFAULT: Maybe you and I really are more alike than I realize...
