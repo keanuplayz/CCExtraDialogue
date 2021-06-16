@@ -2,6 +2,15 @@
 # Note: Secret 'Detective Joern' dialogue is unlocked after at least 1 message in every location instead of 'all messages'
 # This is intended because not every region gets more than one message and its not obvious when you are done with them.
 
+#Revision notes
+#1--- About tidal lock
+#A moon with water orbiting a gas giant would most likely cause enormous shifts in sea level depending on how the planet is oriented, 
+# and considering the water sensitivity of instant #matter it'd make places like the archipelago and rhombus city very stupid projects
+#2--
+# About synchronous rotation in relation to star
+# the disastrous consequences that (SyncRotation) would have on the environment, 
+# particularly the temperatures (which C'tron hinted at upon arriving in Sapphire Ridge).
+
 == ctron-joern-battle-over-rise-cced ==
 condition: party.alive.Glasses && party.alive.Joern && area.autumn-area.isCurrent
 
