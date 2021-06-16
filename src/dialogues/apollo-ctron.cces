@@ -6,19 +6,21 @@ condition: party.alive.Apollo && party.alive.Glasses
 
 Message 1  
 Apollo > CONTENT: The justice has been served once again! 
-C'tron > WORRIED: If you call murdering a bunch of animals justice... 
-Ap: We must face each and every obstacle the Track puts in our way! 
-Ap: It is our duty as Seekers! 
-Ap: Even if our hearts tell us otherwise, the path of Justice is true! 
-C'tron > EMBARRASSED: Urgh, okay... I guess? 
+C'tron > WORRIED: If you call murdering a bunch of animals - justice... 
+Apollo > DOWN: We must face each and every obstacle the Track puts in our way! 
+Apollo > LECTURING: Even if our hearts tell us otherwise, the path of Justice is true! 
+Apollo > POINTING: It is our duty as Seekers!
+C'tron > EMBARRASSED: Umm, okay...
 
 Message 2 
-Apollo > CONTENT: Our enemies are vanquished once again! (  ) 
+Apollo > CONTENT: Our enemies are vanquished once again!
+Lea > PROUD: ...!
 Apollo > LECTURING: Animal, machine or something else entirely... 
-Apollo > POINTING: None hall stands in the way of Justice! 
-Tr: To be honest, most of Shadoon animals hardly resemble animals. 
-Tr: At least, not after all those changes. 
-Ap : It is by design of the ancients that these animals were imbued with the power of the Track! Ap : The very same power that us noble Seekers use to tackle our challenges! 
+Apollo > POINTING: None shall stands in the way of Justice! 
+C'tron > TOWARD: To be honest, most of Shadoon animals hardly resemble animals. 
+C'tron > EXHAUSTED:  At least, not after all those changes. 
+Apollo > DEFAULT:  It is by design of the ancients that these animals were imbued with the power of the Track! 
+Apollo > DEFAULT: The very same power that us noble Seekers use to tackle our challenges! 
 C'tron > WORRIED: I don't know if you can call adding guns to birds as 'imbuing power'... 
 Lea > SMILE: ...
 
@@ -41,7 +43,7 @@ else
     # Compassionate from knowing
     C'tron > SAD: Probably the same reason why \c[3]AGI\c[0] is frowned upon.
     Lea > NERVOUS: ...Why? 
-    C'tron > TOWARD: <I`m sure it will change for the better.>
+    C'tron > TOWARD: <I'm sure it will change for the better.>
     Lea > NOD_SAD: [nods]
 endif
 
