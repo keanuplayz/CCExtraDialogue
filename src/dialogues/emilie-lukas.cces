@@ -49,14 +49,28 @@ Emilie > AWAY: How is your job, Lukas?
 Lukas > DEFAULT: Tasks are thrown between department, people are too incompetent on their position and the boss always asks for yet another change.
 Lukas > LAUGH: You know, business as usual.
 Emilie > CURIOUS: I wonder if Lea will also get a job.
-Le > SURPRISED_AWAY: How?
+Lea > SURPRISED_AWAY: How?
 Lukas > WONDERING: I'm sure Instatainment will find something for you to do.
-
-Message 7
-Lukas > SHOCKED: Did someone just move in the bush?!
-Emilie > CURIOUS: You mean that grasshaired player, who's been following us for a few hours?
-Emilie > SMILE: Oui, he's \c[3]creepy\c[0].
-Lukas > PANIC: \c[1]Few hours\c[0]?!
-Lea > SURPRISED_AWAY: ...?
+Lukas > WINK: Play-testing new content?
+Emilie > CURIOUS: Like an early access?
+Lea > EXCITED: ...!
+Lukas > WINK: Knowing Instatainment, its gonna be one hell of a \c[3]Long Early Access\c[0].
+Lukas > WINK: Evotar-exclusive, of course.
+Emilie > MOPING: Not fair! She can't even spoil it! 
+Lea > WHISTLING: ...!
 
 set cced.emilie-lukas-banter-finished true
+
+Message 10
+Lukas > SHOCKED: Did someone just move in that bush?!
+Emilie > CURIOUS: You mean the grassheaded player, who's been following us for a few hours?
+Emilie > SMILE: Oui, he's \c[3]creepy\c[0].
+Lukas > PANIC: \c[1]Few hours\c[0]?!
+Lea > SURPRISED_TOWARD: ...?
+Lea > SURPRISED_AWAY: ...?
+
+if plot.line >= 40000
+    Lea > SURPRISED: What? Where?
+else
+    Lea > SURPRISED: Hi?
+endif
