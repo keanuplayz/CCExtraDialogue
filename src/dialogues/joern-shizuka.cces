@@ -1,0 +1,15 @@
+# by el2020
+== joern-shizuka-battle-over-cced ==
+condition: party.alive.Joern && party.alive.Shizuka && plot.line >= 40000
+
+Event 1
+Joern > SMILE: That was a fun battle. #to-do - workshop this line.
+Shizuka > INNOCENT: Uhmm... Yeah, it was.
+Joern > TOWARD: You two really do fight the same. #to-do - and this one
+Lea > SURPRISED_TOWARD: ...?
+Shizuka > FUNNY_SMILE: I mean...\. it makes sense.
+Shizuka > SMUG: She is my copy, after all.
+Lea > NOD: [nods]
+
+
+Event 2:
