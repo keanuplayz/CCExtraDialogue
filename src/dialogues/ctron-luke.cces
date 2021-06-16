@@ -1,0 +1,14 @@
+# Discussion of what would Evotars even do, while being stuck in a CrossWorlds: Music, Painting, Filmmaking, Being an actor (not for mute girl though), Arena Superstar, PVP tournaments champion etc.
+# Evotars Trio. Shenanigans are inbound. This dialogue has large potential and must be a killer. 
+
+== ctron+luke-battle-over-cced ==
+
+condition: party.alive.Glasses && party.alive.Schneider && plot.line >= 40000
+
+Message 1
+Luke > TOWARDS: A party with 3 Evotars.\. Pretty neat, huh?
+C'tron > THOUGHTFUL: Now that you mention it.\. We may be in fact be the first party of evotars playing together.
+Luke > LAUGH: <?>
+#???
+
+set cced.ctron-luke-banter-finished true
