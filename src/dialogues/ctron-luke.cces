@@ -42,10 +42,8 @@ Luke > WONDERING: Would be rather expensive though, no?
 C'tron > THOUGHTFUL: That's true. We are also rather limited in our ability to interact with real world.
 
 Message 5
-C'tron >
-C'tron > TOWARD: 
-C'tron > THOUGHTFUL: With some properly designed equipment, this limitation may be alleviated. # There is a better word for it
-Luke > SURPRISED: You mean like... exoskeletons?
+C'tron > THOUGHTFUL: If we can get some properly designed equipment...\. this limitation may be alleviated. # There is a better word for it
+Luke > SURPRISED: You mean like...\. \c[3]exoskeletons\c[0]?
 C'tron > SMILE: Exactly! They can protect us from water and provide enough power to physically interact with real world.
 Lea > ASTONISHED: ...!!
 # Just rephrase it so average person understands
@@ -78,9 +76,51 @@ C'tron > SMILE: There is also little reason to build any murder-bots in this day
 C'tron > EXHAUSTED: At least, I hope so.
  
 Message 7
-#Ctron: Still, its cool but that's at least a few years if not decades away.
-#Luke: Seems like plenty of time for some other things we can already do while staying in CrossWorlds
-#Lea: What?
-# expand upon what's said in the very first comment
+C'tron > WORRIED: We're probably decades away from Instatainment even having a discussion about us leaving CrossWorlds.
+C'tron > WORRIED: In the meanwhile, we're stuck learning public speaking.
+Lea > SURPRISED: ...?!
+Luke > EYES_CLOSED: Seems like plenty of time to learn some new skills and hobbies.
+Lea > SURPRISED_TOWARD: What?
+Luke > WONDERING: \c[3]Painting\c[0] may be a start.
+Luke > DEFAULT: They got a \c[3]whole computer\c[0] for Satoshi. I don't see, why we can't get us something similar for drawing.
+C'tron > EMBARRASSED: <I couldn't get a round circle, even if I tried.> 
+Lea > THINKING: ...?
+
+Message 8
+Luke > DEFAULT: How about some \c[3]old-school music\c[0]? Just straight <jam>, without all these fancy toys.
+Lea > SURPRISED: ...!
+Lea > EXCITED: Lea!!
+Luke > LAUGH: See? Not everything is as hopeless.
+Luke > WINK: Just imagine.\. Lea, <jamming> on sax in some Basin Keep jazz club. # - Tautology with first line
+Lea > CHARMED: ...
+Luke > WINK: A limo rolls to the the entrance lit by nightly lamp posts.\. Driver opens the back door and..\s[0]
+C'tron > EMBARRASSED: I am more of a writing person to be honest.
+Luke > PISSED: ...
+C'tron > SMILE: But you're correct. Almost every creative work is available to us even with current limitations.
+C'tron > AWESOME: Maybe I'll finally start writing a story I've always dreamed about.
+
+Message 9
+Luke > DEFAULT: Just remembered something from bashing all these mobs.
+Luke > TOWARDS: Some people actually make money from performing various challenges in Rhombus Arena.
+C'tron > TOWARD: Challenges?
+Luke > DEFAULT: Yeah. They are very experienced players and go above and beyond in difficulty.
+Luke > TOWARDS: like \c[3]No Hit Rush Modes\c[0] or \c[3]Slippery floor\c[0], like in that Bergen dungeon.
+Luke > LAUGH: Or both of these together.
+C'tron > EXHAUSTED: Sounds like a recipe for insanity.
+Luke > LAUGH: Sure is. They also go for flashiness instead of just making it through.
+Luke > WINK: I think, it may be something that Lea could get very good at.
+Lea > PROUD: Lea!!
+
+Message 10
+C'tron > EMBARRASSED: Alright, you changed my mind.
+C'tron > SMILE: Being an evotar may not be that bad.
+Lea > EXTRA_GENTLE_SMILE: ...
+Luke > LAUGH: Just throwing ideas around.
+Luke > EYES_CLOSED: If Instatainment is listening and need some more of my \c[3]expertise\c[0]... 
+Luke > WINK: You know where to find me.
+Sergey > WHISTLING: Sure, I'm taking \c[3]notes\[0].
+Lea > SHOCKED: ...!!
+Sergey > JOKING: ... #alt: \c[1]Giant murder-bots...\c[0]
+
 
 set cced.ctron-luke-banter-finished true
