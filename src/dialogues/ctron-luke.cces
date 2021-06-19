@@ -3,7 +3,7 @@
 
 == ctron+luke-battle-over-cced ==
 
-condition: party.alive.Glasses && party.alive.Schneider && plot.line >= 40000
+condition: party.alive.Glasses && party.alive.Luke && plot.line >= 40000
 
 Message 1
 Luke > TOWARDS: A party with 3 Evotars.\. Pretty neat, huh?
@@ -121,6 +121,5 @@ Luke > WINK: You know where to find me.
 Sergey > WHISTLING: Sure, I'm taking \c[3]notes\[0].
 Lea > SHOCKED: ...!!
 Sergey > JOKING: ... #alt: \c[1]Giant murder-bots...\c[0]
-
 
 set cced.ctron-luke-banter-finished true
