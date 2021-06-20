@@ -7,7 +7,7 @@ condition: party.alive.Emilie && party.alive.Schneider
 Message 1
 Emilie > HAPPY: Yay! Double the party, double the punching power!
 Luke > DEFAULT: I have a sword, Emilie.
-Luke > SKEPTICAL: Its cutting things, not punching.
+Luke > SKEPTICAL: Its for cutting things, not punching.
 Emilie > DETERMINED: Whatever, fighting up close is almost punching.
 Lea > SMILE: ...
 Luke > DEFAULT: Alright, punching it is.
@@ -95,7 +95,7 @@ Emilie > EMBARRASSED: Oui.\. Sounds like you.
 Message 10
 Emilie > DETERMINED: Did you two \c[3]kiss\c[0]?
 Lea > EXTRA_EMBARRASSED: ...W-what?!!
-Luke > WHISTLING: That escalated quickly..
+Luke > WHISTLING: That escalated quickly...
 Lea > EXTRA_EMBARRASSED: ...W-why?!
 Emilie > SMILE: I'm a detective, remember?
 Emilie > DEAD_INSIDE: \c[1]Did you kiss or no?
@@ -107,9 +107,9 @@ Lea > ANGRY: Wait!
 Luke > WINK: Whelp, only one way to find out.
 Lea > SHOCKED: ...!!
 Lea > SHOUT_PANIC: \c[1]Wait! Bye!!\c[0]
-Luke > WHISTLING: Alright, alright...<\. Sheesh, that was loud...> # Maybe cut out the 'sheesh' of dialogue line
+Luke > WHISTLING: Just kidding, sorry...\. that was loud...
 Lea > DOWN_EYE_CLOSED: ...
-Luke > WINK: Maybe next time...
+Luke > WINK: <Maybe next time...> # They are not yet a couple. This line may be too direct. 
 Lea > DISGUSTED: ...!
 Emilie > EXHAUSTED: You know what...\. Forget about it.
 
@@ -121,6 +121,6 @@ Luke > LAUGH: Bwahahahaha~! Nice one.
 Emilie > SUSPICIOUS: ...
 Emilie > MOPING: Oui, you two are dumb.
 Lea > SMILE: Sorry...
-Luke > DEFAULT: Ja, let's go punch some things.
+Luke > DEFAULT: Ja, better let's go punch some things.
 
 set cced.emilie-luke-banter-finished true
