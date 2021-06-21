@@ -1,0 +1,101 @@
+
+# Detective Shizuka. Almost rivals Detective Joern in her deduction.
+
+== ctron+shizuka-battle-over-cced ==
+
+condition:  party.alive.Glasses && party.alive.Shizuka
+
+Message 1
+C'tron > THOUGHTFUL: I'm sorry. Its Shizuka, right?
+Shizuka > DEFAULT: Yeah, hi.
+C'tron > EMBARRASSED: Just wanted to say that you and Lea's fighting styles look kinda similar.
+
+if cced.shizuka-lea-similarity-dialogue == 0
+    Shizuka > INNOCENT: Thanks, I guess.
+endif
+if cced.shizuka-lea-similarity-dialogue == 1
+    Shizuka > FUNNY_SMILE: Yeah, I get that a lot.
+endif
+if cced.shizuka-lea-similarity-dialogue == 2
+    Shizuka > INNOCENT: Okaaay...
+endif
+If cced.shizuka-lea-similarity-dialogue >= 3
+    Shizuka > EXTRA_ANNOYED: ...
+    Lea > SMILE: ...
+endif
+
+C'tron > EMBARRASSED: I'm Tronny by the way.
+Shizuka > BRIGHT: Nice to meet you.
+
+set cced.shizuka-lea-similarity-dialogue + 1
+
+Message 2
+# ???
+Shizuka > SMUG: <...> # CTron falls prey to Shizuka's sarcasm
+Lea > SMUG: ...
+C'tron > EXHAUSTED: You two really are one and the same.
+
+
+Message 3
+Shizuka > INNOCENT: What exactly did you mean by \c[3]one and the same\c[0]?
+Shizuka > BRIGHT: Lea's character is nothing like mine.
+Lea > THINKING: ...
+# ???
+# Maybe, but overall your behavior is 99% identical
+Shizuka > BADASS: Oh really?
+C'tron > AWESOME: <???>. Even your tastes are similar.
+C'tron > SMUG: You both prefer <\c[3]Quantic Wave\c[0]>. # Maybe use something new, because reusing Quantic Wave is cheap and boring
+Lea > NOD: [nods] 
+Shizuka > SURPRISED: ...
+Shizuka > EXTRA_SURPRISED: This is...\. \c[3]oddly specific\c[0].
+Shizuka > SARCASTIC: You know that how, exactly?
+C'tron > EMBARRASSED: Uhm...\. lucky guess?
+Shizuka > EXTRA_SUSPICIOUS: Uh huh...
+
+Message 4
+#???
+Shizuka > DEFAULT: Have we met before, Tronny?
+C'tron > EMBARRASSED: N-no, I'm sure you've never seen me.
+Shizuka > SARCASTIC: Strange...\. because I feel something very familiar about you.
+Lea > SURPRISED_AWAY: ...?
+
+Message 5
+#???
+
+Message 6
+#???
+Shizuka > EXTRA_SUSPICIOUS: For how long you two have played together?
+C'tron > THOUGHTFUL: Roughly since Lea arrived to Maroon Valley.
+C'tron > EMBARRASSED: So uhm...\. two to three weeks, I guess.
+#???
+
+Message 7
+#C'Tron > ???: ???
+Shizuka > SARCASTIC: Oh...\. now I get it.
+Lea > SURPRISED_TOWARD: ...?
+Shizuka > SARCASTIC: Its your manner of speech.
+Shizuka > DENYING: Knew someone who, who talked like that.
+C'tron > DOWN: Knew? What happened to him?
+Shizuka > CONCERNED: Nothing.
+Shizuka > CONFLICTED: He ruined my life...\. and got away with that.
+C'tron > SAD: Oh...\. I'm sorry.
+Lea > SAD: ...
+
+Message 8
+#???
+
+Message 9
+#???
+Shizuka > DENYING: Just stay quiet and punch mobs, okay.
+
+set cced.ctron-shizuka-banter-finished true
+
+
+
+== ctron+shizuka-battle-over-extra-cced ==
+
+condition:  party.alive.Glasses && party.alive.Shizuka && cced.shizuka-shadytron-rumor-finished
+Shizuka > DENYING: ...
+Lea > MOPING: What?
+Shizuka > ANNOYED: Nothing...
+# [Shizuka disliked that.]
