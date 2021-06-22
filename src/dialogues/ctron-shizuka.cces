@@ -1,5 +1,5 @@
-
 # Detective Shizuka. Almost rivals Detective Joern in her deduction.
+# This banter is mostly fine, but also a little sad.
 
 == ctron+shizuka-battle-over-cced ==
 
@@ -8,7 +8,7 @@ condition:  party.alive.Glasses && party.alive.Shizuka
 Message 1
 C'tron > THOUGHTFUL: I'm sorry. Its Shizuka, right?
 Shizuka > DEFAULT: Yeah, hi.
-C'tron > EMBARRASSED: Just wanted to say that you and Lea's fighting styles look kinda similar.
+C'tron > EMBARRASSED: Just wanted to say you two really do fight pretty similarly to one another.
 
 if cced.shizuka-lea-similarity-dialogue == 0
     Shizuka > INNOCENT: Thanks, I guess.
@@ -30,7 +30,7 @@ Shizuka > BRIGHT: Nice to meet you.
 set cced.shizuka-lea-similarity-dialogue + 1
 
 Message 2
-# ???
+# ??? CTron is being Ctron
 Shizuka > SMUG: <...> # CTron falls prey to Shizuka's sarcasm
 Lea > SMUG: ...
 C'tron > EXHAUSTED: You two really are one and the same.
@@ -38,55 +38,86 @@ C'tron > EXHAUSTED: You two really are one and the same.
 
 Message 3
 Shizuka > INNOCENT: What exactly did you mean by \c[3]one and the same\c[0]?
-Shizuka > BRIGHT: Lea's character is nothing like mine.
+Shizuka > BRIGHT: Lea's character is nothing like me.
 Lea > THINKING: ...
-# ???
-# Maybe, but overall your behavior is 99% identical
+Shizuka > FUNNY_SMILE: She prefers to hug people.\. I punch them instead.
+Lea > SMILE: ...
+
+Message 4
+C'tron > SURPRISED: Experiencing major events may cause significant changes in one's personality, true.
+C'tron > SMILE: But outside of that, your personal preferences should still be \c[3]99% identical\c[0].
 Shizuka > BADASS: Oh really?
-C'tron > AWESOME: <???>. Even your tastes are similar.
+C'tron > AWESOME: Yes! For example, your tastes remained similar!
 C'tron > SMUG: You both prefer <\c[3]Quantic Wave\c[0]>. # Maybe use something new, because reusing Quantic Wave is cheap and boring
 Lea > NOD: [nods] 
 Shizuka > SURPRISED: ...
-Shizuka > EXTRA_SURPRISED: This is...\. \c[3]oddly specific\c[0].
+Shizuka > SURPRISED: This is...\. \c[3]oddly specific\c[0].
 Shizuka > SARCASTIC: You know that how, exactly?
 C'tron > EMBARRASSED: Uhm...\. lucky guess?
-Shizuka > EXTRA_SUSPICIOUS: Uh huh...
+Shizuka > EXTRA_SUSPICIOUS: Uh huh... # Self-explanatory. Emilie's expression.
 
 Message 4
-#???
 Shizuka > DEFAULT: Have we met before, Tronny?
-C'tron > EMBARRASSED: N-no, I'm sure you've never seen me.
+C'tron > EXHAUSTED: N-no, I'm confident you've never seen me.
 Shizuka > SARCASTIC: Strange...\. because I feel something very familiar about you.
 Lea > SURPRISED_AWAY: ...?
+C'tron > EXHAUSTED: I ugh... just said the same thing about you and Lea.
+C'tron > EMBARRASSED:  Maybe you've met a \c[3]real player\c[0] from whom I was created?
+Shizuka > FUNNY_SMILE: Eh, don't worry.\. We'll figure it out eventually. 
+Shizuka > FUNNY_SMILE: Not like this thought is planning on leaving anytime soon.
+C'tron > EXHAUSTED: Okay-dokey...
 
 Message 5
-#???
+Shizuka > EVIL_GRIN: No...\. of course we've never met before.
+Shizuka > DENYING: I've never payed much attention to avatars in Vermillion Dump.
+Shizuka > SARCASTIC: Which you should remember by the way...\. you know... being \c[3]Evotar\c[0] and all that.
+Lea > EXTRA_NERVOUS_GLANCE: ... # Same expression, but glancing to the right.
+C'tron > EXHAUSTED: Uh... n-no, sorry...\. I don't remember ever being to Vermillion.
+Shizuka > DEFAULT: You're one lucky kid then, Tronny.
+C'tron > SAD: ...
 
 Message 6
-#???
-Shizuka > EXTRA_SUSPICIOUS: For how long you two have played together?
-C'tron > THOUGHTFUL: Roughly since Lea arrived to Maroon Valley.
-C'tron > EMBARRASSED: So uhm...\. two to three weeks, I guess.
-#???
-
-Message 7
-#C'Tron > ???: ???
+# ??? C'tron says something that sounds Sidwellish. Alternatively, make a skip of two messages (so this is Message 8)
 Shizuka > SARCASTIC: Oh...\. now I get it.
 Lea > SURPRISED_TOWARD: ...?
-Shizuka > SARCASTIC: Its your manner of speech.
-Shizuka > DENYING: Knew someone who, who talked like that.
-C'tron > DOWN: Knew? What happened to him?
-Shizuka > CONCERNED: Nothing.
-Shizuka > CONFLICTED: He ruined my life...\. and got away with that.
-C'tron > SAD: Oh...\. I'm sorry.
-Lea > SAD: ...
+Shizuka > SARCASTIC: Its your manner of speech, Tronny.
+Shizuka > DENYING: Reminds me of \c[1]Sidwell\c[0]. The one, who started all this mess.
+C'tron > THOUGHTFUL: I see.\. What happened to him?
+Shizuka > CONCERNED: Nothing...
+Shizuka > CONFLICTED: He ruined our lives...\. and got away with it.
+C'tron > SAD: ...\. Sorry.
+Shizuka > EVIL_GRIN: Don't worry.\. You couldn't know.
 
-Message 8
-#???
+Message 7
+Shizuka > CONCERNED: ...
+Lea > SURPRISED_TOWARD: ...?
+C'tron > WORRIED: You may still find him...\. eventually.
+Shizuka > ANGRY: Look, he is gone for good, alright?!
+Shizuka > STRICT: Its been \c[1]seven months\c[o] already! 
+Shizuka > SCREAM: \c[1]He left no records, no traces, nothing!!
+Lea > SURPRISED_AWAY: ...?
+Shizuka > ANNOYED: No use mulling over it.
+Shizuka > CONFLICTED: Satoshi and Lea are \c[3]safe\c[0]...\! its all that matters now.
+C'tron > EXHAUSTED: I'm sorry, Shizuka.\s[0]
+Shizuka > SAD: Just...\. let's just stay quiet and punch mobs, okay.
+Lea > SURPRISED: ...
+
+# Message 8 is deliberately skipped
 
 Message 9
-#???
-Shizuka > DENYING: Just stay quiet and punch mobs, okay.
+Shizuka > DENYING: Lea.\. I need to \c[3]speak with you\c[0].
+Shizuka > DENYING: \c[3]In private\c[0].
+C'tron > THOUGHTFUL: Should I... leave the party?
+Lea > SURPRISED_AWAY: ...?
+Lea > SURPRISED_TOWARD: Why?
+Shizuka > DENYING: ...
+Shizuka > EXTRA_DENYING2: Its nothing urgent. # Same expression, but glancing to the left side
+Lea > ANNOYED: ...\.Why?
+Shizuka > SMUG: Just family business.
+C'tron > EMBARRASSED: Oh, alright then.
+C'tron > SMILE: I'll gladly \c[3]leave you two alone\c[0], if you need a moment.
+Lea > NOD: [nods]
+C'tron > EXHAUSTED: Gosh, hope I didn't say something really offensive.
 
 set cced.ctron-shizuka-banter-finished true
 
@@ -94,8 +125,10 @@ set cced.ctron-shizuka-banter-finished true
 
 == ctron+shizuka-battle-over-extra-cced ==
 
+Message 1
 condition:  party.alive.Glasses && party.alive.Shizuka && cced.shizuka-shadytron-rumor-finished
 Shizuka > DENYING: ...
 Lea > MOPING: What?
 Shizuka > ANNOYED: Nothing...
+Lea > ANNOYED: ...
 # [Shizuka disliked that.]
