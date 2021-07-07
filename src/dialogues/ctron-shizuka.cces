@@ -125,8 +125,9 @@ set cced.ctron-shizuka-banter-finished true
 
 == ctron+shizuka-battle-over-extra-cced ==
 
-Message 1
 condition: party.alive.Glasses && party.alive.Shizuka && cced.shizuka-shadytron-rumor-finished
+
+Message 1
 Shizuka > DENYING: ...
 Lea > MOPING: What?
 Shizuka > ANNOYED: Nothing...
