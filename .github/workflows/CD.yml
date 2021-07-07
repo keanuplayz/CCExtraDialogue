@@ -32,7 +32,7 @@ jobs:
 
       - name: Create archives
         run: |
-          zip -q cc_extra_dialogue.ccmod assets patches plugin.js ccmod.json package.json icon.png
+          zip -q -r cc_extra_dialogue.ccmod assets patches plugin.js ccmod.json package.json icon.png
           tar -czf cc_extra_dialogue.tar.gz --transform 's,^,cc_extra_dialogue/,' assets patches plugin.js ccmod.json package.json icon.png
 
       - name: Create release
