@@ -1,4 +1,4 @@
-name: Build
+name: Dev Release
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build and upload artifacts
+    name: Build and publish release
     runs-on: ubuntu-latest
 
     steps:
@@ -36,12 +36,13 @@ jobs:
           tar -czf cc_extra_dialogue.tar.gz --transform 's,^,cc_extra_dialogue/,' assets patches plugin.js ccmod.json package.json icon.png
 
       - name: Create release
-        uses: 'marvinpinto/action-automatic-releases@latest'
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: 'dev'
+          name: 'CCES Dev'
+          tag_name: 'dev'
           prerelease: true
-          title: 'CCES Dev'
           files: |
             cc_extra_dialogue.ccmod
             cc_extra_dialogue.tar.gz
