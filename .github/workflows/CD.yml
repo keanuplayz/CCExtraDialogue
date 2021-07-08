@@ -37,13 +37,11 @@ jobs:
           tar -czf cc_extra_dialogue.tar.gz --transform 's,^,cc_extra_dialogue/,' assets patches plugin.js ccmod.json package.json icon.png
 
       - name: Create release
-        uses: softprops/action-gh-release@v1
+        run: |
+          gh release delete ${{ env.VERSION }} -y
+          gh release create ${{ env.VERSION }} -p -t "${{ env.NAME }}" ${{ env.FILES }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          name: 'CCES Dev'
-          tag_name: 'dev'
-          prerelease: true
-          files: |
-            cc_extra_dialogue.ccmod
-            cc_extra_dialogue.tar.gz
+          VERSION: 'dev'
+          NAME: 'CCED Dev'
+          FILES: cc_extra_dialogue.ccmod cc_extra_dialogue.tar.gz
