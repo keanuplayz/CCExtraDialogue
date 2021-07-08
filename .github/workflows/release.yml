@@ -1,12 +1,13 @@
-name: Dev Release
+name: Release
 
 on:
   push:
-  workflow_dispatch:
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build:
-    name: Build and publish dev release
+    name: Build and publish release
     runs-on: ubuntu-latest
 
     steps:
@@ -40,9 +41,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: 'CCES Dev'
-          tag_name: 'dev'
-          prerelease: true
           files: |
             cc_extra_dialogue.ccmod
             cc_extra_dialogue.tar.gz
