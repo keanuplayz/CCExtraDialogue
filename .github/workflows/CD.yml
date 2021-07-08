@@ -8,6 +8,7 @@ jobs:
   build:
     name: Build and publish dev release
     runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/heads/')
 
     steps:
       - name: Clone CCExtraDialogue
