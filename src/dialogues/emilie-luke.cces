@@ -2,7 +2,7 @@
 
 == emilie+luke-battle-over-cced ==
 
-condition: party.alive.Emilie && party.alive.Schneider
+condition: party.alive.Emilie && party.alive.Luke
 
 Message 1
 Emilie > HAPPY: Yay! Double the party, double the punching power!
