@@ -94,9 +94,9 @@ Emilie > EMBARRASSED: Oui.\. Sounds like you.
 
 Message 10
 Emilie > DETERMINED: Did you two \c[3]kiss\c[0]?
-Lea > EXTRA_EMBARRASSED: ...W-what?!!
+Lea > EX2_EMBARRASSED: ...W-what?!!
 Luke > WHISTLING: That escalated quickly...
-Lea > EXTRA_EMBARRASSED: ...W-why?!
+Lea > EX2_EMBARRASSED: ...W-why?!
 Emilie > SMILE: I'm a detective, remember?
 Emilie > DEAD_INSIDE: \c[1]Did you kiss or no?
 Lea > WRAP_HEAD: ...!! # This expression lacks 'face' part by default. If it would look strange, we'll remake it as additional expression

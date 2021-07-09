@@ -62,7 +62,7 @@ Joern > DEFAULT: \c[3]Bergen Trail\c[0] is nice. Fresh and chilly.
 Joern > DEFAULT: Reminds me our hiking with Polly.
 C'tron > DEFAULT: You two hike a lot?
 Joern > DEFAULT: Sometimes. I like mountains.
-Lea > EXTRA_LIGHT_SMILE: Why?
+Lea > EX2_LIGHT_SMILE: Why?
 Joern > SMILE: The best view comes after the hardest climb.
 Lea > EXCITED: ...!
 C'tron > EMBARRASSED: That's a nice quote.
@@ -158,7 +158,7 @@ Lea > EXHAUSTED: ...
 C'tron > BLANK: And if there are so many instanced rooms for every player...
 C'tron > PANIC: Its not only water or light... \c[1]entire planet must be simulated\c[0]!
 Joern > SMILE: Relax, Tronny.
-Joern > EXTRA_TRANQUIL: Relax.
+Joern > EX2_TRANQUIL: Relax.
 Lea > SLEEPING: ...
 
 
@@ -253,7 +253,7 @@ set cced.ctron-joern-banter-extra-finished true
 
 
 
-== goern-sweetron-battle-over-cced == 
+== !goern-sweetron-battle-over-cced == 
 
 condition: false
 
@@ -265,4 +265,4 @@ Joern > ANGRY: I told you, cat!
 C'tron > CRAZY_PANIC2: It keeps happening!
 Joern > ANGRY: I told you, man!
 Joern > ANGRY: I warned you about cats!
-Lea > EXTRA_4_WALL_BREAK: Why?
+Lea > EXHAUSTED: Why?

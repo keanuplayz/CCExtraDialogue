@@ -20,7 +20,7 @@ if cced.shizuka-lea-similarity-dialogue == 2
     Shizuka > INNOCENT: Okaaay...
 endif
 If cced.shizuka-lea-similarity-dialogue >= 3
-    Shizuka > EXTRA_ANNOYED: ...
+    Shizuka > EX2_ANNOYED: ...
     Lea > SMILE: ...
 endif
 
@@ -54,7 +54,7 @@ Shizuka > SURPRISED: ...
 Shizuka > SURPRISED: This is...\. \c[3]oddly specific\c[0].
 Shizuka > SARCASTIC: You know that how, exactly?
 C'tron > EMBARRASSED: Uhm...\. lucky guess?
-Shizuka > EXTRA_SUSPICIOUS: Uh huh... # Self-explanatory. Emilie's expression.
+Shizuka > EX2_SUSPICIOUS: Uh huh... # Self-explanatory. Emilie's expression.
 
 Message 4
 Shizuka > DEFAULT: Have we met before, Tronny?
@@ -71,7 +71,7 @@ Message 5
 Shizuka > EVIL_GRIN: No...\. of course we've never met before.
 Shizuka > DENYING: I've never payed much attention to avatars in Vermillion Dump.
 Shizuka > SARCASTIC: Which you should remember by the way...\. you know... being \c[3]Evotar\c[0] and all that.
-Lea > EXTRA_NERVOUS_GLANCE: ... # Same expression, but glancing to the right.
+Lea > EX2_NERVOUS_GLANCE: ... # Same expression, but glancing to the right.
 C'tron > EXHAUSTED: Uh... n-no, sorry...\. I don't remember ever being to Vermillion.
 Shizuka > DEFAULT: You're one lucky kid then, Tronny.
 C'tron > SAD: ...
@@ -111,7 +111,7 @@ C'tron > THOUGHTFUL: Should I... leave the party?
 Lea > SURPRISED_AWAY: ...?
 Lea > SURPRISED_TOWARD: Why?
 Shizuka > DENYING: ...
-Shizuka > EXTRA_DENYING2: Its nothing urgent. # Same expression, but glancing to the left side
+Shizuka > EX2_DISAPPOINTED: Its nothing urgent. # Same expression, but glancing to the left side
 Lea > ANNOYED: ...\.Why?
 Shizuka > SMUG: Just family business.
 C'tron > EMBARRASSED: Oh, alright then.
@@ -130,6 +130,6 @@ condition: party.alive.Glasses && party.alive.Shizuka && cced.shizuka-shadytron-
 Message 1
 Shizuka > DENYING: ...
 Lea > MOPING: What?
-Shizuka > ANNOYED: Nothing...
+Shizuka > EX2_PASSIVEAGGRESSIVE: Nothing...
 Lea > ANNOYED: ...
 # [Shizuka disliked that.]
