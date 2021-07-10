@@ -50,13 +50,12 @@ jobs:
           mv cc_extra_expressions_pack.ccmod ../
           mv cc_extra_expressions_pack.tar.gz ../
 
+      - name: Get version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
       - name: Create release
-        uses: softprops/action-gh-release@v1
+        run: |
+          gh release create ${{ steps.get_version.outputs.VERSION }} -t "CCED ${{ steps.get_version.outputs.VERSION }}" ${{ env.FILES }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          files: |
-            cc_extra_dialogue.ccmod
-            cc_extra_dialogue.tar.gz
-            cc_extra_expressions_pack.ccmod
-            cc_extra_expressions_pack.tar.gz
+          FILES: cc_extra_dialogue.ccmod cc_extra_dialogue.tar.gz cc_extra_expressions_pack.ccmod cc_extra_expressions_pack.tar.gz
