@@ -13,6 +13,12 @@ jobs:
     steps:
       - name: Clone CCExtraDialogue
         uses: actions/checkout@v2
+      - name: Clone cc-extra-expressions-pack
+        uses: actions/checkout@v2
+        with:
+          repository: Paradragon/cc-extra-expressions-pack
+          token: ${{ secrets.PAT }}
+          path: expressions
       - name: Clone cc-eventscript-parser
         uses: actions/checkout@v2
         with:
@@ -31,10 +37,18 @@ jobs:
       - name: Compile CCES files
         run: python3.10 parser/cc_eventscript_parser.py src/dialogues/*
 
-      - name: Create archives
+      - name: Create CCED archives
         run: |
           zip -q -r cc_extra_dialogue.ccmod assets patches plugin.js ccmod.json package.json icon.png
           tar -czf cc_extra_dialogue.tar.gz --transform 's,^,cc_extra_dialogue/,' assets patches plugin.js ccmod.json package.json icon.png
+
+      - name: Create CCEEP archives
+        run: |
+          cd expressions
+          zip -q -r cc_extra_expressions_pack.ccmod ./*
+          tar -czf cc_extra_expressions_pack.tar.gz --transform 's,^,cc_extra_expressions_pack/,' ./*
+          mv cc_extra_expressions_pack.ccmod ../
+          mv cc_extra_expressions_pack.tar.gz ../
 
       - name: Create release
         uses: softprops/action-gh-release@v1
@@ -44,3 +58,5 @@ jobs:
           files: |
             cc_extra_dialogue.ccmod
             cc_extra_dialogue.tar.gz
+            cc_extra_expressions_pack.ccmod
+            cc_extra_expressions_pack.tar.gz
