@@ -45,10 +45,10 @@ jobs:
       - name: Create CCEEP archives
         run: |
           cd expressions
-          zip -q -r cc_extra_expressions_pack.ccmod ./*
-          tar -czf cc_extra_expressions_pack.tar.gz --transform 's,^,cc_extra_expressions_pack/,' ./*
-          mv cc_extra_expressions_pack.ccmod ../
-          mv cc_extra_expressions_pack.tar.gz ../
+          zip -q -r cc-extra-expressions-pack.ccmod ./*
+          tar -czf cc-extra-expressions-pack.tar.gz --transform 's,^,cc-extra-expressions-pack/,' ./*
+          mv cc-extra-expressions-pack.ccmod ../
+          mv cc-extra-expressions-pack.tar.gz ../
 
       - name: Create release
         run: |
@@ -58,4 +58,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VERSION: 'dev'
           NAME: 'CCED Dev'
-          FILES: cc_extra_dialogue.ccmod cc_extra_dialogue.tar.gz cc_extra_expressions_pack.ccmod cc_extra_expressions_pack.tar.gz
+          FILES: cc_extra_dialogue.ccmod cc_extra_dialogue.tar.gz cc-extra-expressions-pack.ccmod cc-extra-expressions-pack.tar.gz
