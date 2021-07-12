@@ -1,0 +1,20 @@
+[{
+    "type": "ENTER",
+    "index": ["floors", 1, "maps"]
+},{
+    "type": "ADD_ARRAY_ELEMENT",
+    "content": {
+        "path": "jungle-city.interior.cced-hub",
+        "name": {
+            "en_US": "CCED Hub"
+        },
+        "offset": {
+            "x": 0,
+            "y": 0
+        },
+        "dungeon": "NO_DUNGEON"
+    }
+},{
+    "type": "EXIT",
+    "count": 3
+}]
