@@ -12,7 +12,7 @@
 },{
     "type": "SET_KEY",
     "index": "condition",
-    "content": "cced.hub-map-unlocked"
+    "content": "cced.hub.unlocked"
 },{
     "type": "EXIT",
     "count": 3
