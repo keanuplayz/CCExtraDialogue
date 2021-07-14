@@ -1,4 +1,4 @@
-== luke+shizuka-battle-over-cced ==
+== cced-luke-shizuka-battle-over-1 ==
 
 condition: party.alive.Luke && party.alive.Shizuka
 
@@ -18,7 +18,7 @@ Message 2
 Luke > DEFAULT: Aren't you two basically sisters?
 
 # Similar conversation occurs in Lukas-Shizuka party 
-if cced.lea-sakai-sisterhood-dialogue
+if cced.shizuka.sakai-sisterhood
     Luke > TOWARDS: One could say that you have more in common than anybody else in the universe.
     Shizuka > INNOCENT: I mean... if she wants to...
     Shizuka > SMILE: She does understand me better than anyone... like a real sister would.
@@ -33,7 +33,7 @@ Luke > WINK: \c[3]Lea Sakai\c[0]. <What a beautifully sounding name!>
 Lea > CHARMED: ...
 Shizuka > EVIL_GRIN: Oh bother...
 
-set cced.lea-sakai-sisterhood-dialogue true
+set cced.shizuka.sakai-sisterhood true
 
 Message 3
 Luke > WONDERING: Why Lea?
@@ -43,13 +43,13 @@ Luke > DEFAULT: So that people don't confuse us two when talking.
 Shizuka > SARCASTIC: Good point.
 
 # Similar conversation occurs in Lukas-Shizuka party 
-if cced.why-lea-named-lea-dialogue
+if cced.shizuka.lea-name-origin
     Lea > SURPRISED: Wait! Why Lea?
     Shizuka > INNOCENT: No particular reason besides that it sounds nice.
     Lea > THINKING: ...
 endif 
 
-set cced.why-lea-named-lea-dialogue true
+set cced.shizuka.lea-name-origin true
 
 
 Message 4
@@ -58,13 +58,13 @@ Luke > TOWARDS: <But Lea has more fluidness and determination in her movements.>
 Lea > SMUG: ...!
 
 # Also occurs in party with C'Tron, Joern and Lukas 
-if cced.shizuka-lea-similarity-dialogue == 1
+if cced.shizuka.lea-similarity-mentions == 1
     Shizuka > FUNNY_SMILE: Yeah, I get that a lot.
 endif
-if cced.shizuka-lea-similarity-dialogue == 2
+if cced.shizuka.lea-similarity-mentions == 2
     Shizuka > INNOCENT: Okaaay...
 endif
-if cced.shizuka-lea-similarity-dialogue >= 3
+if cced.shizuka.lea-similarity-mentions >= 3
     Shizuka > EX2_ANNOYED: ...
     Lea > SMILE: ...
 endif
@@ -76,7 +76,7 @@ Luke > EYES_CLOSED: No job, no vacations.
 Shizuka > FUNNY_SMILE: Just you wait. They will find something to do for you.
 Lea > EXHAUSTED: ...
 
-set cced.shizuka-lea-similarity-dialogue + 1
+set cced.shizuka.lea-similarity-mentions + 1
 
 Message 5
 Luke > WINK: I suppose, Lea was always this charming?
@@ -88,4 +88,4 @@ Lea > HOLD_HORNS_ANNOYED: ...!
 Luke > COMPLAINING: Yeah. I wish they would enable customisation menu for evotars.
 Shizuka > EVIL_GRIN: Well... you know, what to do once they do, mister.
 
-set cced.luke-shizuka-banter-finished true
+set cced.luke-shizuka.battle-over-1.finished true

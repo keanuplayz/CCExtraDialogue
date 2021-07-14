@@ -1,4 +1,4 @@
-== emilie+lukas-battle-over-cced ==
+== cced-emilie-lukas-battle-over-1 ==
 
 condition: party.alive.Emilie && party.alive.Schneider && plot.line >= 40000
 
@@ -59,7 +59,7 @@ Lukas > WINK: Evotar-exclusive, of course.
 Emilie > MOPING: Not fair! She can't even spoil it! 
 Lea > WHISTLING: ...!
 
-set cced.emilie-lukas-banter-finished true
+set cced.emilie-lukas.battle-over-1.finished true
 
 Message 10
 Lukas > SHOCKED: Did someone just move in that bush?!

@@ -1,7 +1,7 @@
 # Discussion of what would Evotars even do, while being stuck in a CrossWorlds: Music, Painting, Filmmaking, Being an actor (not for mute girl though), Arena Superstar, PVP tournaments champion etc.
 # Evotars Trio. Shenanigans are inbound. This dialogue has large potential and must be a killer. 
 
-== ctron+luke-battle-over-cced ==
+== cced-ctron-luke-battle-over-1 ==
 
 condition: party.alive.Glasses && party.alive.Luke && plot.line >= 40000
 
@@ -122,4 +122,4 @@ Sergey > WHISTLING: Sure, I'm taking \c[3]notes\[0].
 Lea > SHOCKED: ...!!
 Sergey > JOKING: ... #alt: \c[1]Giant murder-bots...\c[0]
 
-set cced.ctron-luke-banter-finished true
+set cced.ctron-luke.battle-over-1.finished true

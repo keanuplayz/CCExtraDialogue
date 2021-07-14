@@ -1,4 +1,4 @@
-== apollo+ctron-battle-over-cced ==
+== cced-apollo-ctron-battle-over-1 ==
 
 condition: party.alive.Apollo && party.alive.Glasses
 
@@ -89,4 +89,4 @@ Lea > SURPRISED_AWAY: Why?
 Tr: Electricity goes from low potential to higher potential through the path of least resistance 
 Tr: Fun fact, if electric eels touch the target they are shocking, they are very likely to kill themselves.
 
-set cced.apollo-ctron-banter-finished true
+set cced.apollo-ctron.battle-over-1.finished true

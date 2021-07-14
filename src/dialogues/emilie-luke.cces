@@ -1,6 +1,6 @@
 # Regret nothing, appreciate everything
 
-== emilie+luke-battle-over-cced ==
+== cced-emilie-luke-battle-over-1 ==
 
 condition: party.alive.Emilie && party.alive.Luke
 
@@ -123,4 +123,4 @@ Emilie > MOPING: Oui, you two are dumb.
 Lea > SMILE: Sorry...
 Luke > DEFAULT: Ja, better let's go punch some things.
 
-set cced.emilie-luke-banter-finished true
+set cced.emilie-luke.battle-over-1.finished true

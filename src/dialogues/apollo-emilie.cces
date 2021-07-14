@@ -1,4 +1,4 @@
-== apollo-emilie-battle-over-cced ==
+== cced-apollo-emilie-battle-over-1 ==
 
 condition: party.alive.Apollo && party.alive.Emilie
 
@@ -98,4 +98,4 @@ Emilie > DETERMINED Oui! Try me and I'll beat you every time.
 Lea > ANNOYED ...
 Apollo > SUSPICIOUS I shall consider this proposition.
 
-set cced.apollo-emilie-banter-finished true
+set cced.apollo-emilie.battle-over-1.finished true

@@ -11,7 +11,7 @@
 # the disastrous consequences that (SyncRotation) would have on the environment, 
 # particularly the temperatures (which C'tron hinted at upon arriving in Sapphire Ridge).
 
-== ctron-joern-battle-over-rise-cced ==
+== cced-ctron-joern-battle-over-rise ==
 condition: party.alive.Glasses && party.alive.Joern && area.autumn-area.isCurrent
 
 Message 1
@@ -27,7 +27,8 @@ endif
 
 Lea > NOD: [nods]
 
-set cced.ctron-joern-location-banters + 1
+set cced.ctron-joern.tourism.locations + 1
+set cced.ctron-joern.tourism.rise true
 
 Message 2
 Joern > DEFAULT: We should go on a picnic someday.
@@ -38,7 +39,7 @@ Joern > SMILE: Picnic shopping.
 
 
 
-== ctron-joern-battle-over-fall-cced ==
+== cced-ctron-joern-battle-over-fall ==
 condition: party.alive.Glasses && party.alive.Joern && area.autumn-fall.isCurrent
 
 Message 1
@@ -50,11 +51,11 @@ C'tron > AWESOME: Lush, green and full of life.
 Lea > SURPRISED: ...
 Joern > AWWW: Why do you have to be so straightforward?
 
-set cced.ctron-joern-location-banters + 1
+set cced.ctron-joern.tourism.locations + 1
+set cced.ctron-joern.tourism.fall true
 
 
-
-== ctron-joern-battle-over-bergen-cced ==
+== cced-ctron-joern-battle-over-bergen ==
 condition: party.alive.Glasses && party.alive.Joern && area.bergen-trails.isCurrent
 
 Message 1
@@ -67,7 +68,8 @@ Joern > SMILE: The best view comes after the hardest climb.
 Lea > EXCITED: ...!
 C'tron > EMBARRASSED: That's a nice quote.
 
-set cced.ctron-joern-location-banters + 1
+set cced.ctron-joern.tourism.locations + 1
+set cced.ctron-joern.tourism.bergen true
 
 Message 2
 Joern > DEFAULT: There is one more reason.
@@ -85,7 +87,7 @@ Joern > SMILE: I like buying trinkets.
 
 
 
-== ctron-joern-battle-over-desert-cced ==
+== cced-ctron-joern-battle-over-desert ==
 condition: party.alive.Glasses && party.alive.Joern && area.heat-area.isCurrent
 
 Message 1
@@ -105,7 +107,8 @@ endif
 Joern > UP: There are \c[3]personal temperature settings\c[0]?
 Joern > SURPRISED: ...
 
-set cced.ctron-joern-location-banters + 1
+set cced.ctron-joern.tourism.locations + 1
+set cced.ctron-joern.tourism.desert true
 
 Message 2
 Joern > DEFAULT: It says \c[1]'Realistic Immersion Preset'\c[0]. 
@@ -118,7 +121,7 @@ Joern > SMILE: ...
 
 
 
-== ctron-joern-battle-over-gaia-cced ==
+== cced-ctron-joern-battle-over-gaia ==
 condition: party.alive.Glasses && party.alive.Joern && area.jungle.isCurrent
 
 Message 1
@@ -129,11 +132,11 @@ Joern > DEFAULT: There are no shortcuts to any place worth going, Tronny.
 Lea > ASTONISHED: ...!
 C'tron > EMBARRASSED: Yeah... you're right on that one.
 
-set cced.ctron-joern-location-banters + 1
+set cced.ctron-joern.tourism.locations + 1
+set cced.ctron-joern.tourism.gaia true
 
 
-
-== ctron-joern-battle-over-sapphire-cced ==
+== cced-ctron-joern-battle-over-sapphire ==
 condition: party.alive.Glasses && party.alive.Joern && area.forest.isCurrent
 
 Message 1
@@ -146,7 +149,8 @@ C'tron > SURPRISED: For that to be natural, Raritan Gem must have synchronous ro
 C'tron > WORRIED: Can't be the case. The climate would be way different even after \c[3]terraforming\c[0].
 Joern > SMILE: Relax and enjoy the atmosphere, Tronny.
 
-set cced.ctron-joern-location-banters + 1
+set cced.ctron-joern.tourism.locations + 1
+set cced.ctron-joern.tourism.sapphire true
 
 Message 2
 # Crackpot theories time
@@ -163,7 +167,7 @@ Lea > SLEEPING: ...
 
 
 
-== ctron-joern-battle-over-azure-cced ==
+== cced-ctron-joern-battle-over-azure ==
 condition: party.alive.Glasses && party.alive.Joern && area.beach.isCurrent
 
 Message 1
@@ -179,12 +183,13 @@ C'tron > SMILE: Mostly different variations of sand crabs and worms.
 Joern > SMILE: Tasty.
 Lea > DISGUSTED: ...!
 
-set cced.ctron-joern-location-banters + 1
+set cced.ctron-joern.tourism.locations + 1
+set cced.ctron-joern.tourism.azure true
 
 
 
-== ctron-joern-battle-over-extra-cced ==
-condition: party.alive.Glasses && party.alive.Joern && plot.line >= 45600 && cced.ctron-joern-location-banters >= 7 
+== cced-ctron-joern-battle-over-1 ==
+condition: party.alive.Glasses && party.alive.Joern && plot.line >= 45600 && cced.ctron-joern.tourism.locations >= 7 
 
 Message 1
 Joern > DEFAULT: Lea, remember that masked guy we met in that red place? Feels like I've seen him before...
@@ -249,7 +254,7 @@ C'Tron > EMBARRASSED: Oh.. um, how many characters does he have?
 Joern > ANGRY: Too many.
 Lea > SMILE: ... 
 
-set cced.ctron-joern-banter-extra-finished true
+set cced.ctron-joern.battle-over-1.finished true
 
 
 

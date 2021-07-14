@@ -2,6 +2,8 @@
 # At some point all \c[3]...\c[0] got replaced with ...\!, including their content. 
 # Had to rewrite again, hope that nothing is missing.
 
+# Original idea by CoolWall
+# by Paradragon
 == cced-joern-lukas-battle-over-1 ==
 
 condition: party.alive.Joern && party.alive.Schneider
@@ -43,9 +45,9 @@ Lea > EX2_ANGRY_NOD: [nods]
 Joern > DEFAULT: Agree. Eating healthy is important.
 Lukas > COMPLAINING: Why are you like that, Lea...
 
-set cced.joern-lukas-battle-over-1-finished
+set cced.joern-lukas.battle-over-1.finished true
 
-
+# by Paradragon
 == cced-joern-lukas-battle-over-2 ==
 Message 1 
 Lukas > WONDERING: Isn't CrossGear connected to all \c[3]five senses\c[0]?
@@ -94,4 +96,4 @@ else
 endif
 Lea > EXCITED: ...!
 
-set cced.joern-lukas-battle-over-2-finished
+set cced.joern-lukas.battle-over-2.finished true

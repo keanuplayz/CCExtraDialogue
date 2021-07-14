@@ -1,8 +1,8 @@
 # The only person you can trust a secret is yourself... and your copy, but don't quote me on that second part
 
-== shizuka-rumors-similarity-battle-over-cced ==
+== cced-shizuka-rumors-similarity-battle-over ==
 
-condition: party.alive.Shizuka && party.size == 1 && cced.shizuka-lea-similarity-dialogue >= 4
+condition: party.alive.Shizuka && party.size == 2 && cced.shizuka.lea-similarity-mentions >= 4
 
 Message 1
 Shizuka > DEFAULT: Maybe they have a point.
@@ -13,13 +13,13 @@ Lea > NOD: [nods]
 Shizuka > SMUG: That's why we're the most badass sisters in CrossWorlds.
 Lea > SMUG: ...!
 
-set cced.shizuka-similarity-rumor-finished true
+set cced.shizuka.similarity-rumor.finished true
 
 
 
-== shizuka-rumors-shadytron-battle-over-cced ==
+== cced-shizuka-rumors-shadytron-battle-over ==
 
-condition: party.alive.Shizuka && party.size == 1 && cced.ctron-shizuka-banter-finished
+condition: party.alive.Shizuka && party.size == 2 && cced.ctron-shizuka.battle-over-1.finished
 
 Message 1
 Shizuka > DENYING: I wouldn't go anywhere near that \c[3]C'Tron\c[0] in your place.
@@ -29,13 +29,13 @@ Shizuka > DENYING: And dealing with that type always ends up in trouble.
 Shizuka > CONCERNED: I've seen it...
 Lea > NERVOUS: ...
 
-set cced.shizuka-shadytron-rumor-finished true
+set cced.shizuka.shadytron-rumor.finished true
 
 
 
-== shizuka-rumors-boldlukas-extra-battle-over-cced ==
+== cced-shizuka-rumors-boldlukas-extra-battle-over ==
 
-condition: party.alive.Shizuka && party.size == 1 && cced.lukas-shizuka-banter-extra-finished
+condition: party.alive.Shizuka && party.size == 2 && cced.lukas-shizuka.battle-over-1.finished
 
 Message 1
 Shizuka > EVIL_GRIN: That friend of your, Lukas...
@@ -53,4 +53,4 @@ Shizuka > FUNNY_SMILE: Slapped him so hard, my hand disintegrated.
 Lea > SMILE: ...
 Shizuka > FUNNY_SMILE: The audacity of that guy.\. Unbelievable.
 
-set cced.shizuka-boldlukas-rumor-finished true
+set cced.shizuka.bold-lukas-rumor.finished true

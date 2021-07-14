@@ -18,7 +18,7 @@ Luke > EYES_CLOSED: Nope.
 Lea > SURPRISED_TOWARD: Why?
 Luke > WHISTLING: Pets demand an awful lot of \c[3]responsibility\c[0].
 Luke > LAUGH: I had enough of it at my job.
-if cced.joern-lukas-battle-over-1-finished
+if cced.joern-lukas.battle-over-1.finished
     Joern > SARCASTIC: Or maybe its something about \c[3]insufficient funds\c[0] for the fridge?
     Luke > LAUGH: You got me on that one!
 else
@@ -57,4 +57,4 @@ Lea > DETERMINED: ...!
 Luke > COMPLAINING: I'm being honest!\. Stop looking at me like that.
 Lea > SMUG: ...!
 
-set cced-joern-luke-battle-over-1-finished
+set cced.joern-luke.battle-over-1.finished true

@@ -1,4 +1,4 @@
-== lukas+shizuka-battle-over-cced ==
+== cced-lukas-shizuka-battle-over-1 ==
 
 condition: party.alive.Schneider && party.alive.Shizuka
 
@@ -17,7 +17,7 @@ Message 2
 Schneider > DEFAULT: Aren't you two basically sisters?
 
 # Similar conversation occurs in Luke-Shizuka party 
-if cced.lea-sakai-sisterhood-dialogue
+if cced.shizuka.sakai-sisterhood
     Schneider > TOWARDS: One could say that you have more in common than anybody else in the universe.
     Shizuka > INNOCENT: I mean... if she wants to...
     Shizuka > SMILE: She does understand me better than anyone... like a real sister would.
@@ -30,7 +30,7 @@ endif
 
 Lukas > LAUGH: \c[3]Lea Sakai\c[0]. Has a ring to it!
 
-set cced.lea-sakai-sisterhood-dialogue true
+set cced.shizuka.sakai-sisterhood true
 
 Message 3
 Lukas > WONDERING: Why Lea?
@@ -39,13 +39,13 @@ Shizuka > SARCASTIC: Why Lukas?
 Lukas > SKEPTICAL: Good point.
 
 # Similar conversation occurs in Luke-Shizuka party 
-if cced.why-lea-named-lea-dialogue
+if cced.shizuka.lea-name-origin
     Lea > SURPRISED: Wait! Why Lea?
     Shizuka > INNOCENT: No particular reason besides that it sounds nice.
     Lea > THINKING: ...
 endif 
 
-set cced.why-lea-named-lea-dialogue true
+set cced.shizuka.lea-name-origin true
 
 Message 4
 Lukas > SURPRISED: Wow, you two do fight similarly.
@@ -53,13 +53,13 @@ Lukas > TOWARDS: <But Lea has more fluidness and determination in her movements.
 Lea > SMUG: ...!
 
 # Also occurs in party with C'Tron, Joern and Luke 
-if cced.shizuka-lea-similarity-dialogue == 1
+if cced.shizuka.lea-similarity-mentions == 1
     Shizuka > FUNNY_SMILE: Yeah, I get that a lot.
 endif
-if cced.shizuka-lea-similarity-dialogue == 2
+if cced.shizuka.lea-similarity-mentions == 2
     Shizuka > INNOCENT: Okaaay...
 endif
-If cced.shizuka-lea-similarity-dialogue >= 3
+If cced.shizuka.lea-similarity-mentions >= 3
     Shizuka > EX2_ANNOYED: ...
     Lea > SMILE: ...
 endif
@@ -70,7 +70,7 @@ Shizuka > FUNNY_SMILE: Yeah.[pause] To real life.
 Lukas > LAUGH: Now I see where the sassiness came from.
 Lea > WHISTLING: ...
 
-set cced.shizuka-lea-similarity-dialogue + 1
+set cced.shizuka.lea-similarity-mentions + 1
 
 Message 5
 Lukas > TOWARDS: Shizuka. Did Lea always look like that?
@@ -102,13 +102,13 @@ Shizuka > TOWARD: Apologies accepted, whatever.
 Shizuka > BADASS: Let's go punch some more mobs. I need to unwind.
 Lea > EXCITED: ...!
 
-set cced.lukas-shizuka-banter-finished true
+set cced.lukas-shizuka.battle-over-1.finished true
 
 
-== lukas+shizuka-battle-over-extra-cced ==
+== cced-lukas-shizuka-battle-over-2 ==
 
 # plot.line 48000 is reached when finished Ku'Lero / final dungeon
-condition: party.alive.Schneider && party.alive.Shizuka && plot.line >= 48000 && cced.lukas-shizuka-banter-finished
+condition: party.alive.Schneider && party.alive.Shizuka && plot.line >= 48000 && cced.lukas-shizuka.battle-over-1.finished
 
 Message 1
 Lukas > EXT_EMBARASSED: ...
@@ -144,4 +144,4 @@ Shizuka > CONFLICTED: And let's never bring this topic up again.
 Lukas > DEFAULT: Fair enough.
 Lea > SHOUT: <What?! Why?! Why! Hi! Lea! Bye!>
 
-set cced.lukas-shizuka-banter-extra-finished true
+set cced.lukas-shizuka.battle-over-2.finished true

@@ -1,25 +1,25 @@
 # Detective Shizuka. Almost rivals Detective Joern in her deduction.
 # This banter is mostly fine, but also a little sad.
 
-== ctron+shizuka-battle-over-cced ==
+== cced-ctron-shizuka-battle-over-1 ==
 
-condition:  party.alive.Glasses && party.alive.Shizuka
+condition: party.alive.Glasses && party.alive.Shizuka
 
 Message 1
 C'tron > THOUGHTFUL: I'm sorry. Its Shizuka, right?
 Shizuka > DEFAULT: Yeah, hi.
 C'tron > EMBARRASSED: Just wanted to say you two really do fight pretty similarly to one another.
 
-if cced.shizuka-lea-similarity-dialogue == 0
+if cced.shizuka.lea-similarity-mentions == 0
     Shizuka > INNOCENT: Thanks, I guess.
 endif
-if cced.shizuka-lea-similarity-dialogue == 1
+if cced.shizuka.lea-similarity-mentions == 1
     Shizuka > FUNNY_SMILE: Yeah, I get that a lot.
 endif
-if cced.shizuka-lea-similarity-dialogue == 2
+if cced.shizuka.lea-similarity-mentions == 2
     Shizuka > INNOCENT: Okaaay...
 endif
-If cced.shizuka-lea-similarity-dialogue >= 3
+If cced.shizuka.lea-similarity-mentions >= 3
     Shizuka > EX2_ANNOYED: ...
     Lea > SMILE: ...
 endif
@@ -27,7 +27,7 @@ endif
 C'tron > EMBARRASSED: I'm Tronny by the way.
 Shizuka > BRIGHT: Nice to meet you.
 
-set cced.shizuka-lea-similarity-dialogue + 1
+set cced.shizuka.lea-similarity-mentions + 1
 
 Message 2
 # ??? CTron is being Ctron
@@ -119,13 +119,13 @@ C'tron > SMILE: I'll gladly \c[3]leave you two alone\c[0], if you need a moment.
 Lea > NOD: [nods]
 C'tron > EXHAUSTED: Gosh, hope I didn't say something really offensive.
 
-set cced.ctron-shizuka-banter-finished true
+set cced.ctron-shizuka.battle-over-1.finished true
 
 
 
-== ctron+shizuka-battle-over-extra-cced ==
+== cced-ctron-shizuka-battle-over-2 ==
 
-condition: party.alive.Glasses && party.alive.Shizuka && cced.shizuka-shadytron-rumor-finished
+condition: party.alive.Glasses && party.alive.Shizuka && cced.shizuka.shadytron-rumor.finished
 
 Message 1
 Shizuka > DENYING: ...

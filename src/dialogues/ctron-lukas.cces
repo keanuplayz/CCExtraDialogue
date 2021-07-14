@@ -1,4 +1,4 @@
-== ctron+lukas-battle-over-cced ==
+== cced-ctron-lukas-battle-over-1 ==
 
 condition: party.alive.Glasses && party.alive.Schneider && plot.line >= 40000
 
@@ -80,4 +80,4 @@ Lukas > WINK: Just kidding, don't worry about it.
 Lukas > LAUGH: <Not like we really need buffs, when Lea is with us.>
 Lea > SMUG: Hi.
 
-set cced.ctron-lukas-banter-finished true
+set cced.ctron-lukas.battle-over-1.finished true

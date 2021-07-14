@@ -1,5 +1,5 @@
 # by el2020
-== joern-shizuka-battle-over-cced ==
+== cced-joern-shizuka.battle-over-1 ==
 condition: party.alive.Joern && party.alive.Shizuka && plot.line >= 40000
 
 Event 1
@@ -35,3 +35,5 @@ else
     endif
 endif
 Shizuka > DEFAULT: Maybe you and I really are more alike than I realize...
+
+set cced.joern-shizuka.battle-over-1.finished true
