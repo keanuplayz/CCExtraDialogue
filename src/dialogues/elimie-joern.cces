@@ -1,3 +1,16 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 # by Paradragon
 == cced-emilie-joern-battle-over-1 ==
@@ -43,7 +56,7 @@ Message 4
 Emilie > CURIOUS: How monsieur grasshead manages to always beat Lea to the dungeon?
 Joern > SARCASTIC: Skips everything in a rush to next landmark.
 Joern > SARCASTIC: Except \c[3]certain\c[0] chests.
-Joern > ANGRY: I hardly have the time to figure out the quest objective. 
+Joern > ANGRY: I hardly have the time to figure out the quest objective.
 Lea > ANNOYED: ...!
 Emilie > EXHAUSTED: Somehow reminds me of Lea...
 Emilie > EXHAUSTED: Running around for minutes and destroying every living being without breaks.
@@ -74,13 +87,13 @@ if plot.apollo.leaWins >= 3
     endif
     Lea > SMUG: Lea!
     Joern > SMILE: About time he met a \c[3]superior\c[0] opponent.
-else 
-    if plot.apollo.leaWins >= 2 
+else
+    if plot.apollo.leaWins >= 2
         Emilie > CURIOUS: They are pretty even in terms of skill, non.
         Lea > EXHAUSTED: ...
         Joern > DEFAULT: Surprisingly.
         Joern > SMILE: Nice to finally see him fight a \c[3]challenging\c[0] opponent.
-    else 
+    else
         Joern > TOWARD: Could've went easier on Lea.
         Lea > PRE_CRY1: ...
         Emilie > ANGRY: Yeah!\. Bashing newbies is \c[1]not fair\c[0]!

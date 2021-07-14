@@ -1,5 +1,19 @@
-#Note: 
-# At some point all \c[3]...\c[0] got replaced with ...\!, including their content. 
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+#Note:
+# At some point all \c[3]...\c[0] got replaced with ...\!, including their content.
 # Had to rewrite again, hope that nothing is missing.
 
 # Original idea by CoolWall
@@ -20,9 +34,9 @@ Lukas > COMPLAINING: Yeah, thanks for advice, chief.
 Message 2
 Lukas > COMPLAINING: I think, I'm cool now.\. Swallowed some super pills.
 Joern > TOWARD: <sci-fi medication>?
-Lukas > SKEPTICAL: Not sure.\. Maybe? 
+Lukas > SKEPTICAL: Not sure.\. Maybe?
 Joern > SARCASTIC: How irresponsible.
-Lukas > DEFAULT: Don't worry. I've been taking them for years and so far they seem to help. 
+Lukas > DEFAULT: Don't worry. I've been taking them for years and so far they seem to help.
 
 Message 3
 Lukas > WHISTLING: Hold on, I think there is another slice left.
@@ -49,7 +63,7 @@ set cced.joern-lukas.battle-over-1.finished true
 
 # by Paradragon
 == cced-joern-lukas-battle-over-2 ==
-Message 1 
+Message 1
 Lukas > WONDERING: Isn't CrossGear connected to all \c[3]five senses\c[0]?
 Joern > DEFAULT: Taste and smell are missing.
 Lukas > WHISTLING: That's the thing, Joern.
@@ -89,10 +103,10 @@ Sergey > ROLL_EYES: We read that kind of suggestions every day.
 Sergey > WORRIED: Satoshi left before finishing the \c[3]taste buds\c[0] module.\! And people who can improve CrossGear are not that common.
 Lea > SAD: ...
 # TODO: KuLero release plot line
-if plot.line >= 40000 && plot.line <= ??? 
+if plot.line >= 40000 && plot.line <= ???
     Sergey > THINKING: But since he is back...\! Maybe he will finish it after Ku'Lero is released.
-else 
-    Sergey > THINKING: But since he is back...\! I'll ask him about it. 
+else
+    Sergey > THINKING: But since he is back...\! I'll ask him about it.
 endif
 Lea > EXCITED: ...!
 

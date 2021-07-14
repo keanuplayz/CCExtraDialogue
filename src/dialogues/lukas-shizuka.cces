@@ -1,3 +1,17 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 == cced-lukas-shizuka-battle-over-1 ==
 
 condition: party.alive.Schneider && party.alive.Shizuka
@@ -16,7 +30,7 @@ Lea > EXHAUSTED: ...
 Message 2
 Schneider > DEFAULT: Aren't you two basically sisters?
 
-# Similar conversation occurs in Luke-Shizuka party 
+# Similar conversation occurs in Luke-Shizuka party
 if cced.shizuka.sakai-sisterhood
     Schneider > TOWARDS: One could say that you have more in common than anybody else in the universe.
     Shizuka > INNOCENT: I mean... if she wants to...
@@ -38,12 +52,12 @@ Lea > SURPRISED_TOWARD: Why Lea?
 Shizuka > SARCASTIC: Why Lukas?
 Lukas > SKEPTICAL: Good point.
 
-# Similar conversation occurs in Luke-Shizuka party 
+# Similar conversation occurs in Luke-Shizuka party
 if cced.shizuka.lea-name-origin
     Lea > SURPRISED: Wait! Why Lea?
     Shizuka > INNOCENT: No particular reason besides that it sounds nice.
     Lea > THINKING: ...
-endif 
+endif
 
 set cced.shizuka.lea-name-origin true
 
@@ -52,7 +66,7 @@ Lukas > SURPRISED: Wow, you two do fight similarly.
 Lukas > TOWARDS: <But Lea has more fluidness and determination in her movements.>
 Lea > SMUG: ...!
 
-# Also occurs in party with C'Tron, Joern and Luke 
+# Also occurs in party with C'Tron, Joern and Luke
 if cced.shizuka.lea-similarity-mentions == 1
     Shizuka > FUNNY_SMILE: Yeah, I get that a lot.
 endif
@@ -120,11 +134,11 @@ Lea > SURPRISED_AWAY: Why?
 
 Message 2
 Lukas > COMPLAINING: I'm sorry, Shizuka.
-Shizuka > SMUG: You should be. 
+Shizuka > SMUG: You should be.
 Shizuka > FUNNY_SMILE: I'm still shaken.
 Lea > SURPRISED_AWAY:  Why?
 Lukas > PISSED: No, you're not.
-Shizuka > SARCASTIC: Then I'm hungry. And when I'm hungry, I tend to punch annoying people. 
+Shizuka > SARCASTIC: Then I'm hungry. And when I'm hungry, I tend to punch annoying people.
 Lea > ANNOYED: ...?
 
 Message 3

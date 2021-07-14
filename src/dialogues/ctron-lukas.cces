@@ -1,3 +1,17 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 == cced-ctron-lukas-battle-over-1 ==
 
 condition: party.alive.Glasses && party.alive.Schneider && plot.line >= 40000
@@ -16,7 +30,7 @@ Message 2
 Lukas > WONDERING: Hey, Tronny. Are you feeling alright?
 C'tron > EMBARRASSED: Mostly yes... just a little <thought fog / brain fog / mental fog>, that's all.
 C'tron > SMILE: No need to worry about it.
-Lukas > SURPRISED: Oh, ok. 
+Lukas > SURPRISED: Oh, ok.
 Lukas > LAUGH: I just noticed you were reluctant to use some abilities, that's all.
 Lea > SMILE: ...
 
@@ -32,7 +46,7 @@ Lukas > DEFAULT: You lot didn't forget to spend your \c[3]circuit points\c[0], r
 #    if <player level> <= 3
 #        Lea > SURPRISED: Whaaaat?
 #    else
-#        # Under question if this is possible to get unspent circuit points. Probably a sum, but a separate condition for every tree will suffice too. 
+#        # Under question if this is possible to get unspent circuit points. Probably a sum, but a separate condition for every tree will suffice too.
 #        if <player level> >= 10 && <unspent neutral circuit points> < 4
 #            Lea > PROUD: ...!
 #        else
@@ -44,7 +58,7 @@ Lukas > DEFAULT: You lot didn't forget to spend your \c[3]circuit points\c[0], r
 C'tron > SMILE: <Of course... kind of hard to forget it.>
 Lukas > SKEPTICAL: Well, then you surely have \c[3]Divine Protection\c[0] and its variants unlocked, Tronny. Give them a shot.
 C'tron > SURPRISED: Is it like... protective... arts?
-Lukas > LAUGH:  Jap. Surprised you don't use them more often.   
+Lukas > LAUGH:  Jap. Surprised you don't use them more often.
 Lukas > TOWARDS: They are very good for \c[3]level 1\c[0] arts. Albert throws Them all the time.
 C'tron > EMBARRASSED:  Okay-dokey... <I'll see about it>.
 
@@ -72,11 +86,11 @@ Lea > EXCITED: Lea!
 C'tron > WORRIED: You're right...
 
 Message 6
-Lukas > RANTING: <Oh Junge>, guess Albert was right. 
+Lukas > RANTING: <Oh Junge>, guess Albert was right.
 Lukas > SERIOUS: You're just terrible at this game.
 Lea > NOD: [nods]
 C'tron > EMBARRASSED: Sorry...
-Lukas > WINK: Just kidding, don't worry about it. 
+Lukas > WINK: Just kidding, don't worry about it.
 Lukas > LAUGH: <Not like we really need buffs, when Lea is with us.>
 Lea > SMUG: Hi.
 

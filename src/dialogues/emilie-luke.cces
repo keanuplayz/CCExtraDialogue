@@ -1,3 +1,17 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # Regret nothing, appreciate everything
 
 == cced-emilie-luke-battle-over-1 ==
@@ -16,7 +30,7 @@ Message 2
 Emilie > AWAY: Taking awfully many hits, Luke. Aren't you like...\. a \c[3]seasoned player\c[0]?
 #alternative condition, if we want it... for some reason...:
 #if area.autumn-area.isCurrent || area.autumn-fall.isCurrent || area.bergen-trails.isCurrent || area.heat-area.isCurrent || area.jungle.isCurrent || area.forest.isCurrent
-if area.beach.isCurrent 
+if area.beach.isCurrent
     Luke > LAUGH: Not used to fighting these enemies.
 else
     Luke > LAUGH: Forgot how to fight these enemies.
@@ -67,7 +81,7 @@ Luke > COMPLAINING: Friends are allowed to do that, right?
 Lea > NOD: [nods]
 Emilie > SMILE: Oui! Friendly cuddles are nice too.
 Luke > WHISTLING: Uhm...\. hugs and cuddles are different things, Emilie.
-Emilie > SMILE: Oh, I know, silly.\. No mistake here. 
+Emilie > SMILE: Oh, I know, silly.\. No mistake here.
 Lea > NERVOUS: ...
 
 Message 8
@@ -80,7 +94,7 @@ Lea > SHAKE: [shakes head]
 
 Message 9
 Emilie > DETERMINED: Did you two \c[3]go for a walk\c[0]?
-Luke > DEFAULT: Jap. Ran around and jumped on pipes after some boring quest. 
+Luke > DEFAULT: Jap. Ran around and jumped on pipes after some boring quest.
 Luke > LAUGH: Bashed some mobs along the way too.
 Lea > SMILE: ...
 Emilie > SMILE: No, silly. You know, what I meant.
@@ -109,7 +123,7 @@ Lea > SHOCKED: ...!!
 Lea > SHOUT_PANIC: \c[1]Wait! Bye!!\c[0]
 Luke > WHISTLING: Just kidding, sorry...\. that was loud...
 Lea > DOWN_EYE_CLOSED: ...
-Luke > WINK: <Maybe next time...> # They are not yet a couple. This line may be too direct. 
+Luke > WINK: <Maybe next time...> # They are not yet a couple. This line may be too direct.
 Lea > DISGUSTED: ...!
 Emilie > EXHAUSTED: You know what...\. Forget about it.
 

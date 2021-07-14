@@ -1,8 +1,22 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 == cced-apollo-emilie-battle-over-1 ==
 
 condition: party.alive.Apollo && party.alive.Emilie
 
-Message 1 
+Message 1
 Apollo > CONTENT Another glorious victory for Spheromancers!
 Lea > EXCITED ...!
 Emilie > SUSPICIOUS I'm right here, grasshead.
@@ -30,7 +44,7 @@ Lea > EXHAUSTED ...
 
 #Quadroguard
 #A tank class with high defense.
-#Quadroguards follow the Virtue of Endurance. They have a deficit in attack power and speed but have superior defense in comparison to all other classes. They can survive longer and can even take up multiple enemies at once with ease. Their element of choice is Cold. 
+#Quadroguards follow the Virtue of Endurance. They have a deficit in attack power and speed but have superior defense in comparison to all other classes. They can survive longer and can even take up multiple enemies at once with ease. Their element of choice is Cold.
 #Quadroguards are a tank Melee class mainly based around absorbing damage. They are designed for a highly defensive playstyle, and are typically used to block enemy attacks and protect their weaker teammates. With both melee and square-shaped VRP, they can land very powerful attacks, but are very slow in doing so.
 #The Stats of Quadroguards are not directly mentioned, but it is likely that they have high Defense and Health when compared to other classes. Their weapon of choice is a mace, which is typically wielded in combination with a shield.
 #Most quadroguards wear square shaped horns in the chin and use the color blue in their clothes.
@@ -38,7 +52,7 @@ Message 4
 Emilie > DETERMINED Okay, then how about \c[3]Quadroguard\c[0]. Protecting your friends is very noble?
 Apollo > DEFAULT The Quadroguards put their lives on the line to take the blows and protect their team.
 Apollo > LECTURING A truly honorable class, that almost rivals the Spheromancer.
-Emilie > SMILE Oui! A team of a Quadroguard and Pentafist sounds good. Right, Lea? 
+Emilie > SMILE Oui! A team of a Quadroguard and Pentafist sounds good. Right, Lea?
 Lea > SURPRISED_TOWARD ...?
 Apollo > POINTING While Quadroguards are valuable teammates, they would be less than ideal for walking the track alone.
 Apollo > LECTURING They are great at protecting themselves and their team, but severely lack in offensive capabilities.
@@ -61,7 +75,7 @@ Apollo > LECTURING I would never pick them.
 Apollo > POINTING Just like tribladers, Pentafists are all about attacking as fast as you can without thinking.
 Apollo > SHOUTING Unlike tribladers, it's the only thing Pentafists are good at. They have no range, no damage and have to rely on luck because of this focus on... focus.
 Emilie > EMBARRASSED If Pentafists are so bad, why are they the most popular class in CrossWorlds?
-Apollo > MOPING Because of their flashy appearance... Almost every new player picks a Pentafist. 
+Apollo > MOPING Because of their flashy appearance... Almost every new player picks a Pentafist.
 Apollo > ANGRY In the end, it throws even more shade on those, who actually put effort into honing their skills.
 Apollo > CONTENT Pentafists are also terrible for dueling, as duels are less about who is more skilled, than who gets the first hit in.
 Emilie > EXHAUSTED I could say the same about your duels with Lea.
@@ -82,7 +96,7 @@ Em: <Isn't Albert a Hexacast, who prefers melee combat?>
 Lea > THINKING ...
 Apollo: Hexacasts certainly can fight in melee, every class does. But it's less than ideal when one can obliterate their enemies with powerful homing or area-damaging arts.
 Em: What about Hexacast duels?
-Apollo: Simply throwing arts is not sufficient to win, so they must employ at least some kind of trickery or strategy, as befits their virtue. 
+Apollo: Simply throwing arts is not sufficient to win, so they must employ at least some kind of trickery or strategy, as befits their virtue.
 Apollo: Still, it's more of a fight of programmed automated weapons and homing attacks than actual display of fighting mastery.
 # ??? - Missing connecting line. Alternatively, throw out next line entirely.
 Apollo: I must admit. Out of all four classes, Hexacast duels are the most interesting to follow.

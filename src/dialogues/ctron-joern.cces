@@ -1,14 +1,28 @@
-# Joern comments on the landscapes of CrossWorlds.  
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Joern comments on the landscapes of CrossWorlds.
 # Note: Secret 'Detective Joern' dialogue is unlocked after at least 1 message in every location instead of 'all messages'
 # This is intended because not every region gets more than one message and its not obvious when you are done with them.
 
 #Revision notes
 #1--- About tidal lock
-#A moon with water orbiting a gas giant would most likely cause enormous shifts in sea level depending on how the planet is oriented, 
+#A moon with water orbiting a gas giant would most likely cause enormous shifts in sea level depending on how the planet is oriented,
 # and considering the water sensitivity of instant #matter it'd make places like the archipelago and rhombus city very stupid projects
 #2--
 # About synchronous rotation in relation to star
-# the disastrous consequences that (SyncRotation) would have on the environment, 
+# the disastrous consequences that (SyncRotation) would have on the environment,
 # particularly the temperatures (which C'tron hinted at upon arriving in Sapphire Ridge).
 
 == cced-ctron-joern-battle-over-rise ==
@@ -91,8 +105,8 @@ Joern > SMILE: I like buying trinkets.
 condition: party.alive.Glasses && party.alive.Joern && area.heat-area.isCurrent
 
 Message 1
-Joern > DEFAULT: I don't like the \c[3]Maroon Valley\c[0]. 
-Joern > ANGRY: Its to bright, sand gets everywhere and its also very hot. I'm sweating buckets right now. 
+Joern > DEFAULT: I don't like the \c[3]Maroon Valley\c[0].
+Joern > ANGRY: Its to bright, sand gets everywhere and its also very hot. I'm sweating buckets right now.
 Joern > DEFAULT: Why would they do it like that?
 C'tron > TOWARD: Some folks prefer the environment to be \c[3]realistic\c[0]. Otherwise they can't get into the game.
 C'tron > SMILE: Fortunately, \c[3]personal temperature settings\c[0] are highly customisable.
@@ -101,8 +115,8 @@ if plot.line >= 40000
     C'tron > WORRIED: To bad evotars can't access them, just like the \c[3]looks menu\c[0].
     Lea > EXHAUSTED: ...!!
     C'Tron > EMBARRASSED: At least we get somewhat bearable settings by default, right?
-    Lea > NOD: [nods] 
-endif 
+    Lea > NOD: [nods]
+endif
 
 Joern > UP: There are \c[3]personal temperature settings\c[0]?
 Joern > SURPRISED: ...
@@ -111,7 +125,7 @@ set cced.ctron-joern.tourism.locations + 1
 set cced.ctron-joern.tourism.desert true
 
 Message 2
-Joern > DEFAULT: It says \c[1]'Realistic Immersion Preset'\c[0]. 
+Joern > DEFAULT: It says \c[1]'Realistic Immersion Preset'\c[0].
 Joern > SARCASTIC: Think, I'll lower it a little.
 C'tron > BLANK: Don't tell me you've played all this time with realistic temperature.
 Joern > DEFAULT: ...
@@ -189,7 +203,7 @@ set cced.ctron-joern.tourism.azure true
 
 
 == cced-ctron-joern-battle-over-1 ==
-condition: party.alive.Glasses && party.alive.Joern && plot.line >= 45600 && cced.ctron-joern.tourism.locations >= 7 
+condition: party.alive.Glasses && party.alive.Joern && plot.line >= 45600 && cced.ctron-joern.tourism.locations >= 7
 
 Message 1
 Joern > DEFAULT: Lea, remember that masked guy we met in that red place? Feels like I've seen him before...
@@ -201,23 +215,23 @@ Joern > SUSPICIOUS: Although...
 Lea > SCARED: ...??
 
 #Alternative to the above with a few wording changes
-#Joern > DEFAULT: Lea, remember that masked guy we met in the red place? Feels like I've seen him before... 
-#Lea > SURPRISED_AWAY ..?? 
-#C'Tron > EMBARRASSED: I heard Vermillion was not the most pleasant experience to her. Maybe let's not dwell on it... 
-#Joern > SARCASTIC: You're right. Nevermind... 
-#Lea > EXHAUSTED: ... 
-#Joern > SUSPICIOUS: Although... 
+#Joern > DEFAULT: Lea, remember that masked guy we met in the red place? Feels like I've seen him before...
+#Lea > SURPRISED_AWAY ..??
+#C'Tron > EMBARRASSED: I heard Vermillion was not the most pleasant experience to her. Maybe let's not dwell on it...
+#Joern > SARCASTIC: You're right. Nevermind...
+#Lea > EXHAUSTED: ...
+#Joern > SUSPICIOUS: Although...
 #Lea > SCARED: ...??
 
 #Yet another alternative to the above with many wording changes
 #Joern > DEFAULT: There is something that bothers me, Tronny.
 #C'Tron > SMILE: What is that?
 #Joern > DEFAULT: That **masked guy** we met in the red place? Feels like I've seen him before.
-#Lea > SURPRISED_AWAY ..?? 
+#Lea > SURPRISED_AWAY ..??
 #C'Tron > EMBARRASSED: From what I heard about Sidwell and Vermillion, its very unlikely anyone of us actually knows him.
 #Joern > SARCASTIC: You're right. Nevermind.
-#Lea > EXHAUSTED: ... 
-#Joern > SUSPICIOUS: Although... 
+#Lea > EXHAUSTED: ...
+#Joern > SUSPICIOUS: Although...
 #Lea > SCARED: ...??
 
 Message 2
@@ -229,7 +243,7 @@ Lea > ASTONISHED: ...!!
 Joern > SUSPICIOUS: Hmm...
 
 Message 3
-Joern > DEFAULT: I guess it makes sense for a doppelganger of Sidwell to exist. 
+Joern > DEFAULT: I guess it makes sense for a doppelganger of Sidwell to exist.
 Joern > SMILE: I mean, even if her circumstances are special, Lea looks close enough to that other Spheromancer that was with us at Vermillion.
 Lea > ANNOYED: ...
 C'Tron > SMILE: Right! Lea and Shizuka look almost identical, besides the gear and hair.
@@ -239,7 +253,7 @@ Lea > HOLD_HORNS_ANNOYED: Why...
 Message 4
 Joern > DEFAULT: Y'know, a lot of Polly's old CrossWorlds avatars look pretty similar to each other.
 Joern > SARCASTIC: All of them were Spheromancers.
-Lea > DISGUSTED: ... 
+Lea > DISGUSTED: ...
 Joern > UP:  Although, he would play around with new cosmetics and accessories for every character he made.
 C'Tron > WORRIED: Huh... I see...
 Joern > SUSPICIOUS: Hmm...
@@ -252,13 +266,13 @@ Joern > SMILE: Polly has his mask on one of his old CrossWorlds characters that 
 Joern > DEFAULT: He has many characters.
 C'Tron > EMBARRASSED: Oh.. um, how many characters does he have?
 Joern > ANGRY: Too many.
-Lea > SMILE: ... 
+Lea > SMILE: ...
 
 set cced.ctron-joern.battle-over-1.finished true
 
 
 
-== !goern-sweetron-battle-over-cced == 
+== !goern-sweetron-battle-over-cced ==
 
 condition: false
 

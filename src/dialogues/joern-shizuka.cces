@@ -1,3 +1,17 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # by el2020
 == cced-joern-shizuka.battle-over-1 ==
 condition: party.alive.Joern && party.alive.Shizuka && plot.line >= 40000
@@ -17,13 +31,13 @@ Shizuka > TOWARD: I'm curious... what did you mean by "we fight the same"?
 Joern > SURPRISED: Hmm?
 Shizuka > CONFLICTED: Like... How do Lea and I fight the same way?
 Joern > SMILE: You both have the same general "movements" in combat. #to-do - this line probably needs to be reworked
-Joern > UP: Along with that, you two can be a little... aggressive. 
+Joern > UP: Along with that, you two can be a little... aggressive.
 if newgame.sergey-hax
     Shizuka > SARCASTIC: By "aggressive", I assume you mean \c[1]one-shotting pretty much every enemy?
     Lea > INSANE_DOWN: \c[1]...!
     Shizuka > SARCASTIC: ...because if you're referring to \c[1]that\c[0], it only applies to one of us.
     Joern > SARCASTIC: No, not that...
-    Shizuka > FUNNY_SMILE: Even with your \c[1]insane damage\c[0], I guess I can see some similarities. 
+    Shizuka > FUNNY_SMILE: Even with your \c[1]insane damage\c[0], I guess I can see some similarities.
 else
     Shizuka > CONCERNED: Well... I guess I see what you mean.
     Shizuka > DENYING: Remember our duel, Lea?

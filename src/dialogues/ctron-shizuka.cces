@@ -1,3 +1,17 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # Detective Shizuka. Almost rivals Detective Joern in her deduction.
 # This banter is mostly fine, but also a little sad.
 
@@ -49,7 +63,7 @@ C'tron > SMILE: But outside of that, your personal preferences should still be \
 Shizuka > BADASS: Oh really?
 C'tron > AWESOME: Yes! For example, your tastes remained similar!
 C'tron > SMUG: You both prefer <\c[3]Quantic Wave\c[0]>. # Maybe use something new, because reusing Quantic Wave is cheap and boring
-Lea > NOD: [nods] 
+Lea > NOD: [nods]
 Shizuka > SURPRISED: ...
 Shizuka > SURPRISED: This is...\. \c[3]oddly specific\c[0].
 Shizuka > SARCASTIC: You know that how, exactly?
@@ -63,7 +77,7 @@ Shizuka > SARCASTIC: Strange...\. because I feel something very familiar about y
 Lea > SURPRISED_AWAY: ...?
 C'tron > EXHAUSTED: I ugh... just said the same thing about you and Lea.
 C'tron > EMBARRASSED:  Maybe you've met a \c[3]real player\c[0] from whom I was created?
-Shizuka > FUNNY_SMILE: Eh, don't worry.\. We'll figure it out eventually. 
+Shizuka > FUNNY_SMILE: Eh, don't worry.\. We'll figure it out eventually.
 Shizuka > FUNNY_SMILE: Not like this thought is planning on leaving anytime soon.
 C'tron > EXHAUSTED: Okay-dokey...
 
@@ -93,7 +107,7 @@ Shizuka > CONCERNED: ...
 Lea > SURPRISED_TOWARD: ...?
 C'tron > WORRIED: You may still find him...\. eventually.
 Shizuka > ANGRY: Look, he is gone for good, alright?!
-Shizuka > STRICT: Its been \c[1]seven months\c[o] already! 
+Shizuka > STRICT: Its been \c[1]seven months\c[o] already!
 Shizuka > SCREAM: \c[1]He left no records, no traces, nothing!!
 Lea > SURPRISED_AWAY: ...?
 Shizuka > ANNOYED: No use mulling over it.

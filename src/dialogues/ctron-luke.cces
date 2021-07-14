@@ -1,5 +1,19 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # Discussion of what would Evotars even do, while being stuck in a CrossWorlds: Music, Painting, Filmmaking, Being an actor (not for mute girl though), Arena Superstar, PVP tournaments champion etc.
-# Evotars Trio. Shenanigans are inbound. This dialogue has large potential and must be a killer. 
+# Evotars Trio. Shenanigans are inbound. This dialogue has large potential and must be a killer.
 
 == cced-ctron-luke-battle-over-1 ==
 
@@ -16,7 +30,7 @@ Message 2
 C'tron > THOUGHTFUL: I wonder if Instatainment is spying on us right now.
 Luke > DEFAULT: What do you mean?
 C'tron > DEFAULT: We are still alive because Instatainment agreed on a \c[3]research project\c[0] involving evotars.
-C'tron > EMBARRASSED: <For the purposes of it, it would make sense to gather as much data as possible, including \c[3]constant surveillance\c[0].> 
+C'tron > EMBARRASSED: <For the purposes of it, it would make sense to gather as much data as possible, including \c[3]constant surveillance\c[0].>
 Luke > WONDERING: So like... they can see everything we do? Like in a third-person game?
 C'tron > TOWARD: Not really, no. But they certainly can track our position and every movement of our bodies.
 C'tron > WORRIED: ...or record everything we are saying.
@@ -61,7 +75,7 @@ C'tron > THOUGHTFUL: That means, it doesn't really matter, what our bodies are m
 if if newgame.sergey-hax
     Luke > WHISTLING: Are you trying to say there can be \c[3]giant Lea-controlled murder-bot\c[0]?
     Lea > INSANE_DOWN: Lea!!
-    C'tron > EXHAUSTED: Yeah, no. 
+    C'tron > EXHAUSTED: Yeah, no.
     C'tron > EXHAUSTED: No way this will actually happen, but...
 else
     Luke > WINK: Are you trying to say there can be \c[3]giant evotar-controlled murder-bots\c[0]?
@@ -74,7 +88,7 @@ Luke > SKEPTICAL: Jap, that would be rather uncomfortable.
 Lea > THINKING: ...
 C'tron > SMILE: There is also little reason to build any murder-bots in this day and age.
 C'tron > EXHAUSTED: At least, I hope so.
- 
+
 Message 7
 C'tron > WORRIED: We're probably decades away from Instatainment even having a discussion about us leaving CrossWorlds.
 C'tron > WORRIED: In the meanwhile, we're stuck learning public speaking.
@@ -83,7 +97,7 @@ Luke > EYES_CLOSED: Seems like plenty of time to learn some new skills and hobbi
 Lea > SURPRISED_TOWARD: What?
 Luke > WONDERING: \c[3]Painting\c[0] may be a start.
 Luke > DEFAULT: They got a \c[3]whole computer\c[0] for Satoshi. I don't see, why we can't get us something similar for drawing.
-C'tron > EMBARRASSED: <I couldn't get a round circle, even if I tried.> 
+C'tron > EMBARRASSED: <I couldn't get a round circle, even if I tried.>
 Lea > THINKING: ...?
 
 Message 8
@@ -116,7 +130,7 @@ C'tron > EMBARRASSED: Alright, you changed my mind.
 C'tron > SMILE: Being an evotar may not be that bad.
 Lea > EX2_LIGHT_SMILE: ...
 Luke > LAUGH: Just throwing ideas around.
-Luke > EYES_CLOSED: If Instatainment is listening and need some more of my \c[3]expertise\c[0]... 
+Luke > EYES_CLOSED: If Instatainment is listening and need some more of my \c[3]expertise\c[0]...
 Luke > WINK: You know where to find me.
 Sergey > WHISTLING: Sure, I'm taking \c[3]notes\[0].
 Lea > SHOCKED: ...!!

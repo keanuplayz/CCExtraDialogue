@@ -1,3 +1,17 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # Original idea by Lolz
 # by Paradragon
 == cced-joern-luke-battle-over-1 ==
@@ -44,7 +58,7 @@ Lea > ASTONISHED: ...!
 Joern > SMILE: And pets are always there when you need them the most.
 
 Message 5
-Luke > DEFAULT: Don't know, Joern. Seems like it requires a lot of \c[3]commitment\c[0]. 
+Luke > DEFAULT: Don't know, Joern. Seems like it requires a lot of \c[3]commitment\c[0].
 Luke > WHISTLING: You can't just ignore and leave your pet to their own business.
 Luke > SKEPTICAL: I'm not that responsible.
 Lea > EX2_DISAPPOINTED: ...
