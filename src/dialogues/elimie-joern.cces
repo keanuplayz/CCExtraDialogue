@@ -74,19 +74,21 @@ if plot.apollo.leaWins >= 3
     endif
     Lea > SMUG: Lea!
     Joern > SMILE: About time he met a \c[3]superior\c[0] opponent.
-else if plot.apollo.leaWins >= 2 
-    Emilie > CURIOUS: They are pretty even in terms of skill, non.
-    Lea > EXHAUSTED: ...
-    Joern > DEFAULT: Surprisingly.
-    Joern > SMILE: Nice to finally see him fight a \c[3]challenging\c[0] opponent.
 else 
-    Joern > TOWARD: Could've went easier on Lea.
-    Lea > PRE_CRY1: ...
-    Emilie > ANGRY: Yeah!\. Bashing newbies is \c[1]not fair\c[0]!
-    Lea > PRE_CRY2: ...
-    Joern > AWWW: You will get him next time, little girl.
-    Lea > NOD_HARD2: [nods]
-    Emilie > UNCERTAIN: Lea, chérie!\. Don't cry!\. Its just a game, non?
+    if plot.apollo.leaWins >= 2 
+        Emilie > CURIOUS: They are pretty even in terms of skill, non.
+        Lea > EXHAUSTED: ...
+        Joern > DEFAULT: Surprisingly.
+        Joern > SMILE: Nice to finally see him fight a \c[3]challenging\c[0] opponent.
+    else 
+        Joern > TOWARD: Could've went easier on Lea.
+        Lea > PRE_CRY1: ...
+        Emilie > ANGRY: Yeah!\. Bashing newbies is \c[1]not fair\c[0]!
+        Lea > PRE_CRY2: ...
+        Joern > AWWW: You will get him next time, little girl.
+        Lea > NOD_HARD2: [nods]
+        Emilie > UNCERTAIN: Lea, chérie!\. Don't cry!\. Its just a game, non?
+    endif
 endif
 
 set cced.emilie-joern.battle-over-1.finished true
