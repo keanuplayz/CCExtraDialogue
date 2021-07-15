@@ -12,13 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Original idea by <?> / CCED Team
+# by Paradragon
 == cced-apollo-ctron-battle-over-1 ==
 
 condition: party.alive.Apollo && party.alive.Glasses
 
-# Thinking of rewriting it from scratch
-
 Message 1
+Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a \c[3]Hexacast\c[0] join forces on the \c[3]Path of Justice\c[0]!
+Apollo > CONTENT: Truly a sight to behold.
+Lea > PROUD: ...!
+C'tron > EMBARRASSED: Uhm...\. path of justice?
+# ...
+
+# Thinking of rewriting everything below from scratch...
+
+Message 2
 Apollo > CONTENT: The justice has been served once again!
 C'tron > WORRIED: If you call murdering a bunch of animals - justice...
 Apollo > DOWN: We must face each and every obstacle the Track puts in our way!
@@ -26,7 +35,7 @@ Apollo > LECTURING: Even if our hearts tell us otherwise, the path of Justice is
 Apollo > POINTING: It is our duty as Seekers!
 C'tron > EMBARRASSED: Umm, okay...
 
-Message 2
+Message 3
 Apollo > CONTENT: Our enemies are vanquished once again!
 Lea > PROUD: ...!
 Apollo > LECTURING: Animal, machine or something else entirely...
@@ -38,7 +47,7 @@ Apollo > DEFAULT: The very same power that us noble Seekers use to tackle our ch
 C'tron > WORRIED: I don't know if you can call adding guns to birds as 'imbuing power'...
 Lea > SMILE: ...
 
-Message 3
+Message 4
 Ap: It is true, <?> hexacast! Not every enemy is the creation of the Track.
 Apollo > LECTURING: In fact, most cybernetic enemies are but the victims of evil experiments...
 Apollo > POINTING: Performed by \c[1]humans\c[0]!
@@ -65,7 +74,7 @@ Apollo > PONDERING: ...
 Apollo > LECTURING: In any case, their facility is hidden somewhere on Shadoon.
 Apollo > SHOUTING: Finding and stopping these unjust experiments is but one of our many duties as noble Seekers.
 
-Message 4
+Message 5
 Tr : What about organic animals, like Shokats?
 Tr : Animals have to eat something, and originally, cats are carnivores.
 C'tron > EMBARRASSED: Well... most fauna on Shadoon is, really.
@@ -76,7 +85,7 @@ C'tron > SMUG: Don’t forget occasional dessert in form of a seeker...
 Lea > PANIC:  ...?!!
 
 # Message 5, 6 and 7 are in need of serious re-imagining and rewrite
-Message 5
+Message 6
 Tr :Question, Apollo. Operation Trackwalker existed for a long time, is it not?
 Ap: Its true. For many years have humans tried to conquer the Track.
 Tr: Then to be sustainable, the Track ecosystem must either be manually regulated by intelligent agent.
@@ -86,7 +95,7 @@ Tr: I’m not certain there can be one, when every Shadoon creature appears to b
 Ap: Even Seaflies?
 Tr: Don’t remind me of those…
 
-Message 6
+Message 7
 Tr: But let's take Shokats for example. They are a small game hunters blah blah blah.
 Ap: But what about electric eels? They can shock stuff too!
 Tr: Eels are actually knife fish.
@@ -94,7 +103,7 @@ Tr: They can do shock up to ten seconds
 Tr: And like cats, they are a small game hunter
 Tr: Shokats can do so much more frequently, but lets just say its the Track.
 
-Message 7
+Message 8
 Ap: Aren't electric eels able to kill humans too?
 Tr: Yes, but they risk their own lives when doing charges.
 Tr: 80% of their body is electricity generator.
