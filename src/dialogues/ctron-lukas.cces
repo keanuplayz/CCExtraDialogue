@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# by Paradragon
 == cced-ctron-lukas-battle-over-1 ==
 
 condition: party.alive.Glasses && party.alive.Schneider && plot.line >= 40000
