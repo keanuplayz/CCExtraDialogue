@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This file temporarily contains miscellaneous dialogues
-# In due time, they will be moved to their respective places
+# Apollo gives insight as to what is The Path of Justice. Luke calls bull.
 
 # by ...
 == cced-apollo-luke-battle-over-1 ==
@@ -22,7 +21,7 @@ condition: party.alive.Apollo && party.alive.Luke
 
 Message 1
 Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a mighty \c[3]Triblader\c[0] join forces on the \c[3]Path of Justice\c[0]!
-Apollo > CONTENT: <Truly a party to be afraid of!>
+Apollo > CONTENT: <Truly a party to be afraid of!> # This particular line is the same with one in apollo-lukas
 Lea > PROUD: ...!
 Luke > WONDERING: Path of justice? What's that supposed to mean?
 # ...
