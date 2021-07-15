@@ -43,23 +43,23 @@ if newgame.sergey-hax
     Emilie > WATCH_OUT_BADASS: Never said it was done by me.
     Lea > INSANE_DOWN: \c[1]Hi!\c[0]
 else
-    Joern > DEFAULT: You two are rather aggressive in your approach.
-    Emilie > WATCH_OUT_BADASS: Sorry! I'm a pentafist...\! I punch things.
-    Emilie > SMILE: And you don't have to sweat with shielding.
-    Emilie > DETERMINED: <Lea and I can punch everything out of existence before getting noticed!> # I like 'punch everything out of existence', but its already getting long
-    Joern > TOWARD: Good point.
+    Joern > DEFAULT: You two are rather aggressive.
+    Emilie > WATCH_OUT_BADASS: I'm a Pentafist...\! I punch things.
+    Emilie > SMILE: And you don't have to sweat with shielding...
+    Emilie > DETERMINED: ... If we punch everything out of existence first! # I like 'punch everything out of existence', but its already getting long
+    Joern > DEFAULT: Good point.
 endif
 Joern > DEFAULT: Its a nice change of pace from Apollo.
 Joern > SMILE: Plenty of time to take in the view.
 
 Message 4
-Emilie > CURIOUS: How monsieur grasshead manages to always beat Lea to the dungeon?
+Emilie > CURIOUS: How Monsieur grasshead is so quick when it comes to speeding ahead of us?
 Joern > SARCASTIC: Skips everything in a rush to next landmark.
 Joern > SARCASTIC: Except \c[3]certain\c[0] chests.
-Joern > ANGRY: I hardly have the time to figure out the quest objective.
+Joern > ANGRY: Hardly have the time to figure out a quest with him.
 Lea > ANNOYED: ...!
-Emilie > EXHAUSTED: Somehow reminds me of Lea...
-Emilie > EXHAUSTED: Running around for minutes and destroying every living being without breaks.
+Emilie > EMBARRASSED:  Somehow reminds me of Lea...
+Emilie > EXHAUSTED: Running around for minutes...\. Destroying every creature in sight...
 Lea > SMUG: ...!!
 
 # Even I am not sure if it will work the way I want it too...
@@ -133,21 +133,38 @@ Joern > SUSPICIOUS: \c[3]Exactly\c[0] the same.
 Lea > EXHAUSTED: ...!
 
 Message 3
-Emilie > AWAY: Playing with you is fun, Joern.
-Emilie > DETERMINED: When something goes wrong, I can focus on punching them things.
+Emilie > DEFAULT: Playing with you is fun, Joern.
+Emilie > DETERMINED: Since you watch my back, I can focus on punching them things.
 Joern > DEFAULT: Thanks. I like my job.
-Joern > TOWARD: Always a pleasure, when people acknowledge their tanks.
+Joern > SMILE: Always a pleasure, when people acknowledge their tanks.
 Emilie > AWAY: You play tanks often?
 Joern > UP: I like to help other people.
 Joern > DEFAULT: Tanks are my go-to class in any RPG.
-Emilie > DETERMINED: Oh well... I like to help by destroying things before they get a chance to react.
+Emilie > DETERMINED: And I like to punch things out of existance before they even attack us.
 if newgame.sergey-hax
     Emilie > DEAD_INSIDE: At least, I used to...
-    Lea > INSANE: \c[1]Lea!!\c[0]
+    Lea > INSANE_DOWN: \c[1]...!!\c[0]
     Emilie > DEAD_INSIDE: Why are we still here, Joern?
-    Joern > SMILE: To have a nice chat and take in the beauty of CrossWords.
+    Joern > SMILE: To have a nice chat and take in the view.
 endif
 
-# ...And there should be some more nice chat in Message 4, 5 and 6!
-
 set cced.emilie-joern.battle-over-2.finished true
+
+# ...may there be more nice chat!
+== cced-emilie-joern-battle-over-3 ==
+
+condition: party.alive.Emilie && party.alive.Joern && plot.line >= 18700 && cced.emilie-joern.battle-over-2.finished
+
+Message 1
+Emilie > DEFAULT: Any plans for this weekend?
+Joern > DEFAULT: Going to prepare <food>.
+Emilie > ASTONISHED: Oooh~... what's <food>? # Totally not ripped from emilie-shizuka in New Home DLC  ;)
+Joern > DEFAULT: <describes food>
+Emilie > CURIOUS: <fooooood>
+Lea > ANNOYED: ...
+
+Message 2
+
+Message 3
+
+set cced.emilie-joern.battle-over-3.finished true
