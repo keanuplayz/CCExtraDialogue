@@ -110,7 +110,7 @@ set cced.emilie-joern.battle-over-1.finished true
 
 == cced-emilie-joern-battle-over-2 ==
 
-condition: party.alive.Emilie && party.alive.Joern && plot.line >= 18700 && cced.emilie-luke.battle-over-1.finished
+condition: party.alive.Emilie && party.alive.Joern && plot.line >= 18700 && cced.emilie-joern.battle-over-1.finished
 
 Message 1
 Emilie > DEFAULT: How did you get into CrossWords, Joern?
