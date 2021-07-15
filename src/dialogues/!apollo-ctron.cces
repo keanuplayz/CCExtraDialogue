@@ -19,7 +19,7 @@
 condition: party.alive.Apollo && party.alive.Glasses
 
 Message 1
-Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a \c[3]Hexacast\c[0] join forces on the \c[3]Path of Justice\c[0]!
+Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and an acute \c[3]Hexacast\c[0] join forces on the \c[3]Path of Justice\c[0]! # for revision: wise / keen / cunning
 Apollo > CONTENT: Truly a sight to behold.
 Lea > PROUD: ...!
 C'tron > EMBARRASSED: Uhm...\. path of justice?

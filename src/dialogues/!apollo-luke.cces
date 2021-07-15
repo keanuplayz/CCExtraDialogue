@@ -21,5 +21,10 @@
 condition: party.alive.Apollo && party.alive.Luke
 
 Message 1
+Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a mighty \c[3]Triblader\c[0] join forces on the \c[3]Path of Justice\c[0]!
+Apollo > CONTENT: <Truly a party to be afraid of!>
+Lea > PROUD: ...!
+Luke > WONDERING: Path of justice? What's that supposed to mean?
+# ...
 
 set cced.apollo-luke.battle-over-1.finished true
