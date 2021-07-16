@@ -34,7 +34,7 @@ Lea > SHOCKED: ...!!
 Emilie > SHOCKED: What?! Where?!\s[0]
 Emilie > MOPING: Hold up...\! there is nobody behind you.
 Lea > SMILE: Sorry.
-Emilie > EXHAUSTED: Please, chérie...\. don't do that again.
+Emilie > EXHAUSTED: Sacrebleu, Lea...\. don't do that again.
 
 Message 3
 Emilie > DETERMINED: Punching our way to victory, one mob at a time.
@@ -150,21 +150,60 @@ endif
 
 set cced.emilie-joern.battle-over-2.finished true
 
-# ...may there be more nice chat!
+
+
+# ... and so, may there be more nice chat!
+
+# Revision todo: Use correct words concerning 'grilling', 'preparing', 'searing', 'frying' etc. 
+# Original idea by Lolz
+# by Paradragon
 == cced-emilie-joern-battle-over-3 ==
 
 condition: party.alive.Emilie && party.alive.Joern && plot.line >= 18700 && cced.emilie-joern.battle-over-2.finished
 
 Message 1
 Emilie > DEFAULT: Any plans for this weekend?
-Joern > DEFAULT: Going to prepare <food>.
-Emilie > ASTONISHED: Oooh~... what's <food>? # Totally not ripped from emilie-shizuka in New Home DLC  ;)
-Joern > DEFAULT: <describes food>
-Emilie > CURIOUS: <fooooood>
-Lea > ANNOYED: ...
+Joern > DEFAULT: Going to prepare \c[3]seared ahi tuna steak\[0].
+Emilie > ASTONISHED: Oooh~... what's ahi tuna? # Totally not ripped from emilie-shizuka in New Home DLC  ;)
+Joern > DEFAULT: <A certain kind of tuna.\. It's covered in spices and served with wasabi dipping.> # This line could use some editing for sure
+Emilie > CURIOUS: Like a sushi?
+Joern > TOWARD: Sushi is a dish with specially prepared rice.\. Usually dressed with seafood. 
+Joern > DEFAULT: Sashimi would be more accurate in this case.
+Lea > NOD: [nods] # Emilie should probably say some ending line here instead of Lea...
 
 Message 2
+Emilie > AWAY: Why is it scorched though?
+Joern > DEFAULT: Its prepared on a hot surface before being eaten.
+Emilie > SUSPICIOUS: So...\. it's a grilled fish steak?
+Joern > DEFAULT: A bit more complicated.
+Emilie > CURIOUS: How so?
+Joern > SMILE: Instead of grill, it's prepared on a \c[1]hot lava stone\c[0]. 
+Lea > ASTONISHED: ...!
+Emilie > ASTONISHED: Now that's unusual!
 
 Message 3
+Emilie > DEFAULT: So its a special fish, fried on a stone.\. Neat.
+Joern > DEFAULT: But wait...\. There is more...
+Emilie > ASTONISHED: Nooooo~!
+Lea > EXHAUSTED: ...!
+Joern > SARCASTIC: The heated stone is brought to the table.
+Emilie > CURIOUS: Uhm...\. Why?
+Joern > SMILE: The fish is not prepared beforehand. Instead, you \c[3]do it yourself\c[0] by searing on that stone.
+Emilie > ASTONISHED: Wow, exotique!!
+Joern > SMILE: Indeed.\. You cook it as you eat and make it as seared as you like.
+Emilie > DETERMINED: Now I want to try it out!
+Lea > NOD_SAD: [nods]
+
+Message 4
+Emilie > AWAY: How hot is this stone again?
+Joern > SMILE: Around \c[1]700 degrees\c[0].
+Lea > SHOCKED: ...?!
+Emilie > SWEATY_SMILE: ...\! Seems dangerous to put it on a table, non?
+Joern > DEFAULT: It is.
+Joern > SARCASTIC: You better avoid touching it.
+Lea > SCARED: ...!!
+Emilie > SWEATY_SMILE: Oui...\. Maybe I'll try it out later...
 
 set cced.emilie-joern.battle-over-3.finished true
+
+# ...maybe there will be more nice chat... but seems like its enough already...
