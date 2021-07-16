@@ -37,25 +37,29 @@ Lea > SMILE: ...
 
 Message 3
 Lukas > DEFAULT: You lot didn't forget to spend your \c[3]circuit points\c[0], right?
-
-# TODO: properly implement condition
-# Did a few hundred hedgehag loops
-#if <player level> >= 80
-#    Lea > SMUG: ...
-#else
-#    #NG+ no EXP
-#    if <player level> <= 3
-#        Lea > SURPRISED: Whaaaat?
-#    else
-#        # Under question if this is possible to get unspent circuit points. Probably a sum, but a separate condition for every tree will suffice too.
-#        if <player level> >= 10 && <unspent neutral circuit points> < 4
-#            Lea > PROUD: ...!
-#        else
-#            Lea > NERVOUS: \..\..\..
-#        endif
-#    endif
-#endif
-
+if newgame.sergey-hax
+    # Insane Spheromancer
+    Lea > INSANE_DOWN: ...!
+    Lukas > COMPLAINING: Right...\. like you need them at all...
+else
+    if player.level >= 80 && (player.skillPoints[0] + player.skillPoints[1] + player.skillPoints[2] + player.skillPoints[3] + player.skillPoints[4]) < 10
+        # Anti-hedgehag Spheromancer
+        Lea > SMUG: ...
+    else
+        if player.level <= 4
+            # NG+ Spheromancer
+            Lea > SURPRISED_AWAY: ...?
+        else
+            if player.level >= 10 && (player.skillPoints[0] + player.skillPoints[1] + player.skillPoints[2] + player.skillPoints[3] + player.skillPoints[4]) < 10
+                # Average Spheromancer
+                Lea > PROUD: ...!
+            else
+                # Forgetful Spheromancer
+                Lea > NERVOUS: \..\..\..
+            endif
+        endif
+    endif
+endif
 C'tron > SMILE: <Of course... kind of hard to forget it.>
 Lukas > SKEPTICAL: Well, then you surely have \c[3]Divine Protection\c[0] and its variants unlocked, Tronny. Give them a shot.
 C'tron > SURPRISED: Is it like... protective... arts?
