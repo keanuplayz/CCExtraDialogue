@@ -55,7 +55,7 @@ jobs:
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
       - name: Create release
         run: |
-          gh release create ${{ steps.get_version.outputs.VERSION }} -t "CCED ${{ steps.get_version.outputs.VERSION }}" ${{ env.FILES }}
+          gh release create ${{ steps.get_version.outputs.VERSION }} -d -t "CCED ${{ steps.get_version.outputs.VERSION }}" -n "$(cat .github/workflows/release_body_template.md)" ${{ env.FILES }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FILES: cc_extra_dialogue.ccmod cc_extra_dialogue.tar.gz cc-extra-expressions-pack.ccmod cc-extra-expressions-pack.tar.gz
