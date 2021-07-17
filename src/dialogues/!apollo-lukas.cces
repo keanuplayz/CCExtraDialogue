@@ -21,7 +21,7 @@ condition: party.alive.Apollo && party.alive.Schneider
 
 Message 1
 Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a mighty \c[3]Triblader\c[0] join forces on the \c[3]Path of Justice\c[0]!
-Apollo > CONTENT: \s[0]<Truly a party to be afraid of!> # This particular line is the same with one in apollo-luke
+Apollo > CONTENT: <Truly a party to be afraid of!> # This particular line is the same with one in apollo-luke
 Lukas > DEFAULT: Hold up... Spheromancer?
 Lukas > LAUGH: I thought you were a Triblader.
 Apollo > CONTENT: How could you possibly mistake my striking crimson attire for a Triblader
@@ -38,6 +38,7 @@ set cced.apollo-lukas.battle-over-1.finished true
 
 condition: party.alive.Apollo && party.alive.Schneider && area.jungle.isCurrent
 
+Message 1
 Lukas > WONDERING: Hey, Lea...\. Where did your friend go?
 Apollo > DEFAULT: I'm here.
 Lukas > WONDERING: Strange. Did you go invisible or something? 
@@ -48,4 +49,4 @@ Lukas > COMPLAINING:  Sorry, man!\. Your hairs blends way too well with the surr
 Lea > SMILE: ...
 Apollo > MOPING: Unbelievable...
 
-= set cced.apollo-lukas.battle-over-gaia.finished true
+set cced.apollo-lukas.battle-over-gaia.finished true
