@@ -19,7 +19,7 @@
 condition: party.alive.Apollo && party.alive.Luke
 
 Message 1
-Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a mighty \c[3]Triblader\c[0] join forces on the \c[3]Path of Justice\c[0]!
+Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a mighty \c[3]Triblader\c[0] join forces on the Path of Justice!
 Apollo > CONTENT: <Truly a party to be afraid of!> # This particular line is the same with one in apollo-lukas
 Lea > PROUD: ...!
 Luke > DEFAULT: Hold up... Spheromancer?
@@ -35,8 +35,8 @@ endif
 
 Message 2
 Apollo > CONTENT: Our noble party is victorious!
-Apollo > LECTURING: Every step marks out growth...
-Apollo > POINTING: On the Path of Justice!
+Apollo > LECTURING: Every step marks our growth...\n
+Apollo > POINTING: On the Path of Justice!\n
 Luke > WONDERING: Path of justice? What's that supposed to mean?
 Apollo > DEFAULT: It's an idea, an absolute which every Spheromancer must strive to achieve!
 Lea > EXHAUSTED: ...!
@@ -55,7 +55,7 @@ Lea > NOD: [nods]
 
 Message 4
 Luke > LAUGH: Luke and Lea!\. Bringing justice to CrossWords, one hedgehag at a time!
-Lea > LAUGH: ...
+Lea > SMILE: ...
 Apollo > DEFAULT: You missed the message, Triblader.
 Apollo > DOWN: The Path of Justice is not about specifics.
 Apollo > LECTURING: It's about being the change!\. Working on yourself to make the world around you a better place!  # Summary of "The Path of Justice" by Steffron T. James.
@@ -97,7 +97,7 @@ endif
 Luke > DEFAULT: How any of this is going to help society?
 Apollo > PONDERING: What?
 Luke > TOWARDS: <The path of justice...\. Wasn't it about improving society or something?>
-Apollo > MOPING: ...\! Tribladers.
+Apollo > MOPING: Tribladers...
 
 set cced.apollo-luke.battle-over-1.finished true
 

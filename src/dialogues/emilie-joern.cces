@@ -163,7 +163,7 @@ condition: party.alive.Emilie && party.alive.Joern && plot.line >= 18700 && cced
 
 Message 1
 Emilie > DEFAULT: Any plans for this weekend?
-Joern > DEFAULT: Going to prepare \c[3]seared ahi tuna steak\[0].
+Joern > DEFAULT: Going to prepare \c[3]seared ahi tuna steak\c[0].
 Emilie > ASTONISHED: Oooh~... what's ahi tuna? # Totally not ripped from emilie-shizuka in New Home DLC  ;)
 Joern > DEFAULT: <A certain kind of tuna.\. It's covered in spices and served with wasabi dipping.> # This line could use some editing for sure
 Emilie > CURIOUS: Like a sushi?

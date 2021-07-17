@@ -63,6 +63,9 @@ set cced.joern-lukas.battle-over-1.finished true
 
 # by Paradragon
 == cced-joern-lukas-battle-over-2 ==
+
+condition: party.alive.Joern && party.alive.Schneider && cced.joern-lukas.battle-over-1.finished
+
 Message 1
 Lukas > WONDERING: Isn't CrossGear connected to all \c[3]five senses\c[0]?
 Joern > DEFAULT: Taste and smell are missing.
@@ -95,12 +98,13 @@ Lukas > LAUGH: Ja.\. Tronny would definitely do that one.
 Message 4
 Lukas > SURPRISED: I just had the best idea ever...
 Joern > DEFAULT: Go on.
-Lukas > EX2_EXCITED: Forget snowman and blobs!\. Imagine, if you could taste food in CrossWorlds!
+Lukas > EX2_EXCITED: Forget snowman and blobs!\. Imagine, if you could \c[3]eat\c[0] food in CrossWorlds!
 Lea > ASTONISHED: ...!
 Joern > SMILE: Rhombus restaurants. Lovely.
 Lukas > WINK: Easy money. I should pitch this to Sergey!
 Sergey > ROLL_EYES: We read that kind of suggestions every day.
-Sergey > WORRIED: Satoshi left before finishing the \c[3]taste buds\c[0] module.\! And people who can improve CrossGear are not that common.
+Sergey > WORRIED: Satoshi left before finishing the \c[3]taste buds\c[0] module. 
+Sergey > WORRIED: And people who can improve CrossGear are not that common.
 Lea > SAD: ...
 # TODO: KuLero release plot line
 if plot.line >= 40000 && plot.line <= ???
