@@ -23,10 +23,15 @@ Message 1
 Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a mighty \c[3]Triblader\c[0] join forces on the \c[3]Path of Justice\c[0]!
 Apollo > CONTENT: <Truly a party to be afraid of!> # This particular line is the same with one in apollo-luke
 Lukas > DEFAULT: Hold up... Spheromancer?
-Lukas > LAUGH: I thought you were a Triblader.
-Apollo > CONTENT: How could you possibly mistake my striking crimson attire for a Triblader
-Lukas > UP: I don't know...\! Spiky hair and all that green kinda confused me.
-Apollo > MOPING: You can't be serious...
+Lukas > LAUGH: I thought you were a Triblader!
+if cced.apollo.triblader
+    Apollo > MOPING: Not this again...
+else
+    Apollo > CONTENT: How could you possibly mistake my striking crimson attire for a Triblader
+    Lukas > UP: I don't know...\! Spiky hair and all that green kinda confused me.
+    Apollo > MOPING: You can't be serious...
+    set cced.apollo.triblader true
+endif
 
 Message 2
 
