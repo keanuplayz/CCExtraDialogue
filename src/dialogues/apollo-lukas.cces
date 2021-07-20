@@ -1,0 +1,133 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# We need to have some jokes about his hair... make him feel the embarrassment that Lea felt occasionally throughout the game.  >:D
+
+# Original ideas by Function, CoolWall
+# by Paradragon
+# Todo: this particular event should have priority over cced-apollo-lukas-battle-over-1 dialogues
+== cced-apollo-lukas-battle-over-gaia ==
+
+condition: party.alive.Apollo && party.alive.Schneider && area.jungle.isCurrent
+
+Message 1
+Lukas > WONDERING: Hey, Lea...\. Where did your friend go?
+Apollo > DEFAULT: I'm here.
+Lukas > WONDERING: Strange. Did you go invisible or something? 
+Lea > SURPRISED_AWAY: ...?
+Apollo > ANGRY: What...\! You're looking straight at me, Triblader...
+Lukas > LAUGHT: Ah, there you are! 
+Lukas > COMPLAINING: Sorry, man!\. Your hair blends way too well with the surroundings.
+Lea > SMILE: ...
+Apollo > MOPING: Unbelievable...
+
+set cced.apollo-lukas.battle-over-gaia.finished true
+
+
+
+== cced-apollo-lukas-battle-over-1 ==
+
+condition: party.alive.Apollo && party.alive.Schneider
+
+Message 1
+Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a mighty \c[3]Triblader\c[0] join forces on the Path of Justice!
+Apollo > CONTENT: <Truly a party to be afraid of!> # This particular line is the same with one in apollo-luke
+Lukas > DEFAULT: Hold up... Spheromancer?
+Lukas > LAUGH: I thought you were a Triblader!
+if cced.apollo.triblader
+    Apollo > MOPING: Not this again...
+else
+    Apollo > CONTENT: How could you possibly mistake my striking crimson attire for a Triblader
+    Lukas > UP: I don't know...\! Spiky hair and all that green kinda confused me.
+    Apollo > MOPING: You can't be serious...
+    set cced.apollo.triblader true
+endif
+
+Message 2
+Lukas > DEFAULT: Foes beware!\. A party of grassheads has been spotted your location.
+Lukas > LAUGH: Stay clear of green vegetation to avoid being surprised.
+if cced.apollo-lukas.battle-over-gaia.finished
+    Apollo > MOPING: Didn't you already make that joke?
+    Lea > WHISTLING: ...!
+else
+    Apollo > SUSPICIOUS: ...
+endif
+
+Message 3
+Apollo > POINTING: In the name of Justice, we prevailed!
+Lukas > UP: Ja! Serves them right for breaking order and walking in daylight.
+Apollo > DOWN: That's not what it means, Triblader. 
+Apollo > LECTURING: No just cause can be achieved without sacrifices. 
+Lukas > LAUGH: I hope not literally.
+Apollo > MOPING: ....
+
+Message 3
+Apollo > POINTING: The Justice has been served once again! But our work is far from over!
+Lukas > WONDERING: Hey, what's the deal with you and justice?
+Apollo > CONTENT: It's simple.\. The path of Justice is true way to perfection.
+Lukas > SKEPTICAL: Didn't help with the question.\. Only raised more.
+
+Message 4
+Lukas > DEFAULT: I must say this is really nice camouflage you got there.
+Lukas > COMPLAINING: Even I have trouble noticing you sometimes.
+Apollo > ANGRY: It's not camouflage, Triblader.
+Lukas > WONDERING: Then why does your head look like a flower pot?
+Apollo > ANGRY: Because green color is harmonic with crimson red!\. Which is the primary color of Spheromancers!
+Lukas > LAUGH: Oh...\. Ooops, my bad!
+Lea > EX2_CRACKING_UP: ...!!
+
+Message 5
+Lukas > DEFAULT: We cut through them, like a sharp blade though the grass...\. Green head grass\c[0].
+Apollo > RAGING: \c[1]Alright, enough!!\c[0]
+Apollo > POINTING: To protect my honor and choice of attire, I challenge you to a \c[3]duel\[0], Triblader!
+Lukas > WONDERING: That escalated quickly...\. A duel?
+Lukas > WINK: Think you can take on me?
+Apollo > SUSPICIOUS: Cut the tough act, I shall not be intimidated by that miserable display!
+Apollo > SHOUTING: Do you accept my challenge or not?!!
+Lukas > COMPLAINING: Fine...\. when are we doing it?
+Apollo > POINTING: As soon as \c[3]neither of us\c[0] are required by Spheromancer Lea! 
+Lukas > SKEPTICAL: Your call when to \c[3]temporarily disband our party\c[0], Lea.
+Lea > ANNOYED: ...why?
+
+set cced.apollo-lukas.battle-over-1.finished true
+
+
+
+== cced-apollo-lukas-battle-over-duel == 
+# Todo: Potential bug when combat ends with both of them dead. May need one more condition to prevent that
+condition: !party.alive.Apollo && !party.alive.Schneider && cced.apollo-lukas.battle-over-1.finished
+Message 1
+# A hacky way to set variable in case cces requires at least one message
+if false
+    Lea > SMUG: ...
+endif
+set cced.apollo.lukas-duel true
+# set cced-apollo-lukas.battle-over-2.finished true
+
+
+
+== cced-apollo-lukas-battle-over-2 ==
+
+condition: party.alive.Apollo && party.alive.Schneider && cced.apollo-lukas.battle-over-1.finished && cced.apollo.lukas-duel
+
+Lukas > LAUGH: Man. You do look more confident when fighting mobs.
+Apollo > SHOUTING: Do not flatter yourself, Triblader!\. You may have won this fight...
+Apollo > LECTURING: Narrowly...\. and not without the advantage of your class... # There is a better way to spell it. Something like "with no little <?> due to your class" or something, but Don't remember the correct way to word it... With no little help from your class? Idk.
+Lea > ASTONISHED: ...!
+Lukas > SKEPTICAL: Jap.\. Tribladers OP and game's trash.
+Apollo > POINTING: ...meanwhile I shall prepare for our next duel, and then I'll have my revenge!
+Lukas > COMPLAINING: Exactly what I always wanted to do...\. Sweat over PVP in CrossWorlds...
+Lea > SMILE: ...
+
+set cced.apollo-lukas.battle-over-2.finished true

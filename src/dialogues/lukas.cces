@@ -1,0 +1,35 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# by Paradragon
+== cced-lukas-rumors-duel-battle-over ==
+
+condition: party.alive.Schneider && party.size == 2 && cced.apollo.lukas-duel
+
+Message 1
+Lukas > DEFAULT: It was \c[3]5-3\c[0] by the way.
+Lea > SURPRISED_TOWARD: What?
+Lukas > DEFAULT: The duel with grasshead.\. Was loosing terribly, but then figured out a strat.
+Lukas > EYES_CLOSED: Trick is to stay back and patiently wait for him to throw some art that winds him.
+if plot.apollo.leaWins >= 3
+    Lukas > SKEPTICAL: But you probably know that already...
+    Lea > WHISTLING: ...!
+else
+    Lukas > WINK: Then you go in for the kill.\. His HP is low enough to be nuked by some Level 3 arts.
+    Lea > ASTONISHED: ...!
+    Lea > NOD_HAPPY: Thanks!
+    Lukas > TOWARDS: You're welcome.
+endif
+
+set cced.lukas.duel-rumor.finished true
