@@ -1,0 +1,85 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# by Paradragon
+== cced-apollo-ctron-battle-over-1 ==
+
+condition: party.alive.Apollo && party.alive.Glasses
+
+Message 1
+Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and an acute \c[3]Hexacast\c[0] join forces on the \c[3]Path of Justice\c[0]! # for revision: wise / keen / cunning
+Apollo > CONTENT: Truly a sight to behold.
+Lea > PROUD: ...!
+C'tron > TOWARD: Uhm...\. path of justice?
+
+Message 2
+Apollo > POINTING: The justice has been served once again!
+C'tron > WORRIED: If you call murdering a bunch of animals - justice...
+Apollo > DOWN: We must face each and every obstacle the Track puts in our way!
+Apollo > POINTING: It is our duty as Seekers!
+Lea > EXHAUSTED: ...
+
+Message 3
+Apollo > POINTING: Our enemies are vanquished once again!
+Lea > PROUD: ...!
+Apollo > SHOUTING: Imbued with power of the Track, they test our resolve on the path to true mastery.
+C'tron > WORRIED: I don't know if you can call adding guns to birds as "imbuing power"...
+Apollo > DEFAULT: But tis true, Hexacast.\. It is the very same power that also flows through seekers.
+C'tron > EXHAUSTED: Then where is a jetpack growing out of my back...
+Apollo > PONDERING: Hmm...\. I suppose it just works differently for every creature.
+
+Message 4
+C'tron > SMILE: Man, I would like to have a jetpack in crosswords.
+C'tron > SMILE: Would make finding all these chests less of a hussle.
+Lea > EXCITED: ...!
+Apollo > POINTING: Jumping puzzles are but one of the challenges we must overcome on the path to true mastery!
+Apollo > LECTURING: Using Jetpack to trivialize them would be nothing less than cheating!
+Lea > MOPING: ...
+C'tron > EXHAUSTED: That's the point...
+
+Message 5
+C'tron > DEFAULT: Awful lot of cybernetic enemies in CrossWorlds. 
+C'tron > TOWARD: But some of them don't look like designs of the Ancients.
+Apollo > CONTENT: I'm proud of your observational skills, Hexacast.\. It seems you've chosen the right virtue to follow.
+Apollo > LECTURING: As for the creatures...\. some of them are actually victims of evil experiments...
+Apollo > POINTING: Performed by \c[1]humans\c[0]!
+Lea > ASTONISHED: ...!
+
+Message 6
+C'tron > SMILE: The humans behind this must be very smart to pull of animal uplifting.
+C'tron > EMBARRASSED: I mean in-game lore, of course.\. Real world uplifting is only a theory.
+C'tron > WORRIED: To bad that research never managed to get approval by <ACF>. # Todo: Unlock ACF lore entry
+Lea > SURPRISED_AWAY: Why?
+if plot.line < 40000
+    # Ignorance is bliss
+    C'tron > SMILE: Probably the same reason why they are scared of \c[3]Artificial General Intelligence\c[0].
+    C'tron > EMBARRASSED: Fear that non-humans go mad with power and decide to destroy humanity.
+    Lea > SAD: ...
+else
+    # Compassionate from knowing
+    C'tron > PONDERING: Probably the same reason why they are scared of \c[3]Artificial General Intelligence\c[0].
+    C'tron > SAD: Fear that non-humans go mad with power and decide to destroy humanity. 
+    Lea > SAD: ...
+    Apollo > LECTURING: Do not falter, Spheromancer Lea! Doubt is the root of evil!
+    Apollo > DEFAULT: You are the most noble AI I've met to date! Only fools would question your true and honest nature!
+    Apollo > POINTING: By your compassionate example, public opinion shall be swayed, improved, brightening the future of Evotars!! 
+    if newgame.sergey-hax
+        C'tron > PANIC: Uhm... are you sure about that one?
+        Lea > INSANE_DOWN: ...
+    else
+        Lea > TOUCHED: ...Thanks.
+    endif
+endif
+
+set cced.apollo-ctron.battle-over-1.finished true
