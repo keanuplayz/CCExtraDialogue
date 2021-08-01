@@ -18,7 +18,7 @@
 
 # This event tracks how long certain party members were outside of your party
 == cced-member-downtime-battle-over-monitor ==
-condition: true
+repeat: REPEAT
 if !party.has.Apollo
     set cced.apollo.downtime + 1
 endif
@@ -43,43 +43,57 @@ endif
 
 # These events reset downtime to 0 upon party member leave
 == cced-apollo-downtime-reset ==
+repeat: REPEAT
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Apollo
+Message 1
 set cced.apollo.downtime 0
 
 == cced-emilie-downtime-reset ==
+repeat: REPEAT
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Emilie
+Message 1
 set cced.emilie.downtime 0
 
 == cced-ctron-downtime-reset ==
+repeat: REPEAT
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Glasses
+Message 1
 set cced.ctron.downtime 0
 
 == cced-joern-downtime-reset ==
+repeat: REPEAT
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Joern
+Message 1
 set cced.joern.downtime 0
 
 == cced-lukas-downtime-reset ==
+repeat: REPEAT
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Schneider
+Message 1
 set cced.lukas.downtime 0
 
 == cced-luke-downtime-reset ==
+repeat: REPEAT
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Luke
+Message 1
 set cced.luke.downtime 0
 
 == cced-shizuka-downtime-reset ==
+repeat: REPEAT
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Shizuka
+Message 1
 set cced.Shizuka.downtime 0
