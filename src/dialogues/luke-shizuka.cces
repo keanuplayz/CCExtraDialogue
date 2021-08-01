@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# by Paradragon
 == cced-luke-shizuka-battle-over-1 ==
-
-condition: party.alive.Luke && party.alive.Shizuka
+condition: party.alive.Luke && party.alive.Shizuka && plot.line >= 48000
 
 Message 1
 Luke >WONDERING: Hey, Shizuka.
@@ -32,7 +32,7 @@ Message 2
 Luke > DEFAULT: Aren't you two basically sisters?
 
 # Similar conversation occurs in Lukas-Shizuka party
-if cced.shizuka.sakai-sisterhood
+if !cced.shizuka.sakai-sisterhood
     Luke > TOWARDS: One could say that you have more in common than anybody else in the universe.
     Shizuka > INNOCENT: I mean... if she wants to...
     Shizuka > SMILE: She does understand me better than anyone... like a real sister would.
@@ -43,7 +43,7 @@ else
     Shizuka > SMUG: Thought as much.
 endif
 
-Luke > WINK: \c[3]Lea Sakai\c[0]. <What a beautifully sounding name!>
+Luke > WINK: \c[3]Lea Sakai\c[0]. What a charming name!
 Lea > CHARMED: ...
 Shizuka > EVIL_GRIN: Oh bother...
 
@@ -68,10 +68,12 @@ set cced.shizuka.lea-name-origin true
 
 Message 4
 Luke > SURPRISED: Wow, you two do fight similarly.
-Luke > TOWARDS: <But Lea has more fluidness and determination in her movements.>
-Lea > SMUG: ...!
+Luke > TOWARDS: Though Lea is noticeably faster.
 
-# Also occurs in party with C'Tron, Joern and Lukas
+# Also occurs in party with C'Tron, Joern and Luke
+if cced.shizuka.lea-similarity-mentions == 0
+    Lea > SMUG: ...!
+endif
 if cced.shizuka.lea-similarity-mentions == 1
     Shizuka > FUNNY_SMILE: Yeah, I get that a lot.
 endif
@@ -87,16 +89,17 @@ Shizuka > DEFAULT: Just rusty from my vacation.
 Luke > WONDERING: Vacation... another thing I will not miss.
 Lea > SURPRISED: Why?
 Luke > EYES_CLOSED: No job, no vacations.
-Shizuka > FUNNY_SMILE: Just you wait. They will find something to do for you.
+Shizuka > FUNNY_SMILE: Just you wait. Instatainment will find something for you two to do.
+Luke > COMPLAINING: Damn capitalism.\. Even evotars can't escape it.
 Lea > EXHAUSTED: ...
 
 set cced.shizuka.lea-similarity-mentions + 1
 
 Message 5
-Luke > WINK: I suppose, Lea was always this charming?
+Luke > WINK: I suppose, Lea's sense of style always this charming?
 Lea > CHARMED: ...
 Shizuka > SARCASTIC: Be a bit more subtle, okay?
-Shizuka > BRIGHT: Before first awakening, someone took courtesy to give her a new haircut...
+Shizuka > DEFAULT: Before first awakening, someone took courtesy to give her a new haircut...
 Shizuka > SMUG: And the horns.
 Lea > HOLD_HORNS_ANNOYED: ...!
 Luke > COMPLAINING: Yeah. I wish they would enable customisation menu for evotars.
