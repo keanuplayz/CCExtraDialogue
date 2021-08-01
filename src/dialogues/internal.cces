@@ -1,0 +1,85 @@
+# Copyright 2021 CCED Team
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+
+# This file contains events that perform some internal function for CCED
+
+# This event tracks how long certain party members were outside of your party
+== cced-member-downtime-battle-over-monitor ==
+condition: true
+if !party.has.Apollo
+    set cced.apollo.downtime + 1
+endif
+if !party.has.Emilie
+    set cced.emilie.downtime + 1
+endif
+if !party.has.Glasses
+    set cced.ctron.downtime + 1
+endif
+if !party.has.Joern
+    set cced.joern.downtime + 1
+endif
+if !party.has.Schneider
+    set cced.lukas.downtime + 1
+endif
+if !party.has.Luke
+    set cced.luke.downtime + 1
+endif
+if !party.has.Shizuka
+    set cced.shizuka.downtime + 1
+endif
+
+# These events reset downtime to 0 upon party member leave
+== cced-apollo-downtime-reset ==
+type: PARTY_MEMBER_EVENT
+type.actionType: PARTY_LEAVE
+type.member: Apollo
+set cced.apollo.downtime 0
+
+== cced-emilie-downtime-reset ==
+type: PARTY_MEMBER_EVENT
+type.actionType: PARTY_LEAVE
+type.member: Emilie
+set cced.emilie.downtime 0
+
+== cced-ctron-downtime-reset ==
+type: PARTY_MEMBER_EVENT
+type.actionType: PARTY_LEAVE
+type.member: Glasses
+set cced.ctron.downtime 0
+
+== cced-joern-downtime-reset ==
+type: PARTY_MEMBER_EVENT
+type.actionType: PARTY_LEAVE
+type.member: Joern
+set cced.joern.downtime 0
+
+== cced-lukas-downtime-reset ==
+type: PARTY_MEMBER_EVENT
+type.actionType: PARTY_LEAVE
+type.member: Schneider
+set cced.lukas.downtime 0
+
+== cced-luke-downtime-reset ==
+type: PARTY_MEMBER_EVENT
+type.actionType: PARTY_LEAVE
+type.member: Luke
+set cced.luke.downtime 0
+
+== cced-shizuka-downtime-reset ==
+type: PARTY_MEMBER_EVENT
+type.actionType: PARTY_LEAVE
+type.member: Shizuka
+set cced.Shizuka.downtime 0
