@@ -47,19 +47,16 @@ set cced.shizuka.shadytron-rumor.finished true
 
 
 
-== cced-shizuka-rumors-boldlukas-extra-battle-over ==
+== cced-shizuka-rumors-lukasdate-battle-over ==
 
-condition: party.alive.Shizuka && party.size == 2 && cced.lukas-shizuka.battle-over-1.finished
+condition: party.alive.Shizuka && party.size == 2 && cced.lukas-shizuka.battle-over-2.finished
 
 Message 1
 Shizuka > EVIL_GRIN: That friend of your, Lukas...
-Shizuka > FUNNY_SMILE: This is so stupid that I have to talk about it.
-Lea > SURPRISED_TOWARD: What?
 Shizuka > EVIL_GRIN: Remember our recent talk with him?
 Lea > NOD: [nods]
-Shizuka > BRIGHT: He noticed that \c[3]Luke\c[0] asked you for a \c[3]walk on the beach\c[0].
-Shizuka > INNOCENT: "Welp! If our copies got along, surely it means we, too, are predestined to hang out."
-Shizuka > SARCASTIC: Catch my drift?
+Shizuka > BRIGHT: He noticed how \c[3]Luke\c[0] asked you for a \c[3]walk on the beach\c[0].
+Shizuka > INNOCENT: "Welp! If my evotar planned a date with her evotar, maybe I should do that too."
 Lea > ASTONISHED: ...!
 Lea > EXCITED: Meet?
 Shizuka > SARCASTIC: Are you kidding me?\. Of course not.
@@ -67,4 +64,4 @@ Shizuka > FUNNY_SMILE: Slapped him so hard, my hand disintegrated.
 Lea > SMILE: ...
 Shizuka > FUNNY_SMILE: The audacity of that guy.\. Unbelievable.
 
-set cced.shizuka.bold-lukas-rumor.finished true
+set cced.shizuka.lukasdate-rumor.finished true

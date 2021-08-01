@@ -59,6 +59,7 @@ Lea > EX2_ANGRY_NOD: [nods]
 Joern > DEFAULT: Agree. Eating healthy is important.
 Lukas > COMPLAINING: Why are you like that, Lea...
 
+set cced.lukas.nofridge true
 set cced.joern-lukas.battle-over-1.finished true
 
 # by Paradragon
