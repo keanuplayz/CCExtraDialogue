@@ -19,6 +19,8 @@
 # This event tracks how long certain party members were outside of your party
 == cced-member-downtime-battle-over-monitor ==
 repeat: REPEAT
+frequency: ALWAYS
+loopCount: 1
 Event 1
 if !party.has.Apollo
     set cced.apollo.downtime + 1
@@ -45,6 +47,8 @@ endif
 # These events reset downtime to 0 upon party member leave
 == cced-apollo-downtime-reset ==
 repeat: REPEAT
+frequency: ALWAYS
+loopCount: 1
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Apollo
@@ -53,6 +57,8 @@ set cced.apollo.downtime 0
 
 == cced-emilie-downtime-reset ==
 repeat: REPEAT
+frequency: ALWAYS
+loopCount: 1
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Emilie
@@ -61,6 +67,8 @@ set cced.emilie.downtime 0
 
 == cced-ctron-downtime-reset ==
 repeat: REPEAT
+frequency: ALWAYS
+loopCount: 1
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Glasses
@@ -69,6 +77,8 @@ set cced.ctron.downtime 0
 
 == cced-joern-downtime-reset ==
 repeat: REPEAT
+frequency: ALWAYS
+loopCount: 1
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Joern
@@ -77,6 +87,8 @@ set cced.joern.downtime 0
 
 == cced-lukas-downtime-reset ==
 repeat: REPEAT
+frequency: ALWAYS
+loopCount: 1
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Schneider
@@ -85,6 +97,8 @@ set cced.lukas.downtime 0
 
 == cced-luke-downtime-reset ==
 repeat: REPEAT
+frequency: ALWAYS
+loopCount: 1
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Luke
@@ -93,6 +107,8 @@ set cced.luke.downtime 0
 
 == cced-shizuka-downtime-reset ==
 repeat: REPEAT
+frequency: ALWAYS
+loopCount: 1
 type: PARTY_MEMBER_EVENT
 type.actionType: PARTY_LEAVE
 type.member: Shizuka
