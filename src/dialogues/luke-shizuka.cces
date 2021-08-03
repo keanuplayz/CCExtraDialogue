@@ -42,10 +42,9 @@ else
     Lea > NOD_HAPPY: [nods]
     Shizuka > SMUG: Thought as much.
 endif
-
-Luke > WINK: \c[3]Lea Sakai\c[0]. What a charming name!
+Luke > WINK: \c[3]Lea Sakai\c[0].\. What a charming name!
 Lea > CHARMED: ...
-Shizuka > EVIL_GRIN: Oh bother...
+Shizuka > EX2_ANNOYED: Really now?
 
 set cced.shizuka.sakai-sisterhood true
 
@@ -54,21 +53,13 @@ Luke > WONDERING: Why Lea?
 Lea > SURPRISED_TOWARD: Why Lea?
 Shizuka > SARCASTIC: Why Luke?
 Luke > DEFAULT: So that people don't confuse us two when talking.
-Shizuka > SARCASTIC: Good point.
+Shizuka > SARCASTIC: You answered your own question.
 
-# Similar conversation occurs in Lukas-Shizuka party
-if cced.shizuka.lea-name-origin
-    Lea > SURPRISED: Wait! Why Lea?
-    Shizuka > INNOCENT: No particular reason besides that it sounds nice.
-    Lea > THINKING: ...
-endif
+# Skip message 4
 
-set cced.shizuka.lea-name-origin true
-
-
-Message 4
-Luke > SURPRISED: Wow, you two do fight similarly.
-Luke > TOWARDS: Though Lea is noticeably faster.
+Message 5
+Luke > LAUGH: Wow, you two do fight similarly!
+Luke > DEFAULT: Though Lea is noticeably faster.
 
 # Also occurs in party with C'Tron, Joern and Luke
 if cced.shizuka.lea-similarity-mentions == 0
@@ -95,7 +86,7 @@ Lea > EXHAUSTED: ...
 
 set cced.shizuka.lea-similarity-mentions + 1
 
-Message 5
+Message 6
 Luke > WINK: I suppose, Lea's sense of style always this charming?
 Lea > CHARMED: ...
 Shizuka > SARCASTIC: Be a bit more subtle, okay?
