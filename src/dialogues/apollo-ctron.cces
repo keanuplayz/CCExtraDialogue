@@ -78,7 +78,11 @@ else
         C'tron > PANIC: Uhm... are you sure about that one?
         Lea > INSANE_DOWN: ...
     else
-        Lea > TOUCHED: ...Thanks.
+        if lea.words.thanks
+            Lea > TOUCHED: ...Thanks.
+        else
+            Lea > TOUCHED: ...
+        endif
     endif
 endif
 

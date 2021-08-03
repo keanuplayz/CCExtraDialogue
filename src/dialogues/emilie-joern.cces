@@ -27,13 +27,16 @@ Emilie > SUSPICIOUS: We're in a party of three\c, non?
 
 Message 2
 Joern > SARCASTIC: Maybe he is...\! \c[3]right behind you\c[0].
-Lea > SURPRISED_AWAY: ...?
 Emilie > SUSPICIOUS: You must be joking.
-Lea > EX2_SCARED_AWAY: ...!!
+Lea > SURPRISED_AWAY: ...?!
 Lea > SHOCKED: ...!!
-Emilie > SHOCKED: What?! Where?!
-Emilie > MOPING: Hold up...\! there is nobody behind you.
-Lea > SMILE: Sorry.
+Emilie > SHOCKED: ...?!!\!
+Emilie > MOPING: Hold up...\! nobody is following you.
+if lea.words.sorry
+    Lea > SMILE: Sorry.
+else
+    Lea > SMILE: Hi.
+endif
 Emilie > EXHAUSTED: Sacrebleu, Lea...\. don't do that again.
 
 Message 3
