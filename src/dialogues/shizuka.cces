@@ -53,15 +53,15 @@ condition: party.alive.Shizuka && party.size == 2 && cced.lukas-shizuka.battle-o
 
 Message 1
 Shizuka > EVIL_GRIN: That friend of your, Lukas...
-Shizuka > EVIL_GRIN: Remember our recent talk with him?
+Shizuka > BRIGHT: Remember our recent talk with him?
 Lea > NOD: [nods]
-Shizuka > BRIGHT: He noticed how \c[3]Luke\c[0] asked you for a \c[3]walk on the beach\c[0].
+Shizuka > BRIGHT: He noticed how Luke asked you for a \c[3]walk on the beach\c[0].
 Shizuka > INNOCENT: "Welp! If my evotar planned a date with her evotar, maybe I should do that too."
 Lea > ASTONISHED: ...!
 Lea > EXCITED: Meet?
 Shizuka > SARCASTIC: Are you kidding me?\. Of course not.
 Shizuka > FUNNY_SMILE: Slapped him so hard, my hand disintegrated.
 Lea > SMILE: ...
-Shizuka > FUNNY_SMILE: The audacity of that guy.\. Unbelievable.
+Shizuka > EVIL_GRIN: The audacity of that guy... Unbelievable.
 
 set cced.shizuka.lukasdate-rumor.finished true
