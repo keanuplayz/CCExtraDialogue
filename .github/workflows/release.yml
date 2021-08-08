@@ -19,6 +19,11 @@ jobs:
           repository: Paradragon/cc-extra-expressions-pack
           token: ${{ secrets.PAT }}
           path: expressions
+      - name: Clone cc-inner-party-timers
+        uses: actions/checkout@v2
+        with:
+          repository: Paradragon/cc-inner-party-timers
+          token: ${{ secrets.PAT }}
       - name: Clone cc-eventscript-parser
         uses: actions/checkout@v2
         with:
@@ -35,7 +40,7 @@ jobs:
           python-version: '3.10-dev'
 
       - name: Compile CCES files
-        run: python3.10 parser/cc_eventscript_parser.py src/dialogues/*
+        run: python3.10 parser/cc_eventscript_parser.py -r src/dialogues/
 
       - name: Create CCED archives
         run: |
@@ -50,6 +55,14 @@ jobs:
           mv cc-extra-expressions-pack.ccmod ../
           mv cc-extra-expressions-pack.tar.gz ../
 
+      - name: Create CCIPT archives
+        run: |
+          cd timers
+          zip -q -r cc-inner-party-timers.ccmod ./*
+          tar -czf cc-inner-party-timers.tar.gz --transform 's,^,cc-inner-party-timers/,' ./*
+          mv cc-inner-party-timers.ccmod ../
+          mv cc-inner-party-timers.tar.gz ../
+
       - name: Get version
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
@@ -58,4 +71,4 @@ jobs:
           gh release create ${{ steps.get_version.outputs.VERSION }} -d -t "CCED ${{ steps.get_version.outputs.VERSION }}" -n "$(cat .github/workflows/release_body_template.md)" ${{ env.FILES }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FILES: cc_extra_dialogue.ccmod cc_extra_dialogue.tar.gz cc-extra-expressions-pack.ccmod cc-extra-expressions-pack.tar.gz
+          FILES: cc_extra_dialogue.ccmod cc_extra_dialogue.tar.gz cc-extra-expressions-pack.ccmod cc-extra-expressions-pack.tar.gz cc-inner-party-timers.ccmod cc-inner-party-timers.tar.gz

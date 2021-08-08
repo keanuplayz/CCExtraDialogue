@@ -19,6 +19,12 @@ jobs:
           repository: Paradragon/cc-extra-expressions-pack
           token: ${{ secrets.PAT }}
           path: expressions
+      - name: Clone cc-inner-party-timers
+        uses: actions/checkout@v2
+        with:
+          repository: Paradragon/cc-inner-party-timers
+          token: ${{ secrets.PAT }}
+          path: timers
       - name: Clone cc-eventscript-parser
         uses: actions/checkout@v2
         with:
@@ -35,7 +41,7 @@ jobs:
           python-version: '3.10-dev'
 
       - name: Compile CCES files
-        run: python3.10 parser/cc_eventscript_parser.py src/dialogues/*
+        run: python3.10 parser/cc_eventscript_parser.py -r src/dialogues/
 
       - name: Create CCED archives
         run: |
@@ -50,6 +56,14 @@ jobs:
           mv cc-extra-expressions-pack.ccmod ../
           mv cc-extra-expressions-pack.tar.gz ../
 
+      - name: Create CCIPT archives
+        run: |
+          cd timers
+          zip -q -r cc-inner-party-timers.ccmod ./*
+          tar -czf cc-inner-party-timers.tar.gz --transform 's,^,cc-inner-party-timers/,' ./*
+          mv cc-inner-party-timers.ccmod ../
+          mv cc-inner-party-timers.tar.gz ../
+
       - name: Create release
         run: |
           gh release delete ${{ env.VERSION }} -y
@@ -58,4 +72,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VERSION: 'dev'
           NAME: 'CCED Dev'
-          FILES: cc_extra_dialogue.ccmod cc_extra_dialogue.tar.gz cc-extra-expressions-pack.ccmod cc-extra-expressions-pack.tar.gz
+          FILES: cc_extra_dialogue.ccmod cc_extra_dialogue.tar.gz cc-extra-expressions-pack.ccmod cc-extra-expressions-pack.tar.gz cc-inner-party-timers.ccmod cc-inner-party-timers.tar.gz
