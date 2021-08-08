@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Release candidate
+
 # by Paradragon
 == cced-emilie-joern-battle-over-1 ==
 
@@ -47,7 +49,7 @@ if newgame.sergey-hax
     Lea > INSANE_DOWN: \c[1]Hi!\c[0]
 else
     Joern > DEFAULT: You two are rather aggressive.
-    Emilie > WATCH_OUT_BADASS: I'm a Pentafist, Joern...\! I punch things.
+    Emilie > WATCH_OUT_BADASS: I'm a Pentafist...\! I punch things.
     Emilie > SMILE: And you don't have to sweat with shielding...
     Emilie > DETERMINED: ... If we punch everything out of existence first!
     Joern > DEFAULT: Good point.
@@ -61,10 +63,9 @@ Joern > SARCASTIC: Skips everything in a rush to next landmark.
 Joern > SARCASTIC: Except \c[3]certain\c[0] chests.
 Joern > ANGRY: I hardly have the time to figure out a quest with him.
 Emilie > EMBARRASSED: Somehow reminds me of Lea...
-Emilie > EXHAUSTED: Running around without breaks...\. Fighting every mob in sight...
+Emilie > EXHAUSTED: Running around and fighting every mob in sight...
 Lea > SMUG: ...
 
-# Even I am not sure if it will work the way I want it too...
 Message 5
 Emilie > DEFAULT: Hey, Joern. Have you played CrossWorlds before?
 Joern > DEFAULT: First time.
@@ -115,7 +116,7 @@ set cced.emilie-joern.battle-over-1.finished true
 condition: party.alive.Emilie && party.alive.Joern && plot.line >= 18700 && cced.emilie-joern.battle-over-1.finished
 
 Message 1
-Emilie > DEFAULT: How did you get into CrossWords, Joern?
+Emilie > DEFAULT: How did you get into CrossWords?
 Joern > DEFAULT: Apollo was playing it a lot.
 Joern > DEFAULT: I wanted to see for myself, what was it all about.
 Emilie > CURIOUS: And he rolled up a \c[3]new character\c[0] to join you?
@@ -154,8 +155,6 @@ set cced.emilie-joern.battle-over-2.finished true
 
 
 
-# ... and so, may there be more nice chat!
-
 # Original idea by Lolz
 # by Paradragon
 == cced-emilie-joern-battle-over-3 ==
@@ -165,12 +164,12 @@ condition: party.alive.Emilie && party.alive.Joern && plot.line >= 18700 && cced
 Message 1
 Emilie > DEFAULT: Any plans for this weekend?
 Joern > DEFAULT: Going to prepare \c[3]seared ahi tuna steak\c[0].
-Emilie > ASTONISHED: Oooh~... what's ahi tuna? # Totally not ripped from emilie-shizuka in New Home DLC  ;)
+Emilie > ASTONISHED: Ohhh~ What's an ahi tuna?
 Joern > DEFAULT: A certain kind of tuna.\. It's covered in spices and served with wasabi dipping.
 Emilie > CURIOUS: Like a sushi?
-Joern > TOWARD: Sushi is a dish with specially prepared rice and usually dressed with seafood. 
+Joern > TOWARD: Sushi is a dish with specially prepared rice, usually dressed with seafood. 
 Joern > DEFAULT: Sashimi would be more accurate in this case.
-Lea > NOD: [nods] # Emilie should probably say some ending line here instead of Lea...
+Lea > NOD: [nods]
 
 Message 2
 Emilie > AWAY: Why is it seared though?
@@ -183,7 +182,7 @@ Lea > ASTONISHED: ...!
 Emilie > ASTONISHED: Now that's unusual!
 
 Message 3
-Emilie > DEFAULT: So its a special fish, fried on a stone.\. Neat.
+Emilie > DEFAULT: So its a special fish, fried on a stone. Neat.
 Joern > DEFAULT: But wait...\. There is more...
 Emilie > ASTONISHED: Nooooo~!
 Joern > SARCASTIC: The heated stone is brought to the table.
@@ -206,5 +205,3 @@ Lea > SCARED: ...!!
 Emilie > SWEATY_SMILE: Oui...\. Maybe I'll try it out later...
 
 set cced.emilie-joern.battle-over-3.finished true
-
-# ...maybe there will be more nice chat... but seems like its enough already...
