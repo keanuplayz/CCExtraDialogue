@@ -23,21 +23,21 @@ Joern > DEFAULT: Why?
 Emilie > CURIOUS: Every time we saw you, he was somewhere close by.
 Joern > DEFAULT: Not that.
 Joern > TOWARD: Who said, he is not there?
-Emilie > SUSPICIOUS: We're in a party of three\c, non?
+Emilie > SUSPICIOUS: We're in a party of \c[3]three\c[0], non?
 
 Message 2
 Joern > SARCASTIC: Maybe he is...\! \c[3]right behind you\c[0].
 Emilie > SUSPICIOUS: You must be joking.
 Lea > SURPRISED_AWAY: ...?!
 Lea > SHOCKED: ...!!
-Emilie > SHOCKED: ...?!!\!
+Emilie > SHOCKED: W-What happened?!!\!
 Emilie > MOPING: Hold up...\! nobody is following you.
 if lea.words.sorry
     Lea > SMILE: Sorry.
 else
     Lea > SMILE: Hi.
 endif
-Emilie > EXHAUSTED: Sacrebleu, Lea...\. don't do that again.
+Emilie > EXHAUSTED: Sacrebleu, Lea... don't do that again.
 
 Message 3
 Emilie > DETERMINED: Punching our way to victory, one mob at a time.
@@ -47,44 +47,43 @@ if newgame.sergey-hax
     Lea > INSANE_DOWN: \c[1]Hi!\c[0]
 else
     Joern > DEFAULT: You two are rather aggressive.
-    Emilie > WATCH_OUT_BADASS: I'm a Pentafist...\! I punch things.
+    Emilie > WATCH_OUT_BADASS: I'm a Pentafist, Joern...\! I punch things.
     Emilie > SMILE: And you don't have to sweat with shielding...
-    Emilie > DETERMINED: ... If we punch everything out of existence first! # I like 'punch everything out of existence', but its already getting long
+    Emilie > DETERMINED: ... If we punch everything out of existence first!
     Joern > DEFAULT: Good point.
 endif
-Joern > DEFAULT: Its a nice change of pace from Apollo.
-Joern > SMILE: Plenty of time to take in the view.
 
 Message 4
+Joern > DEFAULT: Its a nice change of pace from Apollo.
+Joern > SMILE: Plenty of time to take in the view.
 Emilie > CURIOUS: How Monsieur grasshead is so quick when it comes to speeding ahead of us?
 Joern > SARCASTIC: Skips everything in a rush to next landmark.
 Joern > SARCASTIC: Except \c[3]certain\c[0] chests.
-Joern > ANGRY: Hardly have the time to figure out a quest with him.
-Lea > ANNOYED: ...!
-Emilie > EMBARRASSED:  Somehow reminds me of Lea...
-Emilie > EXHAUSTED: Running around for minutes...\. Destroying every creature in sight...
-Lea > SMUG: ...!!
+Joern > ANGRY: I hardly have the time to figure out a quest with him.
+Emilie > EMBARRASSED: Somehow reminds me of Lea...
+Emilie > EXHAUSTED: Running around without breaks...\. Fighting every mob in sight...
+Lea > SMUG: ...
 
 # Even I am not sure if it will work the way I want it too...
 Message 5
 Emilie > DEFAULT: Hey, Joern. Have you played CrossWorlds before?
 Joern > DEFAULT: First time.
-Emilie > ASTONISHED: Cool!\. Me too!
+Emilie > ASTONISHED: Cool!\. I'm a new player too!
 Emilie > EXHAUSTED: That grasshead though...
 # They know about Apollo beating CrossWorlds before
 # 18700 is Krys'Kajo end
 if plot.line >= 18700
     Emilie > MOPING: Turns out he was cheating all along!
-    Joern > SARCASTIC: Agreed. He has more experience.
+    Joern > SARCASTIC: Agreed. He has more experience with the game.
 else
     Emilie > MOPING: What's his problem?
     Joern > SARCASTIC: He can get overzealous.
-    Joern > TOWARD: But trust me...\. He has good intentions.
+    Joern > DEFAULT: But trust me...\. He has good intentions.
 endif
 
 if plot.apollo.leaWins >= 3
     if plot.line >= 18700
-        Emilie > EMBARRASSED: Beating CrossWorlds before didn't help him much, non.
+        Emilie > EMBARRASSED: Beating CrossWorlds before didn't help him too much, non.
     else
         Emilie > DETERMINED: As long as he keeps getting his ass kicked, its fine by me!
     endif
@@ -126,13 +125,13 @@ Emilie > CURIOUS: What are they doing back there anyway?
 Lea > THINKING: ...?
 
 Message 2
-Emilie > DETERMINED: Bet all of grasshead's characters were \c[3]Spheromancers\c[0].
+Emilie > DETERMINED: Bet all of grassheads characters were \c[3]Spheromancers\c[0].
 Joern > SARCASTIC: How did you figure that out?
 Emilie > WATCH_OUT_BADASS: I'm a detective, Joern.
 Emilie > TAUNTING: Nothing goes unnoticed in my presence.
 Lea > SHAKE: [shakes head]
 Joern > DEFAULT: Right...\! They also looked the same.
-Joern > SUSPICIOUS: \c[3]Exactly\c[0] the same.
+Joern > SARCASTIC: \c[3]Exactly\c[0] the same.
 Lea > EXHAUSTED: ...!
 
 Message 3
@@ -157,7 +156,6 @@ set cced.emilie-joern.battle-over-2.finished true
 
 # ... and so, may there be more nice chat!
 
-# Revision todo: Use correct words concerning 'grilling', 'preparing', 'searing', 'frying' etc. 
 # Original idea by Lolz
 # by Paradragon
 == cced-emilie-joern-battle-over-3 ==
@@ -168,19 +166,19 @@ Message 1
 Emilie > DEFAULT: Any plans for this weekend?
 Joern > DEFAULT: Going to prepare \c[3]seared ahi tuna steak\c[0].
 Emilie > ASTONISHED: Oooh~... what's ahi tuna? # Totally not ripped from emilie-shizuka in New Home DLC  ;)
-Joern > DEFAULT: <A certain kind of tuna.\. It's covered in spices and served with wasabi dipping.> # This line could use some editing for sure
+Joern > DEFAULT: A certain kind of tuna.\. It's covered in spices and served with wasabi dipping.
 Emilie > CURIOUS: Like a sushi?
-Joern > TOWARD: Sushi is a dish with specially prepared rice.\. Usually dressed with seafood. 
+Joern > TOWARD: Sushi is a dish with specially prepared rice and usually dressed with seafood. 
 Joern > DEFAULT: Sashimi would be more accurate in this case.
 Lea > NOD: [nods] # Emilie should probably say some ending line here instead of Lea...
 
 Message 2
-Emilie > AWAY: Why is it scorched though?
+Emilie > AWAY: Why is it seared though?
 Joern > DEFAULT: Its prepared on a hot surface before being eaten.
 Emilie > SUSPICIOUS: So...\. it's a grilled fish steak?
 Joern > DEFAULT: A bit more complicated.
 Emilie > CURIOUS: How so?
-Joern > SMILE: Instead of grill, it's prepared on a \c[1]hot lava stone\c[0]. 
+Joern > SMILE: Instead of grill, it's cooked on a \c[1]hot lava stone\c[0]. 
 Lea > ASTONISHED: ...!
 Emilie > ASTONISHED: Now that's unusual!
 
@@ -188,11 +186,11 @@ Message 3
 Emilie > DEFAULT: So its a special fish, fried on a stone.\. Neat.
 Joern > DEFAULT: But wait...\. There is more...
 Emilie > ASTONISHED: Nooooo~!
-Lea > EXHAUSTED: ...!
 Joern > SARCASTIC: The heated stone is brought to the table.
 Emilie > CURIOUS: Uhm...\. Why?
-Joern > SMILE: The fish is not prepared beforehand. Instead, you \c[3]do it yourself\c[0] by searing on that stone.
-Emilie > ASTONISHED: Wow, exotique!!
+Joern > SMILE: The fish is not prepared beforehand. 
+Joern > SMILE: Instead, you \c[3]do it yourself\c[0] by searing it on that stone.
+Emilie > ASTONISHED: Wow, exotique!
 Joern > SMILE: Indeed.\. You cook it as you eat and make it as seared as you like.
 Emilie > DETERMINED: Now I want to try it out!
 Lea > NOD_SAD: [nods]
@@ -201,7 +199,7 @@ Message 4
 Emilie > AWAY: How hot is this stone again?
 Joern > SMILE: Around \c[1]700 degrees\c[0].
 Lea > SHOCKED: ...?!
-Emilie > SWEATY_SMILE: ...\! Seems dangerous to put it on a table, non?
+Emilie > SWEATY_SMILE: ...\!S-Seems dangerous to put it on a table, non?
 Joern > DEFAULT: It is.
 Joern > SARCASTIC: You better avoid touching it.
 Lea > SCARED: ...!!
