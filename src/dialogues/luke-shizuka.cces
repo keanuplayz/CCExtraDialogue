@@ -17,28 +17,26 @@
 condition: party.alive.Luke && party.alive.Shizuka && plot.line >= 48000
 
 Message 1
-Luke >WONDERING: Hey, Shizuka.
-Shizuka > DEFAULT: Yes?
-Luke > WONDERING: Were you the one, who Lea was based on?
+Luke >WONDERING: Hey, Shizuka. Are you the one, who Lea was based on?
 Shizuka > SMUG: Yeah.
-Luke > WORRIED: Kind of a strange feeling. Since both me and Lea are evotars.
+Luke > WORRIED: I have this strange feeling, you know...
+Luke > Since both me and Lea are evotars...
 Shizuka > DOWN: What do you mean?
-Luke > WORRIED: Luke and I seem more alike than you two, you know.
-Lea > SURPRISED_TOWARD: ...?
-Shizuka > BRIGHT: Figures. Lea had a head start of a few years.
-Lea > EXHAUSTED: ...
+Luke > WORRIED: Lukas seems much more like me, than you two.
+Shizuka > DEFAULT: Figures. Lea had a head start of a few years.
+Shizuka > BRIGHT: Don't despair. Every flower blooms in its own time. 
 
 Message 2
-Luke > DEFAULT: Aren't you two basically sisters?
-
+Luke > WONDERING: Aren't you two basically sisters?
 # Similar conversation occurs in Lukas-Shizuka party
 if !cced.shizuka.sakai-sisterhood
-    Luke > TOWARDS: One could say that you have more in common than anybody else in the universe.
-    Shizuka > INNOCENT: I mean... if she wants to...
-    Shizuka > SMILE: She does understand me better than anyone... like a real sister would.
+    Luke > DEFAULT: One could say that you have more in common than anybody else in the universe.
+    Shizuka > INNOCENT: I mean...\. if she wants to...
+    Shizuka > BRIGHT: She does understand me better than anyone... 
+    Shizuka > SMILE: Like a real sister.
     Lea > TOUCHED: ...
 else
-    Shizuka > BRIGHT: Are we? What do you say, Lea?
+    Shizuka > BRIGHT: Are we?\. What do you say, Lea?
     Lea > NOD_HAPPY: [nods]
     Shizuka > SMUG: Thought as much.
 endif
@@ -55,32 +53,30 @@ Shizuka > SARCASTIC: Why Luke?
 Luke > DEFAULT: So that people don't confuse us two when talking.
 Shizuka > SARCASTIC: You answered your own question.
 
+Message 4
 # Skip message 4
 
 Message 5
-Luke > LAUGH: Wow, you two do fight similarly!
+Luke > DEFAULT: Huh, you two do fight similarly.
 Luke > DEFAULT: Though Lea is noticeably faster.
 
 # Also occurs in party with C'Tron, Joern and Luke
-if cced.shizuka.lea-similarity-mentions == 0
-    Lea > SMUG: ...!
-endif
 if cced.shizuka.lea-similarity-mentions == 1
     Shizuka > FUNNY_SMILE: Yeah, I get that a lot.
 endif
 if cced.shizuka.lea-similarity-mentions == 2
-    Shizuka > INNOCENT: Okaaay...
+    Shizuka > SURPRISED: Okaaay...
 endif
-if cced.shizuka.lea-similarity-mentions >= 3
+If cced.shizuka.lea-similarity-mentions >= 3
     Shizuka > EX2_ANNOYED: ...
     Lea > SMILE: ...
 endif
 
-Shizuka > DEFAULT: Just rusty from my vacation.
+Shizuka > EVIL_GRIN: Just rusty from my vacation.
 Luke > WONDERING: Vacation... another thing I will not miss.
 Lea > SURPRISED: Why?
-Luke > EYES_CLOSED: No job, no vacations.
-Shizuka > FUNNY_SMILE: Just you wait. Instatainment will find something for you two to do.
+Luke > EYES_CLOSED: No need for vacations if you have no job.
+Shizuka > FUNNY_SMILE: Just you wait. Instatainment will find something for you do.
 Luke > COMPLAINING: Damn capitalism.\. Even evotars can't escape it.
 Lea > EXHAUSTED: ...
 
@@ -93,7 +89,14 @@ Shizuka > SARCASTIC: Be a bit more subtle, okay?
 Shizuka > DEFAULT: Before first awakening, someone took courtesy to give her a new haircut...
 Shizuka > SMUG: And the horns.
 Lea > HOLD_HORNS_ANNOYED: ...!
-Luke > COMPLAINING: Yeah. I wish they would enable customisation menu for evotars.
-Shizuka > EVIL_GRIN: Well... you know, what to do once they do, mister.
+Luke > COMPLAINING: Jap. Wish evotars could access customisations menu.
+Luke > SKEPTICAL: I'd like to adjust a few things myself.
+
+Message 7
+Shizuka > INNOCENT: By the way, why can't you just ask Sergey for help?
+Luke > SKEPTICAL: Why would he do that?
+Shizuka > DEFAULT: Why wouldn't he? He is the research lead after all.
+Shizuka > BRIGHT: Well-being of evotars is one of his primary concerns.
+Luke > DEFAULT: Fair, I'll keep that in mind.
 
 set cced.luke-shizuka.battle-over-1.finished true
