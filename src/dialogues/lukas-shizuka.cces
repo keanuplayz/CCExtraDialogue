@@ -128,14 +128,25 @@ Shizuka > SARCASTIC: Dude, I saw it coming from a mile way.
 label postGamePlan
 
 set cced.lukas-shizuka.battle-over-1.finished true
+# Skip starting downtime tracking if the next event will never occur
+if plot.lukeBeachDate
+    set ccipt.vars.Schneider+Shizuka.trackDowntime + 1
+endif
+
 
 
 # Since you can only get Shizuka into your party after final dungeon, this sequence should happen after some time passes since previous one.
 # This sequence only plays out if player replied "Yes" to the beach date proposal. (final-dng/b3/bridge)
 == cced-lukas-shizuka-battle-over-2 ==
-condition: party.alive.Schneider && party.alive.Shizuka && cced.lukas-shizuka.battle-over-1.finished && plot.lukeBeachDate && cced.lukas.downtime >= 5 && cced.shizuka.downtime >= 5
+# 10 minutes without Schneider and Shizuka
+condition: party.alive.Schneider && party.alive.Shizuka && cced.lukas-shizuka.battle-over-1.finished && plot.lukeBeachDate && (cced.lukas-shizuka.battle-over-2.started || ccipt.vars.Schneider+Shizuka.maxDowntime >= 600)
 
 Message 1
+set cced.lukas-shizuka.battle-over-2.started true
+set ccipt.vars.Schneider+Shizuka.trackDowntime - 1
+set ccipt.vars.Schneider+Shizuka.maxDowntime = 0
+set ccipt.vars.Schneider+Shizuka.lastDowntime = 0
+
 Shizuka > EX2_PISSED: ...
 Lukas > WHISTLING: Well...\. this is awkward...
 Shizuka > EX2_PISSED: It is...
