@@ -61,14 +61,14 @@ Luke > DEFAULT: It's about how it was picked...\. Not why it's different.
 Shizuka > INNOCENT: It sounds nice. Should there be any other reason?
 Luke > COMPLAINING: No...\. But there may be one.
 Lea > THINKING: ...?
-Shizuka > SARCASTIC: Then we are ill informed to answer that.\. Let's move on.
+Shizuka > SARCASTIC: Then we are ill informed to answer that. Let's move on.
 
 Message 5
 # Skip message 5
 
 Message 6
 Luke > DEFAULT: Huh, you two do fight similarly.
-Luke > DEFAULT: Though Lea is noticeably faster.
+Luke > LAUGH: Though Lea is noticeably faster.
 
 # Also occurs in party with C'Tron, Joern and Luke
 if cced.shizuka.lea-similarity-mentions == 1
@@ -87,8 +87,8 @@ Luke > WONDERING: Vacation... another thing I will not miss.
 Lea > SURPRISED_TOWARD: Why?
 Luke > EYES_CLOSED: No need for vacations if you have no job.
 Shizuka > FUNNY_SMILE: Just you wait. Instatainment will find something for you to do.
-Luke > COMPLAINING: Damn capitalism.\. Even evotars can't escape it.
 Lea > EXHAUSTED: ...
+Luke > COMPLAINING: Damn capitalism.\. Even evotars cannot escape it.
 
 set cced.shizuka.lea-similarity-mentions + 1
 
