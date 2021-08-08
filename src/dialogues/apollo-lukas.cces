@@ -101,19 +101,19 @@ Lukas > SKEPTICAL: Your call when to \c[3]temporarily disband our party\c[0], Le
 Lea > ANNOYED: ...why?
 
 set cced.apollo-lukas.battle-over-1.finished true
-set ccipt.vars.Apollo+Schneider.trackDowntime + 1
+set ccipt.vars.Apollo-Schneider.trackDowntime + 1
 
 
 
 == cced-apollo-lukas-battle-over-2 ==
 # 15 minutes without Apollo and Schneider
-condition: party.alive.Apollo && party.alive.Schneider && cced.apollo-lukas.battle-over-1.finished && (cced.apollo-lukas.battle-over-2.started || ccipt.vars.Apollo+Schneider.maxDowntime >= 900)
+condition: party.alive.Apollo && party.alive.Schneider && cced.apollo-lukas.battle-over-1.finished && (cced.apollo-lukas.battle-over-2.started || ccipt.vars.Apollo-Schneider.maxDowntime >= 900)
 
 Message 1
 set cced.apollo-lukas.battle-over-2.started true
-set ccipt.vars.Apollo+Schneider.trackDowntime - 1
-set ccipt.vars.Apollo+Schneider.maxDowntime = 0
-set ccipt.vars.Apollo+Schneider.lastDowntime = 0
+set ccipt.vars.Apollo-Schneider.trackDowntime - 1
+set ccipt.vars.Apollo-Schneider.maxDowntime = 0
+set ccipt.vars.Apollo-Schneider.lastDowntime = 0
 
 Lukas > LAUGH: Man. You do look more confident when fighting mobs.
 Apollo > SHOUTING: Do not flatter yourself, Triblader!\. You may have won this fight...
