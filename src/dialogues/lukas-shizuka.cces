@@ -21,9 +21,9 @@ Message 1
 Lukas >WONDERING: Hey, Shizuka. Are you the one, who Lea was based on?
 Shizuka > DEFAULT: Yeah.
 Lukas > TOWARDS: Isn't it neat how we both have evotars of ourselves?
-Shizuka > INNOCENT: Uhm...\. I guess.
-Lukas > SKEPTICAL: Although Luke and I seem much more alike, than you two.
-Shizuka > DEFAULT: Figures.\. Lea had a head start of a few years.
+Shizuka > INNOCENT: Uhm... I guess.
+Lukas > DEFAULT: Although Luke and I seem much more alike, than you two.
+Shizuka > DEFAULT: Figures. Lea had a head start of a few years.
 Lukas > SKEPTICAL: Makes one think, how much experiences shape us.
 
 Message 2
@@ -50,6 +50,7 @@ Lea > SURPRISED_TOWARD: Why Lea?
 Shizuka > SARCASTIC: Why Lukas?
 Lukas > SKEPTICAL: Good point.
 
+Message 4
 # Skip message 4
 
 Message 5
@@ -71,7 +72,7 @@ endif
 Shizuka > EVIL_GRIN: Just rusty from my vacation.
 Lukas > DEFAULT: Recently traveled somewhere?
 Shizuka > FUNNY_SMILE: Yeah.\! To real life.
-Lukas > COMPLAINING: Jap...\. You two are like twin sisters.
+Lukas > COMPLAINING: Jap...\. You two are like twin sisters. Same smug and all that.
 Shizuka > SMUG: Makes sense. She is my copy after all.
 Lea > WHISTLING: ...
 
@@ -81,11 +82,11 @@ Message 6
 Lukas > DEFAULT: Did you two always look like that?
 Lea > NOD [nods]
 Shizuka > DEFAULT: Never bothered to change appearance.
-Lukas > WONDERING: Then why your avatar is different from Lea?
+Lukas > WONDERING: Then why is your avatar different from Lea?
 Lukas > TOWARDS: Luke looked literally like me, when Sergey asked me for help.
 Shizuka > DEFAULT: Before first awakening, someone gave her a new haircut.
-Lea > SURPRISED_TOWARDS: Who?
-Shizuka > SMUG: Take a guess. There were three of us.\. \c[3]Me\c[0], \c[3]Satoshi\c[0] and \c[3]Gautham\c[0].
+Lea > SURPRISED_TOWARD: Who?
+Shizuka > SMUG: Take a guess. There were three of us. \c[3]Me\c[0], \c[3]Satoshi\c[0] and \c[3]Gautham\c[0].
 Lea > THINKING ...
 
 Message 7
@@ -138,8 +139,8 @@ endif
 # Since you can only get Shizuka into your party after final dungeon, this sequence should happen after some time passes since previous one.
 # This sequence only plays out if player replied "Yes" to the beach date proposal. (final-dng/b3/bridge)
 == cced-lukas-shizuka-battle-over-2 ==
-# 10 minutes without Schneider and Shizuka
-condition: party.alive.Schneider && party.alive.Shizuka && cced.lukas-shizuka.battle-over-1.finished && plot.lukeBeachDate && (cced.lukas-shizuka.battle-over-2.started || ccipt.vars.Schneider+Shizuka.maxDowntime >= 600)
+# 5 minutes without Schneider and Shizuka
+condition: party.alive.Schneider && party.alive.Shizuka && cced.lukas-shizuka.battle-over-1.finished && plot.lukeBeachDate && (cced.lukas-shizuka.battle-over-2.started || ccipt.vars.Schneider-Shizuka.maxDowntime >= 300)
 
 Message 1
 set cced.lukas-shizuka.battle-over-2.started true
@@ -148,7 +149,7 @@ set ccipt.vars.Schneider-Shizuka.maxDowntime = 0
 set ccipt.vars.Schneider-Shizuka.lastDowntime = 0
 
 Shizuka > EX2_PISSED: ...
-Lukas > WHISTLING: Well...\. this is awkward...
+Lukas > WHISTLING: Well... this is awkward...
 Shizuka > EX2_PISSED: It is...
 Lea > SURPRISED_TOWARD: ...?
 Lea > SURPRISED_AWAY: Why?
@@ -168,32 +169,36 @@ Lea > SURPRISED_AWAY: Why?
 Lukas > SERIOUS: No, you're not!
 Lukas > PONDERING: It's me, who should be shaken.
 Shizuka > DOWN: Look, my fingers actually went numb from feedback.
-Lea > SURPRISED_TOWARD: ...What?
-Shizuka > FUNNY_SMILE: I'd say, we're even on that.
+Lea > SURPRISED_TOWARD: ...?
+Shizuka > FUNNY_SMILE: Therefore I'd say we're even.
 
 Message 4
 Shizuka > EVIL_GRIN: How did this thought even occur to you?
-Shizuka > SURPRISED: Wait, I know!\. It's because of Luke!
+Shizuka > SURPRISED: Wait, I know! It's because of Luke!
 Lukas > SKEPTICAL: Was worth a try.
 Shizuka > SARCASTIC: Should've tried harder.
 Shizuka > FUNNY_SMILE: He put way more thought into it than you.
 
 Message 5
 Lukas > WINK: So you're saying that....
-Shizuka > ANNOYED: No.
+Shizuka > ANNOYED: No!
 Lukas > LAUGH: Alright.
 Lea > ANNOYED: ...
 Shizuka > DENYING: And let's never bring this topic up again.
 Lukas > DEFAULT: Fair enough.
 Lea > ANNOYED: ...Why?
 
-# Skip message 6 & 7
+Message 6
+# Skip message 6
+
+Message 7
+# Skip message 7
 
 Message 8
 Lukas > DEFAULT: Are you still hungry?
 Shizuka > SARCASTIC: Dude...\. You're millions of light years away from me.
 Shizuka > FUNNY_SMILE: You couldn't invite me for dinner even if you wanted.
-Lukas > SKEPTICAL: It's not like I can't buy a ticket...\. instead of a fridge.
+Lukas > SKEPTICAL: It's not like I can't buy a ticket...
 Shizuka > SARCASTIC: You clearly don't.\. Now \c[1]stop\c[0].
 
 set cced.lukas-shizuka.battle-over-2.finished true
