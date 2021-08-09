@@ -2,7 +2,7 @@
   "name": "cc-extra-dialogue",
   "ccmodHumanName": "CCExtraDialogue",
   "version": "0.0.1",
-  "plugin": "plugin.js",
+  "prestart": "prestart.js",
   "ccmodDependencies": {
     "cc-extra-expressions-pack": ">=0.1.0"
   }
