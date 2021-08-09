@@ -13,18 +13,7 @@ jobs:
     steps:
       - name: Clone CCExtraDialogue
         uses: actions/checkout@v2
-      - name: Clone cc-extra-expressions-pack
-        uses: actions/checkout@v2
-        with:
-          repository: Paradragon/cc-extra-expressions-pack
-          token: ${{ secrets.PAT }}
-          path: expressions
-      - name: Clone cc-inner-party-timers
-        uses: actions/checkout@v2
-        with:
-          repository: Paradragon/cc-inner-party-timers
-          token: ${{ secrets.PAT }}
-          path: timers
+
       - name: Clone cc-eventscript-parser
         uses: actions/checkout@v2
         with:
@@ -45,24 +34,9 @@ jobs:
 
       - name: Create CCED archives
         run: |
-          zip -q -r cc_extra_dialogue.ccmod assets patches plugin.js ccmod.json package.json icon.png
-          tar -czf cc_extra_dialogue.tar.gz --transform 's,^,cc_extra_dialogue/,' assets patches plugin.js ccmod.json package.json icon.png
+          zip -q -r cc_extra_dialogue.ccmod assets patches js prestart.js ccmod.json package.json icon.png
+          tar -czf cc_extra_dialogue.tar.gz --transform 's,^,cc_extra_dialogue/,' assets patches js prestart.js ccmod.json package.json icon.png
 
-      - name: Create CCEEP archives
-        run: |
-          cd expressions
-          zip -q -r cc-extra-expressions-pack.ccmod ./*
-          tar -czf cc-extra-expressions-pack.tar.gz --transform 's,^,cc-extra-expressions-pack/,' ./*
-          mv cc-extra-expressions-pack.ccmod ../
-          mv cc-extra-expressions-pack.tar.gz ../
-
-      - name: Create CCIPT archives
-        run: |
-          cd timers
-          zip -q -r cc-inner-party-timers.ccmod ./*
-          tar -czf cc-inner-party-timers.tar.gz --transform 's,^,cc-inner-party-timers/,' ./*
-          mv cc-inner-party-timers.ccmod ../
-          mv cc-inner-party-timers.tar.gz ../
 
       - name: Create release
         run: |
