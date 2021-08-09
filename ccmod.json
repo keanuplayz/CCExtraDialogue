@@ -2,12 +2,11 @@
   "id": "cc-extra-dialogue",
   "title": "CCExtraDialogue",
   "version": "0.0.1",
-  "plugin": "plugin.js",
+  "prestart": "prestart.js",
   "homepage": "https://github.com/keanuplayz/CCExtraDialogue",
   "icons": {
     "24": "icon.png"
   },
   "ccmodDependencies": {
-    "cc-extra-expressions-pack": ">=0.1.0"
   }
 }
