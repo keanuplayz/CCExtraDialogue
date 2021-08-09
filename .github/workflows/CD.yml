@@ -46,4 +46,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VERSION: 'dev'
           NAME: 'CCED Dev'
-          FILES: cc_extra_dialogue.ccmod cc_extra_dialogue.tar.gz cc-extra-expressions-pack.ccmod cc-extra-expressions-pack.tar.gz cc-inner-party-timers.ccmod cc-inner-party-timers.tar.gz
+          FILES: cc_extra_dialogue.ccmod cc_extra_dialogue.tar.gz 
