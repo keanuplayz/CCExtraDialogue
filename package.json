@@ -4,6 +4,5 @@
   "version": "0.0.1",
   "prestart": "prestart.js",
   "ccmodDependencies": {
-    "cc-extra-expressions-pack": ">=0.1.0"
   }
 }
