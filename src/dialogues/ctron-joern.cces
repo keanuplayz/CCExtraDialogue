@@ -13,18 +13,9 @@
 # limitations under the License.
 
 # Joern comments on the landscapes of CrossWorlds.
-# Note: Secret 'Detective Joern' dialogue is unlocked after at least 1 message in every location instead of 'all messages'
-# This is intended because not every region gets more than one message and its not obvious when you are done with them.
+# Update: Secret 'Detective Joern' dialogue is a secret and therefore should be available only after all dialogues are exhausted.
 
-#Revision notes
-#1--- About tidal lock
-#A moon with water orbiting a gas giant would most likely cause enormous shifts in sea level depending on how the planet is oriented,
-# and considering the water sensitivity of instant #matter it'd make places like the archipelago and rhombus city very stupid projects
-#2--
-# About synchronous rotation in relation to star
-# the disastrous consequences that (SyncRotation) would have on the environment,
-# particularly the temperatures (which C'tron hinted at upon arriving in Sapphire Ridge).
-
+# by Paradragon
 == cced-ctron-joern-battle-over-rise ==
 condition: party.alive.Glasses && party.alive.Joern && area.autumn-area.isCurrent
 
@@ -32,24 +23,23 @@ Message 1
 Joern > DEFAULT: So peaceful in here.
 Joern > TOWARD: When we don't kill everything in sight.
 Lea > SMUG: ...!
-C'tron > SURPRISED: Its a very pleasant area to return to for sure.
+C'tron > SURPRISED: It's a very pleasant area for sure.
 C'tron > SMILE: Maybe my favorite out of all we've been to.
 
 if plot.line >= 40000
-    Joern > DEFAULT: And a nice place for your home.
+    Joern > DEFAULT: And a nice location for your village.
 endif
-
 Lea > NOD: [nods]
-
-set cced.ctron-joern.tourism.locations + 1
-set cced.ctron-joern.tourism.rise true
 
 Message 2
 Joern > DEFAULT: We should go on a picnic someday.
 C'tron > EMBARRASSED: Agreed. Just need to find a place without too many players.
 C'tron > SURPRISED: I bet Lea knows a few quiet spots in Autumns Rise, right?
-Lea > NOD_HAPPY: Lea!
+Lea > NOD_HAPPY: [nods]
 Joern > SMILE: Picnic shopping.
+
+set cced.ctron-joern.tourism.locations + 1
+set cced.ctron-joern.tourism.rise true
 
 
 
@@ -57,23 +47,24 @@ Joern > SMILE: Picnic shopping.
 condition: party.alive.Glasses && party.alive.Joern && area.autumn-fall.isCurrent
 
 Message 1
-Joern > AWWW: Seeing all this ruins is so sad.
+Joern > AWWW: Seeing all these ruins is so sad.
+Joern > AWWW: Just imagine, every one of them was inhabited by a family.
 C'tron > DEFAULT: Shadows of civilization long forgotten, taken back by forces of nature.
-C'tron > DOWN: Every concrete jungle built by intelligent life will eventually be abandoned, doomed to break down under the elements.
-C'tron > AWESOME: And when it does, in a few years, landscape inevitably changes back to how it was intended to be.
-C'tron > AWESOME: Lush, green and full of life.
-Lea > SURPRISED: ...
-Joern > AWWW: Why do you have to be so straightforward?
+C'tron > DOWN: Every concrete jungle of humanity will eventually be abandoned, doomed to break down under the elements.
+C'tron > SMILE: Eventually, landscape will revert to how it was intended to be.
+C'tron > AWESOME: Lush, green and full of wildlife.
+Joern > AWWW: Why are you so straightforward?
 
 set cced.ctron-joern.tourism.locations + 1
 set cced.ctron-joern.tourism.fall true
+
 
 
 == cced-ctron-joern-battle-over-bergen ==
 condition: party.alive.Glasses && party.alive.Joern && area.bergen-trails.isCurrent
 
 Message 1
-Joern > DEFAULT: \c[3]Bergen Trail\c[0] is nice. Fresh and chilly.
+Joern > DEFAULT: Bergen Trail is so fresh and chilly.
 Joern > DEFAULT: Reminds me our hiking with Polly.
 C'tron > DEFAULT: You two hike a lot?
 Joern > DEFAULT: Sometimes. I like mountains.
@@ -82,22 +73,29 @@ Joern > SMILE: The best view comes after the hardest climb.
 Lea > EXCITED: ...!
 C'tron > EMBARRASSED: That's a nice quote.
 
-set cced.ctron-joern.tourism.locations + 1
-set cced.ctron-joern.tourism.bergen true
-
 Message 2
 Joern > DEFAULT: There is one more reason.
-Joern > DEFAULT: Every hiking trail has something special at the end...
-if plot.line < 40000
-    Lea > EXCITED: ...?!
-endif
-if plot.line >= 40000
+Joern > DEFAULT: Every hiking trail ends with something special...
+if lea.words.what
     Lea > EXCITED: What?!
 endif
-
+    Lea > EXCITED: ...?!
+endif
 Joern > DEFAULT: Souvenir shops.
 Lea > ANNOYED: ...
 Joern > SMILE: I like buying trinkets.
+
+Message 3
+C'tron > DEFAULT: How does Bergen compare to an actual hiking trail?
+Joern > DEFAULT: The view is nice, but can't even compete with real life.
+C'tron > THOUGHTFUL: Why? Looks quite immersive to me.
+C'tron > WORRIED: If you ignore penguins, seahorses and snowmans.
+Joern > DEFAULT: Climbing Bergen Trail is too easy.
+Joern > TOWARD: Where is the challenge if you don't get tired?
+C'tron > EXHAUSTED: Right...
+
+set cced.ctron-joern.tourism.locations + 1
+set cced.ctron-joern.tourism.bergen true
 
 
 
@@ -105,24 +103,18 @@ Joern > SMILE: I like buying trinkets.
 condition: party.alive.Glasses && party.alive.Joern && area.heat-area.isCurrent
 
 Message 1
-Joern > DEFAULT: I don't like the \c[3]Maroon Valley\c[0].
-Joern > ANGRY: Its to bright, sand gets everywhere and its also very hot. I'm sweating buckets right now.
-Joern > DEFAULT: Why would they do it like that?
-C'tron > TOWARD: Some folks prefer the environment to be \c[3]realistic\c[0]. Otherwise they can't get into the game.
+Joern > DEFAULT: I don't like Maroon Valley.
+Joern > ANGRY: It's to bright, sand gets everywhere and is also very hot.
+Joern > ANGRY: I'm sweating buckets right now.
+C'tron > DEFAULT: Some folks prefer the environment to be \c[3]realistic\c[0].
+C'tron > EMBARRASSED: Otherwise they can't immerse themselves in the game.
 C'tron > SMILE: Fortunately, \c[3]personal temperature settings\c[0] are highly customisable.
-
 if plot.line >= 40000
-    C'tron > WORRIED: To bad evotars can't access them, just like the \c[3]looks menu\c[0].
-    Lea > EXHAUSTED: ...!!
-    C'Tron > EMBARRASSED: At least we get somewhat bearable settings by default, right?
-    Lea > NOD: [nods]
+    C'Tron > EMBARRASSED: Evotars can't access them, but at least we get somewhat bearable settings by default.
+    Lea > EXHAUSTED: ...!
 endif
-
 Joern > UP: There are \c[3]personal temperature settings\c[0]?
 Joern > SURPRISED: ...
-
-set cced.ctron-joern.tourism.locations + 1
-set cced.ctron-joern.tourism.desert true
 
 Message 2
 Joern > DEFAULT: It says \c[1]'Realistic Immersion Preset'\c[0].
@@ -133,51 +125,69 @@ Lea > SCARED: ...!
 C'tron > PANIC: Oh no...
 Joern > SMILE: ...
 
+set cced.ctron-joern.tourism.locations + 1
+set cced.ctron-joern.tourism.desert true
+
 
 
 == cced-ctron-joern-battle-over-gaia ==
 condition: party.alive.Glasses && party.alive.Joern && area.jungle.isCurrent
 
 Message 1
-C'tron > DEFAULT: Instatainment nailed the image of a real jungle. Excluding the animals, of course.
-C'tron > SURPRISED: Its very humid, lush with green and full of difficult terrain.
+C'tron > DEFAULT: Instatainment nailed the image of a real jungle. 
+C'tron > WORRIED: Excluding animals, of course.
+C'tron > SURPRISED: It's very humid, lush with vegetation and full of difficult terrain.
 C'tron > EMBARRASSED: Although, I'd like it to be a bit more straightforward... and smaller, I guess.
 Joern > DEFAULT: There are no shortcuts to any place worth going, Tronny.
 Lea > ASTONISHED: ...!
 C'tron > EMBARRASSED: Yeah... you're right on that one.
 
+Message 2
+C'tron > DEFAULT: Did you know that some jungles have trees as old as two thousand years?
+C'tron > AWESOME: Some of them exist since the time when \c[3]Terra\c[0] was still inhabited!
+Lea > ASTONISHED: ...!
+Joern > DEFAULT: I wonder how would it feel to live for a thousand years.
+C'tron > EMBARRASSED: I think, very desensitised to everything after a century.
+
 set cced.ctron-joern.tourism.locations + 1
 set cced.ctron-joern.tourism.gaia true
+
 
 
 == cced-ctron-joern-battle-over-sapphire ==
 condition: party.alive.Glasses && party.alive.Joern && area.forest.isCurrent
 
 Message 1
-Lea > SURPRISED_AWAY: ...?
-
-Joern > DEFAULT: Can't find places like \c[3]Sapphire Ridge\c[0] back home.
-Joern > SMILE: I thinking of meditation break under some tree.
-C'tron > DEFAULT: Perpetual dusk, while not unheard of, is a very rare <planetary behavior>.
+Joern > DEFAULT: Can't find places like this back at home.
+Joern > SMILE: I'm thinking of short meditation break under some tree.
+C'Tron > DEFAULT: Sapphire Ridge. A forest, permanently shrouded in twilight.
+C'tron > DEFAULT: Perpetual dusk, while not unheard of, is a very rare planetary anomaly.
 C'tron > SURPRISED: For that to be natural, Raritan Gem must have synchronous rotation with the star.
-C'tron > WORRIED: Can't be the case. The climate would be way different even after \c[3]terraforming\c[0].
+C'tron > WORRIED: No, this can't be right.\! The climate should be much more hostile than it is.
 Joern > SMILE: Relax and enjoy the atmosphere, Tronny.
 
-set cced.ctron-joern.tourism.locations + 1
-set cced.ctron-joern.tourism.sapphire true
-
 Message 2
-# Crackpot theories time
-C'tron > THOUGHTFUL: <Thinking about it, orbiting around gas giant may result in Raritan Gem's being hidden from the star behind parental gas giant.>
-C'tron > WORRIED: No way it has \c[3]synchronous rotation\c[0], \c[3]geostatic orbit\c[0] and \c[3]habitable atmosphere and gravity\c[0] at the same time.
-C'tron > WORRIED: This is way to many coincidences.
-Joern > SARCASTIC: ...
-Lea > EXHAUSTED: ...
-C'tron > BLANK: And if there are so many instanced rooms for every player...
-C'tron > PANIC: Its not only water or light... \c[1]entire planet must be simulated\c[0]!
+C'tron > BLANK: There are hundreds of instanced rooms for every player...
+C'tron > CRAZY_PANIC: No way they hollowed out the entire continent for them. It's just too much terraforming.
+C'tron > PANIC: That means only one thing...
+Joern > DEFAULT: Tronny.
+C'tron > CRAZY_PANIC: Not only water and light are fake! 
+C'tron > CRAZY_PANIC2: \c[1]The entire planet must be simulated!!\c[0]
 Joern > SMILE: Relax, Tronny.
 Joern > EX2_TRANQUIL: Relax.
 Lea > SLEEPING: ...
+
+Message 3
+C'tron > EXHAUSTED: Okay, maybe that was a bit too crazy.
+C'tron > THOUGHTFUL: Raritan Gem is definitely a real planet. There are ships with maintenance crew after all.
+C'tron > WORRIED: Illumination is totally artificial though...\. like every other special effect.
+Joern > TOWARD: What if planet is also artificial? 
+Joern > SARCASTIC: Like, all metal on the inside?
+C'tron > PANIC: Oh no...
+Lea > SMILE: ...
+
+set cced.ctron-joern.tourism.locations + 1
+set cced.ctron-joern.tourism.sapphire true
 
 
 
@@ -185,12 +195,15 @@ Lea > SLEEPING: ...
 condition: party.alive.Glasses && party.alive.Joern && area.beach.isCurrent
 
 Message 1
-Joern > DEFAULT: This beach area is pretty.
-Joern > SMILE: Now, you two go on vacation too.
+Joern > DEFAULT: This beach area is quite pretty.
+Joern > SMILE: Now you two go on vacation too!
 Lea > SMILE: ...
 C'tron > EMBARRASSED: I guess. Something is better than nothing, right?
 Joern > TOWARD: It's way more clean than the one we've been too.
-C'tron > AWESOME: Did you know that food leftovers from tourists are an important part of some beach ecosystems?
+
+Message 2 
+# This is actually a lie, but it's sci-fi. We can dream a little.
+C'tron > AWESOME: Did you know that food leftovers from tourists are an important part of some beach ecosystems? 
 C'tron > EMBARRASSED: Although these cases are far and between and don't have that many species.
 Lea > ASTONISHED: Who?
 C'tron > SMILE: Mostly different variations of sand crabs and worms.
@@ -202,7 +215,9 @@ set cced.ctron-joern.tourism.azure true
 
 
 
-== cced-ctron-joern-battle-over-1 ==
+# To be revised!
+# Original idea by Lolz... probably...
+== cced-ctron-joern-detective-battle-over ==
 condition: party.alive.Glasses && party.alive.Joern && plot.line >= 45600 && cced.ctron-joern.tourism.locations >= 7
 
 Message 1
@@ -268,10 +283,11 @@ C'Tron > EMBARRASSED: Oh.. um, how many characters does he have?
 Joern > ANGRY: Too many.
 Lea > SMILE: ...
 
-set cced.ctron-joern.battle-over-1.finished true
+set cced.ctron-joern.detective.finished true
 
 
 
+# Original idea is NOT by Paradragon
 == !goern-sweetron-battle-over-cced ==
 
 condition: false
