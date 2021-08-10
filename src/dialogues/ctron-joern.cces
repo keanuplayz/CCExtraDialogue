@@ -48,12 +48,10 @@ condition: party.alive.Glasses && party.alive.Joern && area.autumn-fall.isCurren
 
 Message 1
 Joern > AWWW: Seeing all these ruins is so sad.
-Joern > AWWW: Just imagine, every one of them was inhabited by a family.
-C'tron > DEFAULT: Shadows of civilization long forgotten, taken back by forces of nature.
-C'tron > DOWN: Every concrete jungle of humanity will eventually be abandoned, doomed to break down under the elements.
-C'tron > SMILE: Eventually, landscape will revert to how it was intended to be.
-C'tron > AWESOME: Lush, green and full of wildlife.
-Joern > AWWW: Why are you so straightforward?
+Joern > AWWW: Long ago, Every one of them had a family.
+C'tron > DEFAULT: Shadows of civilization long forgotten.
+C'tron > DOWN: Every concrete jungle will eventually be abandoned, doomed to break down under the elements.
+Joern > AWWW: You are heartless, Tronny.
 
 set cced.ctron-joern.tourism.locations + 1
 set cced.ctron-joern.tourism.fall true
@@ -65,9 +63,9 @@ condition: party.alive.Glasses && party.alive.Joern && area.bergen-trails.isCurr
 
 Message 1
 Joern > DEFAULT: Bergen Trail is so fresh and chilly.
-Joern > DEFAULT: Reminds me our hiking with Polly.
+Joern > TOWARD: Reminds me of our hiking with Polly.
 C'tron > DEFAULT: You two hike a lot?
-Joern > DEFAULT: Sometimes. I like mountains.
+Joern > SMILE: Sometimes. I like mountains.
 Lea > EX2_LIGHT_SMILE: Why?
 Joern > SMILE: The best view comes after the hardest climb.
 Lea > EXCITED: ...!
@@ -87,12 +85,27 @@ Joern > SMILE: I like buying trinkets.
 
 Message 3
 C'tron > DEFAULT: How does Bergen compare to an actual hiking trail?
-Joern > DEFAULT: The view is nice, but can't even compete with real life.
+Joern > DEFAULT: The view is nice, but nowhere near real life.
 C'tron > THOUGHTFUL: Why? Looks quite immersive to me.
 C'tron > WORRIED: If you ignore penguins, seahorses and snowmans.
 Joern > DEFAULT: Climbing Bergen Trail is too easy.
-Joern > TOWARD: Where is the challenge if you don't get tired?
+Joern > TOWARD: What's the challenge if you don't get tired?
 C'tron > EXHAUSTED: Right...
+
+Message 4
+C'tron > EMBARRASSED: So is it a challenge, a view... or a shop?
+Joern > TOWARD: Tronny, that's an obvious question.
+Joern > SMILE: Everybody will tell you the same thing.
+C'tron > DOWN: And that is...
+Joern > SMILE: Souvenir shops of course.
+if lea.words.why
+    Lea > ANNOYED: Why.
+else
+    Lea > ANNOYED: ...
+endif
+C'tron > EXHAUSTED: I knew it...
+Joern > SMILE: Why climb the mountain if you can't bring home a piece of it?
+C'tron > WORRIED: You're kidding me.
 
 set cced.ctron-joern.tourism.locations + 1
 set cced.ctron-joern.tourism.bergen true
@@ -103,27 +116,43 @@ set cced.ctron-joern.tourism.bergen true
 condition: party.alive.Glasses && party.alive.Joern && area.heat-area.isCurrent
 
 Message 1
-Joern > DEFAULT: I don't like Maroon Valley.
-Joern > ANGRY: It's to bright, sand gets everywhere and is also very hot.
-Joern > ANGRY: I'm sweating buckets right now.
-C'tron > DEFAULT: Some folks prefer the environment to be \c[3]realistic\c[0].
-C'tron > EMBARRASSED: Otherwise they can't immerse themselves in the game.
-C'tron > SMILE: Fortunately, \c[3]personal temperature settings\c[0] are highly customisable.
-if plot.line >= 40000
-    C'Tron > EMBARRASSED: Evotars can't access them, but at least we get somewhat bearable settings by default.
-    Lea > EXHAUSTED: ...!
+Joern > ANGRY: I don't like Maroon Valley.
+Joern > ANGRY: It's to bright, windy and sand gets everywhere. 
+C'tron > SMILE: That's actually quite accurate climate for a midday desert.
+C'tron > EMBARRASSED: Though I can see, how it can be annoying for some people.
+Joern > AWWW: Lea, can we go back to Bergen?
+Lea > SHAKE: [shakes head]
+Joern > SARCASTIC: You're a little devil, you know that?
+if newgame.sergey-hax
+    Lea > INSANE_DOWN: Lea! 
+    C'tron > EMBARRASSED: What did you expect? She went mad with power.
 endif
-Joern > UP: There are \c[3]personal temperature settings\c[0]?
-Joern > SURPRISED: ...
 
 Message 2
-Joern > DEFAULT: It says \c[1]'Realistic Immersion Preset'\c[0].
+Joern > ANGRY: Why is this desert so hot?
+Joern > ANGRY: I'm sweating buckets right now.
+C'tron > DEFAULT: Some folks prefer the environment to be realistic.
+C'tron > EMBARRASSED: Otherwise they can't immerse themselves in the game.
+Joern > SARCASTIC: There has to be a line between immersion and fun.
+
+Message 3
+Joern > ANGRY: Seriously, how anybody can bear this heat?
+C'tron > SMILE: Fortunately, \c[3]personal temperature settings\c[0] are a thing.
+if plot.line >= 40000
+    C'Tron > EMBARRASSED: Evotars can't access them, but at least the defaults are somewhat nice.
+    Lea > EXHAUSTED: ...!
+endif
+Joern > UP: There are temperature settings?
+Joern > SURPRISED: ...
+
+Message 3
+Joern > DEFAULT: It says \c[1]Realistic Immersion Preset\c[0].
 Joern > SARCASTIC: Think, I'll lower it a little.
 C'tron > BLANK: Don't tell me you've played all this time with realistic temperature.
+C'tron > BLANK: That's like... \c[1]40 degrees\c[0]!
 Joern > DEFAULT: ...
 Lea > SCARED: ...!
 C'tron > PANIC: Oh no...
-Joern > SMILE: ...
 
 set cced.ctron-joern.tourism.locations + 1
 set cced.ctron-joern.tourism.desert true
@@ -144,10 +173,16 @@ C'tron > EMBARRASSED: Yeah... you're right on that one.
 
 Message 2
 C'tron > DEFAULT: Did you know that some jungles have trees as old as two thousand years?
-C'tron > AWESOME: Some of them exist since the time when \c[3]Terra\c[0] was still inhabited!
+C'tron > AWESOME: Some of them existed since when \c[3]Terra\c[0] was still inhabited!
 Lea > ASTONISHED: ...!
-Joern > DEFAULT: I wonder how would it feel to live for a thousand years.
-C'tron > EMBARRASSED: I think, very desensitised to everything after a century.
+Joern > DEFAULT: Ever wondered, how would it feel to live for a thousand years?
+C'tron > EMBARRASSED: As a tree, you probably won't feel anything at all.
+C'tron > WORRIED: And human probably will end up desensitised to everything in a few centuries.
+if plot.line > 40000
+    Joern > DEFAULT: What about evotars? 
+    Lea > SURPRISED_TOWARD: ...?
+    C'tron > EXHAUSTED: Let's not think about this for now, ok?
+endif
 
 set cced.ctron-joern.tourism.locations + 1
 set cced.ctron-joern.tourism.gaia true
@@ -158,29 +193,37 @@ set cced.ctron-joern.tourism.gaia true
 condition: party.alive.Glasses && party.alive.Joern && area.forest.isCurrent
 
 Message 1
-Joern > DEFAULT: Can't find places like this back at home.
-Joern > SMILE: I'm thinking of short meditation break under some tree.
+Joern > SMILE: Can't find places like this back at home.
 C'Tron > DEFAULT: Sapphire Ridge. A forest, permanently shrouded in twilight.
-C'tron > DEFAULT: Perpetual dusk, while not unheard of, is a very rare planetary anomaly.
+C'tron > DOWN: Perpetual dusk, while not unheard of, is a very rare planetary anomaly.
 C'tron > SURPRISED: For that to be natural, Raritan Gem must have synchronous rotation with the star.
-C'tron > WORRIED: No, this can't be right.\! The climate should be much more hostile than it is.
+C'tron > WORRIED: No, this can't be right.\! The climate should then be much more hostile.
 Joern > SMILE: Relax and enjoy the atmosphere, Tronny.
 
 Message 2
-C'tron > BLANK: There are hundreds of instanced rooms for every player...
+C'tron > DOWN: Almost entirety of this planet is water, yet we never see any storms or waves.
+Joern > DEFAULT: Large waves would be quite disastrous for areas, like Rookie Harbor.
+C'tron > WORRIED: Yes. And have no tides, Raritan Gem must be tidally locked with its parental gas giant
+C'tron > EXHAUSTED: It can't be both tidally locked and have synchronous rotation!
+C'tron > BLANK: Unless... gas giant has synchronous rotation too.
+Lea > EXHAUSTED: ...
+C'tron > EXHAUSTED: No, what a nonsense. The water and illumination are just not real.
+
+Message 3
+C'tron > BLANK: There are also hundreds of instanced rooms for every player...
 C'tron > CRAZY_PANIC: No way they hollowed out the entire continent for them. It's just too much terraforming.
 C'tron > PANIC: That means only one thing...
 Joern > DEFAULT: Tronny.
 C'tron > CRAZY_PANIC: Not only water and light are fake! 
 C'tron > CRAZY_PANIC2: \c[1]The entire planet must be simulated!!\c[0]
-Joern > SMILE: Relax, Tronny.
+Joern > SARCASTIC: Relax, Tronny.
 Joern > EX2_TRANQUIL: Relax.
 Lea > SLEEPING: ...
 
 Message 3
 C'tron > EXHAUSTED: Okay, maybe that was a bit too crazy.
-C'tron > THOUGHTFUL: Raritan Gem is definitely a real planet. There are ships with maintenance crew after all.
-C'tron > WORRIED: Illumination is totally artificial though...\. like every other special effect.
+C'tron > THOUGHTFUL: Raritan Gem is a real planet. There are ships with maintenance crew after all.
+C'tron > WORRIED: But illumination... it's clearly artificial...\. like every other special effect.
 Joern > TOWARD: What if planet is also artificial? 
 Joern > SARCASTIC: Like, all metal on the inside?
 C'tron > PANIC: Oh no...
@@ -195,18 +238,22 @@ set cced.ctron-joern.tourism.sapphire true
 condition: party.alive.Glasses && party.alive.Joern && area.beach.isCurrent
 
 Message 1
-Joern > DEFAULT: This beach area is quite pretty.
-Joern > SMILE: Now you two go on vacation too!
+Joern > SMILE: This beach area is quite pretty. Now you two go on vacation too!
 Lea > SMILE: ...
-C'tron > EMBARRASSED: I guess. Something is better than nothing, right?
-Joern > TOWARD: It's way more clean than the one we've been too.
+C'tron > SMILE: I guess. Something is better than nothing, right?
+Joern > TOWARD: It's also way more clean than ones I've been too.
+C'tron > EMBARRASSED: Can't litter in CrossWords.
 
 Message 2 
 # This is actually a lie, but it's sci-fi. We can dream a little.
-C'tron > AWESOME: Did you know that food leftovers from tourists are an important part of some beach ecosystems? 
-C'tron > EMBARRASSED: Although these cases are far and between and don't have that many species.
-Lea > ASTONISHED: Who?
-C'tron > SMILE: Mostly different variations of sand crabs and worms.
+C'tron > AWESOME: Did you know that food leftovers from tourists are an important part of some ecosystems? 
+C'tron > EMBARRASSED: Although those cases are quite rare... and don't have that many species.
+if lea.words.who
+    Lea > SURPRISED_TOWARD: Who?
+else
+    Lea > SURPRISED_TOWARD: ...?
+endif
+C'tron > SMILE: Mostly variations of sand crabs and worms.
 Joern > SMILE: Tasty.
 Lea > DISGUSTED: ...!
 
