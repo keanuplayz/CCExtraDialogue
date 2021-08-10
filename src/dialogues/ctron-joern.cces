@@ -78,7 +78,7 @@ Joern > DEFAULT: There is one more reason.
 Joern > DEFAULT: Every hiking trail ends with something special...
 if lea.words.what
     Lea > EXCITED: What?!
-endif
+else
     Lea > EXCITED: ...?!
 endif
 Joern > DEFAULT: Souvenir shops.
