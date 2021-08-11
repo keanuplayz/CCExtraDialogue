@@ -12,55 +12,77 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Release candidate
+
+#by Paradragob
 == cced-emilie-lukas-battle-over-1 ==
 
 condition: party.alive.Emilie && party.alive.Schneider && plot.line >= 40000
 
 Message 1
-Lukas > DEFAULT: Been some time since we properly played together.
-Emilie > HAPPY: Oui! And I'm glad Lea is finally back!
+Lukas > DEFAULT: Been some time since we played together.
+Emilie > HAPPY: Oui! And I'm glad that Lea is finally back!
 Lea > SURPRISED: Wait Lea?
 #alternatives to “sleeping” are “offline” and “away”
-Lukas > EYES_CLOSED: Ja / Yap. We all took a break from CrossWorlds, while you were... sleeping.
+Lukas > EYES_CLOSED: Jap. We all took a break from CrossWorlds, while you were...\. sleeping.
 Emilie > SMILE: Silly, you thought I'd play without you?
 Lea > TOUCHED: Thanks...
 Lukas > SKEPTICAL: The game was also kind of out of content for us...
 Lukas > EYES_CLOSED: But \c[3]you\c[0] were the main reason.
 
 Message 2
-Emilie > EXHAUSTED: <Honestly, the waiting for first Sergey call was the worst.>
-Emilie > SAD: I couldn't sleep properly for \c[3]weeks\c[0].
+Emilie > EXHAUSTED: Honestly, waiting for news from Sergey was the worst.
+Emilie > SAD: I couldn't sleep for weeks.
 Lukas > WONDERING: You also had exams approaching at a time, right?
 Emilie > MOPING: Sacrebleu, who cares about stupid exams...
+Emilie > EMBARRASSED: I passed them anyway...\. somehow...
 Lukas > LAUGH: Well, it's good that everything turned out as it is, right?
-Emilie > HAPPY: Yeah! And now, since we're all equally leveled, we can all kick ass together!
-Lea > EXCITED: ...!!
+Emilie > DETERMINED: Oui! And since we're all equally leveled, we can kick ass together!
+if newgame.sergey-hax
+    Lea > INSANE: ...!!
+    Emilie > SUSPICIOUS: Right...\. watch \c[3]you\c[0] kick ass...
+else
+    if player.level < 10
+        Lea > SURPRISED_TOWARD: Hi?
+        Emilie > EXHAUSTED: Sacrebleu, I forgot about that bug.
+        Lukas > COMPLAINING: Don't worry, she'll be fine.
+        Lukas > SKEPTICAL: She made it this far...\. somehow...
+    else
+        Lea > EXCITED: ...!!
+    endif
+endif
 
 Message 3
-Emilie > AWAY <Why CrossWorlds uses so many instanced rooms if its an MMO? Doesn't it like... defeat the purpose of MMO>
-Lukas > WONDERING: Sometimes I wonder about it myself. Wouldn't it also be cheaper to use less instances?
+Emilie > AWAY Why do they use so many instanced rooms? 
+Emilie > SUSPICIOUS: Doesn't it like... defeat the purpose of MMO?
+Lea > THINKING: ...
+Lukas > WONDERING: Sometimes I wonder about it myself. Wouldn't it be cheaper to use less instances?
 Emilie > SHRUG: Guess we'll never know.
 
 Message 4
 Lukas > DEFAULT: By the way, how did you like \c[3]that jumping puzzle\c[0] in Gaia's Garden?
 Emilie > EXHAUSTED: Mon Dieu, the jumping ones are bad already.
-Emilie > CURIOUS: Worse can only be those, where you have to hit switches on time.
-Lukas > UP: Or ones, where you have to escort a slowly traveling VRP.
+Emilie > CURIOUS: Ones where you have to hit switches on time are even worse.
+Lukas > TOWARDS: Or when you have to escort a slowly traveling VRP.
 Lea > EXHAUSTED: ...!
 Lukas > LAUGH They always reminded me of escort quests in other RPGs. Never liked them.
 Emilie > EXHAUSTED: Me neither.
 
 Message 5
-Emilie > EMBARRASSED: This reminds me. Most enemies in CrossWorlds are cool, but I hate the flying ones.
-Lukas > LAUGH: Yeah. They always keep flying away if you get to close and it turns into a waiting game for their special attack.
-Emilie > AWAY: Exactly. Sometimes it's one last papagun that just keeps throwing bananas at you and refuses to go down.
-Lea > EXHAUSTED: ...
-Lukas > DEFAULT: They are actually melons, but I wholeheartedly agree with you. Kinda hard to land a solid swing at them.
+Emilie > DEFAULT: Most enemies in CrossWorlds are kind of cool.
+Emilie > EMBARRASSED: Hate the flying ones though.
+Lukas > LAUGH: Jap. They keep flying away if you get too close. 
+Lukas > SKEPTICAL: Most of the time, it turns the fight into a waiting game.
+Emilie > EXHAUSTED: It's always some dumb papagun for me.
+Emilie > MOPING: He stays up high and keeps throwing stupid bananas.
+Lukas > LAUGH: They are actually melons, but I know that feeling all too well.
 Emilie > WATCH_OUT_BADASS: At least Lea can take care of them with her ranged attacks.
+Lea > WHISTLING: ...
 
 Message 6
 Emilie > AWAY: How is your job, Lukas?
-Lukas > DEFAULT: Tasks are thrown between department, people are too incompetent on their position and the boss always asks for yet another change.
+Lukas > SKEPTICAL: Project scope increased, but deadlines are left unchanged.
+Lukas > DEFAULT: Meanwhile, most of the department has no clue what they are doing.
 Lukas > LAUGH: You know, business as usual.
 Emilie > CURIOUS: I wonder if Lea will also get a job.
 Lea > SURPRISED_AWAY: How?
@@ -68,23 +90,22 @@ Lukas > WONDERING: I'm sure Instatainment will find something for you to do.
 Lukas > WINK: Play-testing new content?
 Emilie > CURIOUS: Like an early access?
 Lea > EXCITED: ...!
-Lukas > WINK: Knowing Instatainment, its gonna be one hell of a \c[3]Long Early Access\c[0].
+Lukas > WINK: Knowing Instatainment, it's gonna be one hell of a \c[3]Long Early Access\c[0].
 Lukas > WINK: Evotar-exclusive, of course.
 Emilie > MOPING: Not fair! She can't even spoil it!
 Lea > WHISTLING: ...!
 
 set cced.emilie-lukas.battle-over-1.finished true
 
-Message 10
-Lukas > SHOCKED: Did someone just move in that bush?!
-Emilie > CURIOUS: You mean the grassheaded player, who's been following us for a few hours?
-Emilie > SMILE: Oui, he's \c[3]creepy\c[0].
-Lukas > PANIC: \c[1]Few hours\c[0]?!
-Lea > SURPRISED_TOWARD: ...?
-Lea > SURPRISED_AWAY: ...?
-
-if plot.line >= 40000
-    Lea > SURPRISED: What? Where?
-else
-    Lea > SURPRISED: Hi?
-endif
+# Message 10
+# Lukas > SHOCKED: Did someone just move in that bush?!
+# Emilie > CURIOUS: You mean the grassheaded player, who's been following us for a few hours?
+# Emilie > SMILE: Oui, he's \c[3]creepy\c[0].
+# Lukas > PANIC: \c[1]Few hours\c[0]?!
+# Lea > SURPRISED_TOWARD: ...?
+# Lea > SURPRISED_AWAY: ...?
+# if plot.line >= 40000
+#     Lea > SURPRISED: What? Where?
+# else
+#     Lea > SURPRISED: Hi?
+# endif
