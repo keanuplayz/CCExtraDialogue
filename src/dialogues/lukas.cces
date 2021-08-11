@@ -15,7 +15,7 @@
 # by Paradragon
 == cced-lukas-rumors-duel-battle-over ==
 
-condition: party.alive.Schneider && party.size == 2 && cced.apollo.lukas-duel
+condition: party.alive.Schneider && party.size == 2 && cced.apollo-lukas.battle-over-2.finished
 
 Message 1
 Lukas > DEFAULT: It was \c[3]5-3\c[0] by the way.
@@ -26,7 +26,7 @@ if plot.apollo.leaWins >= 3
     Lukas > SKEPTICAL: But you probably know that already...
     Lea > WHISTLING: ...!
 else
-    Lukas > WINK: Then you go in for the kill.\. His HP is low enough to be nuked by some Level 3 arts.
+    Lukas > WINK: Then you go in for the kill.\. His HP is low enough to be nuked by most Level 3 arts.
     Lea > ASTONISHED: ...!
     Lea > NOD_HAPPY: Thanks!
     Lukas > TOWARDS: You're welcome.
