@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Release candidate
+
 # by Paradragon
 == cced-luke-shizuka-battle-over-1 ==
 condition: party.alive.Luke && party.alive.Shizuka && plot.line >= 48000

@@ -15,6 +15,8 @@
 # Joern comments on the landscapes of CrossWorlds.
 # Update: Secret 'Detective Joern' dialogue is a secret and therefore should be available only after all dialogues are exhausted.
 
+# Release candidate
+
 # by Paradragon
 == cced-ctron-joern-battle-over-rise ==
 condition: party.alive.Glasses && party.alive.Joern && area.autumn-area.isCurrent
@@ -172,12 +174,12 @@ Lea > ASTONISHED: ...!
 C'tron > EMBARRASSED: Yeah... you're right on that one.
 
 Message 2
-C'tron > DEFAULT: Did you know that some jungles have trees as old as two thousand years?
+C'tron > SMILE: Did you know that some jungles have trees as old as two thousand years?
 C'tron > AWESOME: Some of them existed since when \c[3]Terra\c[0] was still inhabited!
 Lea > ASTONISHED: ...!
 Joern > DEFAULT: Ever wondered, how would it feel to live for a thousand years?
-C'tron > EMBARRASSED: As a tree, you probably won't feel anything at all.
-C'tron > WORRIED: And human probably will end up desensitised to everything in a few centuries.
+C'tron > EMBARRASSED: As a tree, you won't feel anything at all.
+C'tron > WORRIED: And human will probably end up desensitised to everything in a few centuries.
 if plot.line > 40000
     Joern > DEFAULT: What about evotars? 
     Lea > SURPRISED_TOWARD: ...?
@@ -203,7 +205,7 @@ Joern > SMILE: Relax and enjoy the atmosphere, Tronny.
 Message 2
 C'tron > DOWN: Almost entirety of this planet is water, yet we never see any storms or waves.
 Joern > DEFAULT: Large waves would be quite disastrous for areas, like Rookie Harbor.
-C'tron > WORRIED: Yes. And have no tides, Raritan Gem must be tidally locked with its parental gas giant
+C'tron > WORRIED: Yes. And to have no tides, Raritan Gem must be tidally locked with its parental gas giant
 C'tron > EXHAUSTED: It can't be both tidally locked and have synchronous rotation!
 C'tron > BLANK: Unless... gas giant has synchronous rotation too.
 Lea > EXHAUSTED: ...
@@ -242,7 +244,7 @@ Joern > SMILE: This beach area is quite pretty. Now you two go on vacation too!
 Lea > SMILE: ...
 C'tron > SMILE: I guess. Something is better than nothing, right?
 Joern > TOWARD: It's also way more clean than ones I've been too.
-C'tron > EMBARRASSED: Can't litter in CrossWords.
+C'tron > EMBARRASSED: Can't really litter in CrossWords.
 
 Message 2 
 # This is actually a lie, but it's sci-fi. We can dream a little.
