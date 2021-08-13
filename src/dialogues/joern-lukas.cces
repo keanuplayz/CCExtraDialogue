@@ -12,9 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#Note:
-# At some point all \c[3]...\c[0] got replaced with ...\!, including their content.
-# Had to rewrite again, hope that nothing is missing.
+# Release candidate
 
 # Original idea by CoolWall
 # by Paradragon
@@ -79,27 +77,15 @@ Lukas > WHISTLING: But that's the thing, Joern.
 Lukas > SKEPTICAL: They are not missing, just disabled.
 Lea > SURPRISED: Why?
 Joern > DEFAULT: Safety precaution?
-Lukas > LAUGH: Most likely they decided that designing a smell for everything was to much effort.
+Lukas > LAUGH: Most likely they decided that designing hedgehags taste was to much effort.
 
 Message 2
-Joern > DEFAULT: How do you know it's actually disabled?
-Joern > TOWARD: Maybe hardware does not support it.
-Lukas > SKEPTICAL: Probably from some marketing materials.
-Joern > DEFAULT: Never trust corporate advertisements, Lukas.
-
+Joern > DEFAULT: How do you know they are actually disabled?
+Joern > TOWARD: Maybe CrossGear can't physically support them.
+Lukas > SKEPTICAL: We have \c[3]touch\c[0]. How different is it from taste anyway.
+Joern > SARCASTIC: Enough to be considered a separate sense.
 
 Message 3
-Lukas > WONDERING: Lack of taste is actually a big bummer...
-Lukas > WORRIED: Lea can't leave just CrossWords and go to caffe, like we do.
-Lea > SURPRISED_TOWARD: What? Why?
-Lukas > COMPLAINING: Well... until you ate a burger, you never know what you're missing out on.
-Lukas > NORM_SERIOUS: Do you remember how things taste?
-Lea > THINKING: ...
-Lea > SHAKE: [shakes head]
-Joern > AWWW: Poor little girl.
-Sergey > WORRIED: He's got a point.
-
-Message 4
 Lukas > DEFAULT: Hey, Joern.
 Lukas > WHISTLING: If \c[3]taste\c[0] actually worked in CrossWorlds, what would you lick first?
 Joern > ANGRY: Nothing.\. That's unsanitary.
@@ -109,11 +95,21 @@ Lea > SHAKE_EYE_CLOSED: [shakes head]
 Joern > DEFAULT: Or a snowman.
 Lukas > LAUGH: Ja.\. Tronny would definitely do that one.
 
+# Not sure if it fits the dialogue. Message 4 may be cut out on release.
+Message 4
+Lukas > WONDERING: Lea, do you remember how things taste?
+Lea > THINKING: ...
+Lea > SHAKE: [shakes head]
+Joern > AWWW: Poor little girl.
+Lea > SURPRISED_TOWARD: Why?
+Lukas > COMPLAINING: Well... until you ate a burger, you'll never know what you're missing out on.
+
 Message 5
 Lukas > SURPRISED: I just had the best idea ever...
 Joern > DEFAULT: Go on.
-Lukas > EX2_EXCITED: Forget snowman and blobs!\. Imagine, if you could \c[3]eat\c[0] food in CrossWorlds!
+Lukas > EX2_EXCITED: Forget snowman and blobs!\. Imagine, if you could \c[3]taste\c[0] food in CrossWorlds!
 Lea > ASTONISHED: ...!
+Lukas > EX2_EXCITED: Any dish you can imagine, instant preparation time, infinitely scale-able!
 Joern > SMILE: Rhombus restaurants. Lovely.
 Lukas > WINK: Easy money. I should pitch this to Sergey!
 Sergey > ROLL_EYES: We read these kinds of suggestions every day.
