@@ -14,6 +14,9 @@
 
 # Regret nothing, appreciate everything
 
+# Release candidate
+
+#by Paradragon
 == cced-emilie-luke-battle-over-1 ==
 
 condition: party.alive.Emilie && party.alive.Luke
@@ -21,15 +24,13 @@ condition: party.alive.Emilie && party.alive.Luke
 Message 1
 Emilie > HAPPY: Yay! Double the party, double the punching power!
 Luke > DEFAULT: I have a sword, Emilie.
-Luke > SKEPTICAL: Its for cutting things, not punching.
+Luke > SKEPTICAL: It's for cutting things, not punching.
 Emilie > DETERMINED: Whatever, fighting up close is almost punching.
 Lea > SMILE: ...
 Luke > DEFAULT: Alright, punching it is.
 
 Message 2
 Emilie > AWAY: Taking awfully many hits, Luke. Aren't you like...\. a \c[3]seasoned player\c[0]?
-#alternative condition, if we want it... for some reason...:
-#if area.autumn-area.isCurrent || area.autumn-fall.isCurrent || area.bergen-trails.isCurrent || area.heat-area.isCurrent || area.jungle.isCurrent || area.forest.isCurrent
 if area.beach.isCurrent
     Luke > LAUGH: Not used to fighting these enemies.
 else
@@ -42,39 +43,38 @@ Luke > WONDERING: Huh?
 Message 3
 Emilie > SMILE: Hey, Luke~
 Luke > DEFAULT: I'm here.
-Emilie > TAUNTING:  Whatcha always glancing at?
+Emilie > TAUNTING: Whatcha always glancing at?
 Luke > WHISTLING: Just checking if everything is alright.
-Emilie > SMILE: Suuuuure~.
+Emilie > SMILE: Suuuure~
 Lea > SURPRISED_AWAY: ...?
 
 Message 4
-Emilie > SMILE: Is everything alright back there, Luke?
-Luke > WHISTLING: Uhm... yeah, sure. Everything is under control.
+Emilie > SMILE: Is everything alright back there?
+Luke > WHISTLING: Uhm...\. yeah, sure.\. Everything is under control.
 Lea > SURPRISED_TOWARD: ...?
 Emilie > SMILE: Okay-dokey, monsieur.
-Emilie > DETERMINED: Keep watching \c[3]her back\c[0].
+Emilie > DETERMINED: Keep watching her back.
 Lea > SURPRISED_AWAY: ...?
-Lea > SURPRISED: ...\.What?
+Lea > SURPRISED_TOWARD: ...What?
 
 Message 5
-Emilie > SMILE: Sooo~... What exactly happened between you two in Vermillion?
+Emilie > SMILE: So... What exactly happened between you two in Vermillion?
 Emilie > DETERMINED: \c[1]I have to know!
-Lea > ANNOYED: ...
-Luke > EYES_CLOSED: Sorry, can't tell.
+Lea > ANNOYED: ...?
+Luke > EYES_CLOSED: Sorry, Emilie.
 Luke > WINK: Classified information.
-Emilie > MOPING: Common! Its not <right/fair> to keep secrets from your friends, non?
+Emilie > MOPING: Common! Its not fair to keep secrets from your friends, non?
 Lea > EXHAUSTED: ...
 
 Message 6
 Emilie > CULTURE: Fine. If you won't tell me yourself...
-Emilie > SHRUG: I will guess, until you talk.
-Lea > ANNOYED: ...\.Why?
+Emilie > TAUNTING: I will guess, until you talk.
+Lea > ANNOYED: Why?
 Luke > EYES_CLOSED: Why would I answer?
 Emilie > DEFAULT: Because as long as Lea wants it...
 Emilie > DEAD_INSIDE: \c[1]You're trapped here with me.
 Luke > COMPLAINING: Oh Junge...
 
-# Message 6 & 7 may need some... adjustments
 Message 7
 Emilie > DETERMINED: Did you two \c[3]held hands\c[0]?
 Luke > COMPLAINING: Friends are allowed to do that, right?
@@ -82,29 +82,29 @@ Lea > NOD: [nods]
 Emilie > SMILE: Oui! Friendly cuddles are nice too.
 Luke > WHISTLING: Uhm...\. hugs and cuddles are different things, Emilie.
 Emilie > SMILE: Oh, I know, silly.\. No mistake here.
-Lea > NERVOUS: ...
 
 Message 8
 Luke > SKEPTICAL: Who told you about cuddles anyway?
-Emilie > HAPPY: Lucky guess.
+Emilie > SMILE: Lucky guess.
 Luke > RANTING: Oh Junge.\. Didn't know we had a detective in our party.
-Emilie > TAUNTING: Oui!\. Nothing goes unnoticed in my presence.
+Emilie > TAUNTING: Nothing goes unnoticed in my presence, Luke.
 Emilie > WATCH_OUT_BADASS: Being perceptive is cool, non?
 Lea > SHAKE: [shakes head]
+Luke > WONDERING: Except that time when you missed Lea's speech module malfunction.
+Emilie > SUSPICIOUS: Shush. That happened once, ok?
 
 Message 9
 Emilie > DETERMINED: Did you two \c[3]go for a walk\c[0]?
-Luke > DEFAULT: Jap. Ran around and jumped on pipes after some boring quest.
+Luke > DEFAULT: Jap. Also jumped from cliffs and boring metal pipes.
 Luke > LAUGH: Bashed some mobs along the way too.
 Lea > SMILE: ...
-Emilie > SMILE: No, silly. You know, what I meant.
+Emilie > SMILE: Not that, silly.\. You know, what I meant.
 Emilie > DETERMINED: A \c[3]date\c[0]!
-Lea > EXHAUSTED: ...
 Luke > DEFAULT: Sure. I gave Lea a tour of the place once.
 Emilie > CURIOUS: A tour? Of a place you've hardly been to for a week?
 Luke > EYES_CLOSED:  Why not?\. Tours are my speciality.
 Luke > SKEPTICAL: And there was awful lot of nothing to do anyway.
-Emilie > EMBARRASSED: Oui.\. Sounds like you.
+Emilie > EMBARRASSED: Sounds like you.
 
 Message 10
 Emilie > DETERMINED: Did you two \c[3]kiss\c[0]?
@@ -113,28 +113,18 @@ Luke > WHISTLING: That escalated quickly...
 Lea > EX2_EMBARRASSED: ...W-why?!
 Emilie > SMILE: I'm a detective, remember?
 Emilie > DEAD_INSIDE: \c[1]Did you kiss or no?
-Lea > WRAP_HEAD: ...!! # This expression lacks 'face' part by default. If it would look strange, we'll remake it as additional expression
 Luke > WONDERING: Can evotars even do that?
-Emilie > CURIOUS: Why are you looking at me? Ask Polly. He's an expert.
-Lea > SHAKE_EYE_CLOSED: ...!
-Lea > ANGRY: Wait!
-Luke > WINK: Whelp, only one way to find out.
-Lea > SHOCKED: ...!!
-Lea > SHOUT_PANIC: \c[1]Wait! Bye!!\c[0]
-Luke > WHISTLING: Just kidding, sorry...\. that was loud...
-Lea > DOWN_EYE_CLOSED: ...
-Luke > WINK: <Maybe next time...> # They are not yet a couple. This line may be too direct.
-Lea > DISGUSTED: ...!
-Emilie > EXHAUSTED: You know what...\. Forget about it.
+Emilie > CURIOUS: Why are you looking at me?\. I thought you were an expert.
+Lea > WRAP_HEAD: ...!! # This expression lacks 'face' part by default. If it would look strange, we'll remake it as additional expression
 
 Message 11
-Emilie > EMBARRASSED: This entire conversation was really none of my business.
-Emilie > DEFAULT: I'm sorry.
-Lea > PROUD: Hi sorry! Meet Lea! # If the joke doesn't fit this dialogue, stick it somewhere else.
+Emilie > MOPING: I'm sorry.
+Emilie > EMBARRASSED: It's really none of my business.
+Lea > PROUD: Hi sorry, meet Lea! # If the joke doesn't fit this dialogue, stick it somewhere else.
 Luke > LAUGH: Bwahahahaha~! Nice one.
 Emilie > SUSPICIOUS: ...
 Emilie > MOPING: Oui, you two are dumb.
-Lea > SMILE: Sorry...
-Luke > DEFAULT: Ja, better let's go punch some things.
+Lea > SMILE: Sorry.
+Luke > LAUGH: Ja. Let's pretend all this never happened.
 
 set cced.emilie-luke.battle-over-1.finished true
