@@ -7,6 +7,6 @@
   "icons": {
     "24": "icon.png"
   },
-  "ccmodDependencies": {
+  "dependencies": {
   }
 }
