@@ -44,6 +44,7 @@ condition: party.alive.Apollo && party.alive.Schneider
 Message 1
 Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a mighty \c[3]Triblader\c[0] join forces on the Path of Justice!
 Apollo > CONTENT: A truly fearsome party! # This particular line is the same with one in apollo-luke
+Lea > PROUD: ...!
 Lukas > DEFAULT: Hold up... Spheromancer?
 Lukas > LAUGH: I thought you were a Triblader!
 if cced.apollo.triblader

@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Apollo gives insight as to what is The Path of Justice. Luke calls bull.
+# Release candidate
+
 # by Paradragon
 == cced-apollo-luke-battle-over-1 ==
 
@@ -20,14 +21,14 @@ condition: party.alive.Apollo && party.alive.Luke
 
 Message 1
 Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a mighty \c[3]Triblader\c[0] join forces on the Path of Justice!
-Apollo > CONTENT: <Truly a party to be afraid of!> # This particular line is the same with one in apollo-lukas
+Apollo > CONTENT: A truly fearsome party! # This particular line is the same with one in apollo-lukas
 Lea > PROUD: ...!
 Luke > DEFAULT: Hold up... Spheromancer?
 Luke > LAUGH: I thought you were a Triblader!
 if cced.apollo.triblader
     Apollo > MOPING: Not this again...
 else
-    Apollo > CONTENT: How could you possibly mistake my striking crimson attire for a Triblader
+    Apollo > CONTENT: How could you possibly mistake me for a Triblader? Don't you see my crimson attire?
     Luke > UP: I don't know...\! Spiky hair and all that green kinda confused me.
     Apollo > MOPING: You can't be serious...
     set cced.apollo.triblader true
@@ -35,8 +36,8 @@ endif
 
 Message 2
 Apollo > CONTENT: Our noble party is victorious!
-Apollo > LECTURING: Every step marks our growth...\n
-Apollo > POINTING: On the Path of Justice!\n
+Apollo > LECTURING: Every step we make marks our growth...
+Apollo > POINTING: On the Path of Justice!
 Luke > WONDERING: Path of justice? What's that supposed to mean?
 Apollo > DEFAULT: It's an idea, an absolute which every Spheromancer must strive to achieve!
 Lea > EXHAUSTED: ...!
@@ -44,28 +45,30 @@ Apollo > CONTENT: Only by following the Path of Justice may you become the True 
 Luke > SKEPTICAL: Huh...
 
 Message 3
-Luke > SKEPTICAL: I'm not a Spheromancer.\. How does that path work for me?
-Apollo > DEFAULT:  The ideas of Path of Justice are universal.
+Luke > SKEPTICAL: I'm not a Spheromancer.\. How does it work for me?
+Apollo > DEFAULT: The ideas of Path of Justice are universal.
 Apollo > DOWN: One must fight injustice and uphold the order whenever possible!
 Apollo > LECTURING: One must always strife for improvement, for stagnation leads to corruption!
-Apollo > SHOUTING: Most importantly, one shall never cheat or take shortcuts in their mission!
-Apollo > POINTING: This is not only our duty as Spheromancers...\. But \c[3]our purpose\c[0] as Seekers!!
-Luke > COMPLAINING: That's just common sense taken too far.
+Apollo > SHOUTING: And most importantly, one shall never cheat or take shortcuts in their mission!
+Apollo > POINTING: This is not only our duty as Spheromancers...\. But our \c[3]purpose\c[0] as Seekers!
+Luke > COMPLAINING: It other words, it's common sense taken too far.
 Lea > NOD: [nods]
 
 Message 4
 Luke > LAUGH: Luke and Lea!\. Bringing justice to CrossWords, one hedgehag at a time!
 Lea > SMILE: ...
-Apollo > DEFAULT: You missed the message, Triblader.
+Apollo > SUSPICIOUS: You missed the message, Triblader.
 Apollo > DOWN: The Path of Justice is not about specifics.
 Apollo > LECTURING: It's about being the change!\. Working on yourself to make the world around you a better place!  # Summary of "The Path of Justice" by Steffron T. James.
-Apollo > POINTING: The Path of Justice calls everyone to action!\. Only by following it's ideas can we propel society into the bright future!!
+Apollo > SHOUTING: The Path of Justice calls everyone to action!
+Apollo > POINTING: Only by following it's ideas can we propel society into the bright future!
 Luke > WONDERING: Cut the roleplay.\. Do you really believe all this?
 Apollo > CONTENT: I am!\. And I'm proud of it!
 Lea > SCARED: ...?
 
 Message 5
-Apollo > CONTENT: Once again our noble party is victorious!\. With each adversary, we continue honing our skills.
+Apollo > CONTENT: Once again our noble party is victorious!
+Apollo > DEFAULT: With each adversary, we continue honing our skills.
 if newgame.sergey-hax
     Luke > COMPLAINING: Certainly not honing anything in this party.
     Lea > INSANE: ...!!
@@ -73,8 +76,7 @@ if newgame.sergey-hax
 endif
 if newgame.lea-must-die
     Lea > EXHAUSTED: ...!
-    Luke > SKEPTICAL: Can't argue about Lea.\. Hardly applies to me though...
-    Apollo > CONTENT: Each step marks the path of our growth, Triblader.
+    Luke > SKEPTICAL: Can't argue about Lea.\. Hardly applies to me though.
 endif
 if player.level > 75
     Luke > DEFAULT: If by honing skills you mean grinding \c[3]under-leveled\c[0] mobs.
@@ -82,44 +84,11 @@ else
     Luke > DEFAULT: If by honing skills you mean grinding mobs.
 endif
 label postGrind
-Apollo > CONTENT: Danger is inherent to our lives.\. Fighting for survival is but one law of this universe.
+Apollo > CONTENT: Struggling for survival is but one law of this universe.
 Apollo > DOWN: As Seekers, we must not shy away from the fight.\. No matter, how hard it's going to be.
-Apollo > LECTURING: A wise man once said. \c[3]What doesn't kill us, makes us stronger\c[0]. 
-if player.level <= 10 || newgame.lea-must-die
-    Lea > SCARED: ...?!
-else
-    if player.level == 99
-        Lea > WHISTLING: ...!
-    else
-        Lea > NERVOUS: ...?
-    endif
-endif
 Luke > DEFAULT: How any of this is going to help society?
 Apollo > PONDERING: What?
-Luke > TOWARDS: <The path of justice...\. Wasn't it about improving society or something?>
+Luke > TOWARDS: The path of justice...\. Wasn't it about improving society or something?
 Apollo > MOPING: Tribladers...
 
 set cced.apollo-luke.battle-over-1.finished true
-
-
-
-# The Cult of Justice
-# by ...
-== cced.apollo-luke.battle-over-2 ==
-
-condition: party.alive.Apollo && party.alive.Luke && cced.apollo-luke.battle-over-1.finished
-
-Message 1
-Luke > TOWARDS: We should start a cult.
-Apollo > PONDERING: A what...?
-Lea > SURPRISED_AWAY: ...?
-Apollo > SUSPICIOUS: A cult.\! \c[3]Cult of Justice\c[0]!
-Lea > MOPING: ...\.What?
-Luke > LAUGH: You know...\. to spread the word and teach others the...\. teachings of the Path.
-Lea > ANNOYED: ...?
-Apollo > PONDERING: Now that you mention it...
-Apollo > DEFAULT: Indeed, I should think about starting my own guild.
-
-# There should probably be a little more about that...
-
-set cced.apollo-luke.battle-over-2.finished true
