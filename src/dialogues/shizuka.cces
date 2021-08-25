@@ -14,6 +14,7 @@
 
 # The only person you can trust a secret is yourself... and your copy, but don't quote me on that second part
 
+# by Paradragon
 == cced-shizuka-rumors-similarity-battle-over ==
 
 condition: party.alive.Shizuka && party.size == 2 && cced.shizuka.lea-similarity-mentions >= 4
@@ -31,15 +32,16 @@ set cced.shizuka.similarity-rumor.finished true
 
 
 
+# by Paradragon
 == cced-shizuka-rumors-shadytron-battle-over ==
 
 condition: party.alive.Shizuka && party.size == 2 && cced.ctron-shizuka.battle-over-1.finished
 
 Message 1
-Shizuka > DENYING: I wouldn't go anywhere near that \c[3]C'Tron\c[0] in your place.
+Shizuka > DENYING: In your place, I wouldn't go anywhere near that \c[3]C'Tron\c[0].
 Lea > SURPRISED: Why?
 Shizuka > DENYING: He is a shady guy, that lies through his teeth.
-Shizuka > DENYING: And dealing with that type always ends up in trouble.
+Shizuka > EX2_PISSED: Dealing with that type always ends up in trouble.
 Shizuka > CONCERNED: I've seen it...
 Lea > NERVOUS: ...
 
@@ -47,6 +49,7 @@ set cced.shizuka.shadytron-rumor.finished true
 
 
 
+# by Paradragon
 == cced-shizuka-rumors-lukasdate-battle-over ==
 
 condition: party.alive.Shizuka && party.size == 2 && cced.lukas-shizuka.battle-over-2.finished
