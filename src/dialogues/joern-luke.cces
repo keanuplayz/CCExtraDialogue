@@ -18,7 +18,7 @@
 # by Paradragon
 == cced-joern-luke-battle-over-1 ==
 
-condition: party.alive.Joern && party.alive.Luke
+condition: party.alive.Joern && party.alive.Luke && plot.line >= 40000
 
 Message 1
 Luke > WONDERING: Hey, Joern. If you're with us, where is Apollo?

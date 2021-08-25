@@ -18,7 +18,7 @@
 # by Paradragon
 == cced-joern-lukas-battle-over-1 ==
 
-condition: party.alive.Joern && party.alive.Schneider
+condition: party.alive.Joern && party.alive.Schneider && plot.line >= 40000
 
 Message 1
 Lukas > COMPLAINING: Aw, man. I think, I need a break.
@@ -68,7 +68,7 @@ set cced.joern-lukas.battle-over-1.finished true
 # by Paradragon
 == cced-joern-lukas-battle-over-2 ==
 
-condition: party.alive.Joern && party.alive.Schneider && cced.joern-lukas.battle-over-1.finished
+condition: party.alive.Joern && party.alive.Schneider && cced.joern-lukas.battle-over-1.finished && plot.line >= 40000
 
 Message 1
 Lukas > WONDERING: Isn't CrossGear connected to all five senses?

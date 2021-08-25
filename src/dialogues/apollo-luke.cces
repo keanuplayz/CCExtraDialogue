@@ -17,7 +17,7 @@
 # by Paradragon
 == cced-apollo-luke-battle-over-1 ==
 
-condition: party.alive.Apollo && party.alive.Luke
+condition: party.alive.Apollo && party.alive.Luke && plot.line >= 40000
 
 Message 1
 Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a mighty \c[3]Triblader\c[0] join forces on the Path of Justice!

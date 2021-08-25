@@ -16,10 +16,10 @@
 
 # Release candidate
 
-#by Paradragon
+# by Paradragon
 == cced-emilie-luke-battle-over-1 ==
 
-condition: party.alive.Emilie && party.alive.Luke
+condition: party.alive.Emilie && party.alive.Luke && plot.line >= 40000
 
 Message 1
 Emilie > HAPPY: Yay! Double the party, double the punching power!

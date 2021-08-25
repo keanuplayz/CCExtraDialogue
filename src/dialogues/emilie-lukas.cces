@@ -14,7 +14,7 @@
 
 # Release candidate
 
-#by Paradragob
+# by Paradragon
 == cced-emilie-lukas-battle-over-1 ==
 
 condition: party.alive.Emilie && party.alive.Schneider && plot.line >= 40000

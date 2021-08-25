@@ -20,7 +20,7 @@
 # by Paradragon
 == cced-apollo-lukas-battle-over-gaia ==
 
-condition: party.alive.Apollo && party.alive.Schneider && area.jungle.isCurrent && !cced.apollo-lukas.battle-over-1.finished
+condition: party.alive.Apollo && party.alive.Schneider && area.jungle.isCurrent && !cced.apollo-lukas.battle-over-1.finished && plot.line >= 40000
 
 Message 1
 Lukas > WONDERING: Hey, Lea...\. Where did your friend go?
@@ -39,7 +39,7 @@ set cced.apollo-lukas.battle-over-gaia.finished true
 
 == cced-apollo-lukas-battle-over-1 ==
 
-condition: party.alive.Apollo && party.alive.Schneider
+condition: party.alive.Apollo && party.alive.Schneider && plot.line >= 40000
 
 Message 1
 Apollo > POINTING: Two noble \c[3]Spheromancers\c[0] and a mighty \c[3]Triblader\c[0] join forces on the Path of Justice!
@@ -111,7 +111,7 @@ set ccipt.vars.Apollo-Schneider.trackDowntime + 1
 
 == cced-apollo-lukas-battle-over-2 ==
 # 10 minutes without Apollo and Schneider
-condition: party.alive.Apollo && party.alive.Schneider && cced.apollo-lukas.battle-over-1.finished && (cced.apollo-lukas.battle-over-2.started || ccipt.vars.Apollo-Schneider.maxDowntime >= 600)
+condition: party.alive.Apollo && party.alive.Schneider && cced.apollo-lukas.battle-over-1.finished && (cced.apollo-lukas.battle-over-2.started || ccipt.vars.Apollo-Schneider.maxDowntime >= 600) && plot.line >= 40000
 
 Message 1
 set cced.apollo-lukas.battle-over-2.started true
