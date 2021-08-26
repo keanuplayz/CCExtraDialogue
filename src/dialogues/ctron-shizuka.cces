@@ -13,7 +13,8 @@
 # limitations under the License.
 
 # Detective Shizuka. Almost rivals Detective Joern in her deduction.
-# This banter is mostly fine, but also a little sad.
+
+# Release candidate
 
 # by Paradragon
 == cced-ctron-shizuka-battle-over-1 ==
@@ -21,9 +22,9 @@
 condition: party.alive.Glasses && party.alive.Shizuka && plot.line >= 40000
 
 Message 1
-C'tron > THOUGHTFUL: I'm sorry. Its Shizuka, right?
+C'tron > THOUGHTFUL: I'm sorry. It's Shizuka, right?
 Shizuka > DEFAULT: Yeah, hi.
-C'tron > EMBARRASSED: You may call me Tronny.\. We're all friends here, right? 
+C'tron > EMBARRASSED: You may call me Tronny. 
 Shizuka > BRIGHT: Sure.\. Nice to meet you, Tronny.
 
 Message 2
@@ -40,16 +41,19 @@ If cced.shizuka.lea-similarity-mentions >= 3
 endif
 Shizuka > EVIL_GRIN: You know, why that's the case, right?
 C'tron > EMBARRASSED: I've figured it out.
-C'tron > SMILE: You're the one, on whom Lea's evotar was based on.
-Shizuka > SMUG: Bullseye.
 
 set cced.shizuka.lea-similarity-mentions + 1
 
 Message 3
-# ??? CTron is being Ctron
-Shizuka > SMUG: <...> # CTron falls prey to Shizuka's sarcasm
-Lea > SMUG: ...
-C'tron > EXHAUSTED: You two really are one and the same.
+C'tron > DEFAULT: I sense something familiar when playing with you, Shizuka.
+Shizuka > SMUG: Bet it's the pure power, radiating from us.
+if newgame.sergey-hax
+    Shizuka > FUNNY_SMILE: Wish I also had her bugged damage.
+    Lea > INSANE_DOWN: ...!
+else
+    Lea > SMUG: ...!
+endif
+C'tron > EXHAUSTED: Gosh, you two really are one and the same.
 
 Message 4
 Shizuka > INNOCENT: What exactly did you mean by one and the same?
@@ -57,10 +61,10 @@ Shizuka > BRIGHT: Lea is nothing like me.
 C'tron > DOWN: How so?
 Shizuka > FUNNY_SMILE: She prefers to hug people.\. I punch them instead.
 Lea > SMILE: ...
-C'tron > EXHAUSTED: Like I said...
+C'tron > TOWARD: Are you so sure about that?
 
 Message 5
-C'tron > SURPRISED: Traumatic events may cause significant changes in personality.
+C'tron > SURPRISED: Experiencing major events may cause changes in personality.
 C'tron > SMILE: But your preferences should still be \c[3]99% identical\c[0].
 Shizuka > BADASS: Oh really?
 C'tron > AWESOME: Yes! For example, your tastes remained similar!
@@ -70,6 +74,15 @@ Shizuka > SURPRISED: ...
 Shizuka > SARCASTIC: This is...\. \c[3]oddly specific\c[0]. You know that how, exactly?
 C'tron > EMBARRASSED: Uhm...\. lucky guess?
 Shizuka > EX2_SUSPICIOUS: Uh huh...
+
+Message 6
+Shizuka > DEFAULT: How did you figure it out?
+C'tron > SURPRISED: I saw bento in your name.
+C'tron > DOWN: And Lea prefers meat over fish-based consumables.
+Shizuka > SARCASTIC: Seriously? From in-game consumables?
+C'tron > EMBARRASSED: That's really it.
+Sergey > SERIOUS: Lea. I think you should keep these two \c[3]away from each other\c[0].
+Sergey > DRAMATIC: Or their conversation can get heated real quick.
 
 Message 6
 Shizuka > DEFAULT: Have we met before, Tronny?
@@ -96,54 +109,48 @@ Message 8
 Shizuka > SARCASTIC: It wasn't in the briefing though, was it?
 C'tron > THOUGHTFUL: What exactly?
 Shizuka > SARCASTIC: The vermillion dump. Did Sergey tell you about it?
-C'tron > EMBARRASSED: Oh, uhm... he actually did.
-Sergey > SERIOUS: Lea. I think you should keep \c[3]these two separate\c[0].
-Sergey > DRAMATIC: Or their conversation will get heated real quick.
+C'tron > THOUGHTFUL: Oh, uhm... he actually did.
+Sergey > DRAMATIC: Lea...
 
 Message 9
-Shizuka > EX2_DISAPPOINTED: Who puts meat into bento anyway... 
-# Skip message 9
+Shizuka > DENYING: Maybe I'm hallucinating again.
+C'tron > THOUGHTFUL: Again? It that... normal?
+Shizuka > SARCASTIC: Happens when you live on the razor edge for two years.
+Shizuka > DENYING: You start seeing spies in alleyways when there are none.
 
 Message 10
-Shizuka > DENYING: No, it's certainly somebody recent.
-Shizuka > EX2_EYES_CLOSED: Someone from Instatainment?
-# Skip message 10
-
-Message 11
 Shizuka > SARCASTIC: Now I get it.
 Lea > SURPRISED_TOWARD: ...?
 Shizuka > SARCASTIC: It was your manner of speech, Tronny.
 Shizuka > DENYING: Reminds me of \c[1]Sidwell\c[0]. The one, who started all this mess.
 C'tron > EMBARRASSED: That's not concerning in the slightest.
-Shizuka > SARCASTIC: Don't worry, I have nothing against you.
-Shizuka > DENYING: Just an unlucky coincidence.
+Shizuka > DENYING: Don't worry. Just an unlucky coincidence.
 
-Message 12
+Message 11
 C'tron > SURPRISED: What happened to Sidwell?
 Shizuka > CONCERNED: Nothing...
 Shizuka > CONFLICTED: He ruined our lives... and got away with it.
 C'tron > SAD: ...
 Shizuka > EVIL_GRIN: But it's fine.\! It's all fine. 
 
-Message 13
+Message 12
 Shizuka > CONCERNED: ...
 Lea > SURPRISED_TOWARD: ...?
 C'tron > WORRIED: You may still find him...
 Shizuka > ANGRY: Look, he is gone for good, alright?!
-Shizuka > STRICT: It's been \c[1]seven months\c[o] already!
+Shizuka > STRICT: It's been \c[1]seven months\c[0] already!
 Shizuka > SCREAM: \c[1]He left no records, no traces, nothing!!
-Lea > SURPRISED: ...!
-Shizuka > ANNOYED: No use mulling over it.
-Shizuka > CONFLICTED: Satoshi and Lea are \c[3]safe\c[0]...\! its all that matters now.
-C'tron > EXHAUSTED: Sorry for bringing this up, Shizuka.
-Shizuka > SAD: Just...\. let's just stay quiet and punch mobs. Okay?
 Lea > NERVOUS: ...
+Shizuka > CONCERNED: Wish I could do something about it. I'm tired of being useless.
+
+Message 13
+C'tron > EXHAUSTED: Sorry for bringing this up, Shizuka.
+Shizuka > ANNOYED: No use mulling over it.
+Shizuka > CONFLICTED: Satoshi and Lea are \c[3]safe\c[0]...\! it's all that matters now.
+
 
 Message 14
-# Skip message 14
-
-Message 15
-Shizuka > DENYING: Lea.\. I need to \c[3]speak with you\c[0].
+Shizuka > DENYING: Lea.\. I need to speak with you.
 Shizuka > DENYING: \c[3]In private\c[0].
 C'tron > THOUGHTFUL: Should I... leave the party?
 Lea > SURPRISED_AWAY: ...?
