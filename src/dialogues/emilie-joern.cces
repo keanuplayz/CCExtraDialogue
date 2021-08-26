@@ -56,7 +56,7 @@ else
 endif
 
 Message 4
-Joern > DEFAULT: Its a nice change of pace from Apollo.
+Joern > DEFAULT: It's a nice change of pace from Apollo.
 Joern > SMILE: Plenty of time to take in the view.
 Emilie > CURIOUS: How Monsieur grasshead is so quick when it comes to speeding ahead of us?
 Joern > SARCASTIC: Skips everything in a rush to next landmark.
@@ -103,7 +103,7 @@ else
         Lea > PRE_CRY2: ...
         Joern > AWWW: You will get him next time, little girl.
         Lea > NOD_HARD2: [nods]
-        Emilie > UNCERTAIN: Lea, chérie!\. Don't cry!\. Its just a game, non?
+        Emilie > UNCERTAIN: Lea, chérie!\. Don't cry!\. It's just a game, non?
     endif
 endif
 
@@ -182,7 +182,7 @@ Lea > ASTONISHED: ...!
 Emilie > ASTONISHED: Now that's unusual!
 
 Message 3
-Emilie > DEFAULT: So its a special fish, fried on a stone. Neat.
+Emilie > DEFAULT: So it's a special fish, fried on a stone. Neat.
 Joern > DEFAULT: But wait...\. There is more...
 Emilie > ASTONISHED: Nooooo~!
 Joern > SARCASTIC: The heated stone is brought to the table.
