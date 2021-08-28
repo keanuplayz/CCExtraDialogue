@@ -42,7 +42,7 @@ if newgame.sergey-hax
     Lea > INSANE: ...!!
     Emilie > SUSPICIOUS: Right...\. watch \c[3]you\c[0] kick ass...
 else
-    if player.level < 10
+    if player.level <= 10
         Lea > SURPRISED_TOWARD: Hi?
         Emilie > EXHAUSTED: Sacrebleu, I forgot about that bug.
         Lukas > COMPLAINING: Don't worry, she'll be fine.

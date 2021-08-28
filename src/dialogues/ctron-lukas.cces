@@ -44,8 +44,8 @@ if newgame.sergey-hax
     Lukas > COMPLAINING: Yeah...\. like you need them at all...
     goto postSkillPoints
 endif
-# NG+ Spheromancer, level 1 to 9
-if player.level < 10
+# NG+ Spheromancer, level 1 to 10
+if player.level <= 10
     Lea > SURPRISED_AWAY: ...?
     goto postSkillPoints
 endif
