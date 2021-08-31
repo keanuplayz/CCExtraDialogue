@@ -133,5 +133,14 @@
                 "downScared"
             ]
         ]
+    },
+    "EX2_CRACKING_UP": {
+        "faces": [
+            [
+                "straight",
+                "toward",
+                "towardSmile"
+            ]
+        ]
     }
 }

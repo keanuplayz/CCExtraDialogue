@@ -133,5 +133,14 @@
                 "ex2_normEmbarrassed"
             ]
         ]
+    },
+    "EX2_CRACKING_UP": {
+        "faces": [
+            [
+                "straight",
+                "toward",
+                "ex2_towardCrackingUp"
+            ]
+        ]
     }
 }
