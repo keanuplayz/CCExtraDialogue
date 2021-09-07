@@ -11,7 +11,7 @@ function getUnusedSkillPoints(playerModel) {
 
 sc.PlayerModel.inject({
     onVarAccess(a, b) {
-        // We need to run out code before parent() to avoid 
+        // We need to run our code before parent() to avoid 
         // an "Unsupported var access" error that will be thrown by parent()
         if (b[0] == "player") {
             switch (b[1]) {
