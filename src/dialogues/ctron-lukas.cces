@@ -42,36 +42,34 @@ Lukas > DEFAULT: You lot didn't forget to spend your \c[3]circuit points\c[0], r
 if newgame.sergey-hax
     Lea > INSANE_DOWN: ...!
     Lukas > COMPLAINING: Yeah...\. like you need them at all...
-    goto postSkillPoints
+    goto postUnusedCP
 endif
 # NG+ Spheromancer, level 1 to 10
 if player.level <= 10
     Lea > SURPRISED_AWAY: ...?
-    goto postSkillPoints
+    goto postUnusedCP
 endif
 # Forgetful Spheromancer. More than 12 unspent CP
-if (player.skillPoints[0] + player.skillPoints[1] + player.skillPoints[2] + player.skillPoints[3] + player.skillPoints[4]) >= 12
+if player.unusedCP >= 12
     Lea > EX2_NERVOUS_GLANCE: ...
-    goto postSkillPoints
+    goto postUnusedCP
 endif
 # True Spheromancer, every circuit node is unlocked.
-if player.level == 99 && (player.skillPoints[0] + player.skillPoints[1] + player.skillPoints[2] + player.skillPoints[3] + player.skillPoints[4]) == 0
-    if (player.skillPointsExtra[0] + player.skillPointsExtra[1] + player.skillPointsExtra[2] + player.skillPointsExtra[3] + player.skillPointsExtra[4]) == 0
-        Lea > WHISTLING: ...!!
-        goto postSkillPoints
-    endif 
+if player.level == 99 && player.unusedCP == 0
+    Lea > WHISTLING: ...!!
+    goto postUnusedCP
 endif
 # Anti-hedgehag Spheromancer, level 80+
 if player.level >= 80
-    Lea > SMUG: ...
-    goto postSkillPoints
+    Lea > SMUG: ...!
+    goto postUnusedCP
 endif
 # Average Spheromancer, level 10 to 79
 if player.level >= 10
     Lea > PROUD: ...!
-    goto postSkillPoints
+    goto postUnusedCP
 endif
-label postSkillPoints
+label postUnusedCP
 C'tron > SMILE: Of course... kind of hard to forget it.
 Lukas > SKEPTICAL: Then you surely have \c[3]Divine Protection\c[0] unlocked, Tronny. Give it a shot.
 C'tron > SURPRISED: Is it like a... defensive art?
