@@ -1,7 +1,8 @@
 {
   "id": "cc-extra-dialogue",
-  "title": "CCExtraDialogue",
+  "title": "CrossCode Extra Dialogue",
   "version": "0.0.1",
+  "description": "Adds more dialogue to different party member combinations.",
   "prestart": "prestart.js",
   "homepage": "https://github.com/keanuplayz/CCExtraDialogue",
   "icons": {

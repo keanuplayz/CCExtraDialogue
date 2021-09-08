@@ -1,6 +1,6 @@
 {
   "name": "cc-extra-dialogue",
-  "ccmodHumanName": "CCExtraDialogue",
+  "ccmodHumanName": "CrossCode Extra Dialogue",
   "version": "0.0.1",
   "prestart": "prestart.js",
   "ccmodDependencies": {
