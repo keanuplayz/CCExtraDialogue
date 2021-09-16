@@ -6,7 +6,8 @@
     "content": {
         "path": "jungle-city.interior.cced-hub",
         "name": {
-            "en_US": "CCED Hub"
+            "en_US": "CCED Hub",
+            "langUid": 1111000
         },
         "offset": {
             "x": 0,
